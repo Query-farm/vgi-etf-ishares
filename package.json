@@ -1,0 +1,21 @@
+{
+  "name": "vgi-etf-ishares",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "src/worker.ts",
+  "license": "MIT",
+  "description": "VGI worker: iShares ETF product data & multi-day holdings as DuckDB tables",
+  "scripts": {
+    "test": "bun test",
+    "typecheck": "bash scripts/typecheck.sh"
+  },
+  "dependencies": {
+    "@query-farm/vgi": "^0.15.0",
+    "@query-farm/apache-arrow": "^21.1.1",
+    "@query-farm/vgi-rpc": "^0.12.0"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.3",
+    "@types/bun": "latest"
+  }
+}

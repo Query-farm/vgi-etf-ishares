@@ -1,0 +1,65 @@
+# name: test/sql/history.test
+# description: ishares fund_details / distributions / nav_history / holding_dates — schema + live invariants.
+# group: [sql]
+
+require-env VGI_TEST_WORKER
+
+statement ok
+ATTACH 'ishares' AS ish (TYPE vgi, LOCATION '${VGI_TEST_WORKER}');
+
+statement ok
+SET search_path='ish.main';
+
+# --- Schema (bind-only, deterministic). ---
+
+query T
+SELECT column_type FROM (DESCRIBE SELECT * FROM ish.fund_details('IVV')) WHERE column_name = 'num_holdings';
+----
+BIGINT
+
+query T
+SELECT column_type FROM (DESCRIBE SELECT * FROM ish.nav_history('IVV')) WHERE column_name = 'nav';
+----
+DOUBLE
+
+query T
+SELECT column_type FROM (DESCRIBE SELECT * FROM ish.distributions('IVV')) WHERE column_name = 'ex_date';
+----
+DATE
+
+# --- Live invariants (hit iShares). ---
+
+# fund_details is a single-row snapshot naming the tracked index and carrying an objective.
+query I
+SELECT (count(*) = 1 AND max(index_name) IS NOT NULL AND max(length(objective)) > 0)::INT FROM ish.fund_details('IVV');
+----
+1
+
+# NAV history goes back many years (thousands of daily rows) with positive NAV.
+query I
+SELECT (count(*) > 1000 AND min(nav) > 0)::INT FROM ish.nav_history('IVV');
+----
+1
+
+# start_date (a DATE) bounds the NAV series (far fewer rows than the full unbounded history).
+query I
+SELECT (count(*) > 0 AND min(as_of_date) >= DATE '2026-01-01')::INT FROM ish.nav_history('IVV', start_date := DATE '2026-01-01');
+----
+1
+
+# A non-date value for the DATE argument is a bind error (SQL enforces the type).
+statement error
+SELECT * FROM ish.nav_history('IVV', start_date := 'Jan 2026');
+----
+
+# IVV has a distribution history with non-negative totals.
+query I
+SELECT (count(*) > 0 AND min(total_distribution) >= 0)::INT FROM ish.distributions('IVV');
+----
+1
+
+# holding_dates lists at least one featured as-of date.
+query I
+SELECT (count(*) > 0)::INT FROM ish.holding_dates('IVV');
+----
+1

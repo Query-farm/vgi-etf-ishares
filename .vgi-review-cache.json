@@ -1,0 +1,338 @@
+{
+  "360802d429b31b2f": {
+    "object": "ishares",
+    "kind": "catalog",
+    "scores": {
+      "accuracy": 5,
+      "clarity": 5,
+      "completeness": 4,
+      "audience_fit": 5
+    },
+    "suggestions": [
+      "State the geographic/currency scope explicitly \u2014 'US' funds with USD-denominated figures \u2014 so an agent doesn't try non-US tickers or misread monetary units.",
+      "Add a one-line data-freshness caveat (holdings/NAV lag the trade date; latest = most recent published business day) since 'point-in-time' implies real-time.",
+      "Name the catalog\u2192drill entry point concretely (products() yields the portfolio_id/ticker key) without enumerating all functions, to keep the 'start at the catalog' guidance actionable."
+    ],
+    "summary": "Strong purpose-and-concept framing; would benefit from explicit US/USD scope and a freshness caveat."
+  },
+  "7b9525d7d35add83": {
+    "object": "ishares.main",
+    "kind": "schema",
+    "scores": {
+      "accuracy": 5,
+      "clarity": 5,
+      "completeness": 4,
+      "audience_fit": 4
+    },
+    "suggestions": [
+      "The schema doc largely repeats the catalog doc; differentiate it by noting the concrete key-resolution flow (ticker triggers a screener lookup, portfolio_id does not) an agent should exploit in loops.",
+      "Add units/currency scope (USD monetary fields, percent-based yields) at the schema level so every function inherits the convention.",
+      "Mention that fund-level functions are single-shot snapshots back to inception vs. the catalog's cross-fund breadth, to guide function selection."
+    ],
+    "summary": "Accurate but near-duplicate of the catalog doc; needs schema-specific detail (key resolution, units)."
+  },
+  "6e955edae5b96d01": {
+    "object": "ishares.main.holdings",
+    "kind": "table_function",
+    "scores": {
+      "accuracy": 3,
+      "clarity": 4,
+      "completeness": 2,
+      "audience_fit": 3
+    },
+    "suggestions": [
+      "The top-level description says 'numeric portfolio_id' \u2014 this contradicts the VGI313 convention the parameter doc follows ('portfolio_id or exchange ticker', never 'numeric'); drop 'numeric' for consistency.",
+      "No output columns are documented \u2014 enumerate the emitted fields (as_of_date, ticker, name, isin, cusip, sedol, sector, asset_class, country_of_risk, currency, weight, market_value, notional_value, units_held, unit_price, accrual_date) so an agent knows what it can SELECT.",
+      "Specify units and semantics for weight (percent 0\u2013100 vs. fraction) and market_value/notional_value (currency, whether fund-currency or USD), and clarify that empty as_of_dates returns a single latest date while multiple dates fan out one request each."
+    ],
+    "summary": "Prose is clear but the richest function has no column list and leaves weight/value units undefined."
+  },
+  "b089eb43fdd00886": {
+    "object": "ishares.main.holding_dates",
+    "kind": "table_function",
+    "scores": {
+      "accuracy": 5,
+      "clarity": 5,
+      "completeness": 4,
+      "audience_fit": 5
+    },
+    "suggestions": [
+      "State the single output column and type (as_of_date as a DATE/timestamp) explicitly since it's the whole result.",
+      "Note the ordering guarantee (or lack of one) so agents know to ORDER BY rather than assume newest-first.",
+      "Cross-link the relationship crisply: these are a convenience subset; use them when you want iShares' 'official' snapshot dates, otherwise pass any business day to holdings()."
+    ],
+    "summary": "Concise and accurate; add the output column type and ordering note."
+  },
+  "ad73779533e31ee9": {
+    "object": "ishares.main.fund_details",
+    "kind": "table_function",
+    "scores": {
+      "accuracy": 5,
+      "clarity": 4,
+      "completeness": 3,
+      "audience_fit": 4
+    },
+    "suggestions": [
+      "Attach units to each metric class: yields and premium/discount as percents, bid-ask spread as a percent, beta/std-dev basis, and the as-of date these characteristics reflect.",
+      "Clarify the overlap with products (which fields are unique to fund_details vs. duplicated) so an agent knows when it must call this instead of reading a products row.",
+      "Note that any characteristic can be null when iShares withholds it (defensive parsing degrades to null), so consumers should not assume every column is populated."
+    ],
+    "summary": "Good field inventory; missing units, null-behavior, and a clear products-vs-details boundary."
+  },
+  "ba1f771e3d2f5508": {
+    "object": "ishares.main.distributions",
+    "kind": "table_function",
+    "scores": {
+      "accuracy": 5,
+      "clarity": 5,
+      "completeness": 3,
+      "audience_fit": 4
+    },
+    "suggestions": [
+      "State the per-share currency and unit of the amount columns (income, short/long-term capital gain, return of capital, total) and confirm the components sum to total_distribution.",
+      "Document ordering (returned order is not guaranteed; ORDER BY ex_date) and coverage (full history back to inception, one row per event).",
+      "Note that gain/ROC components are frequently zero/null for plain equity ETFs so agents don't treat null as an error."
+    ],
+    "summary": "Clear breakdown of distribution components; needs currency/unit and sum-to-total confirmation."
+  },
+  "b776e53eed7ac430": {
+    "object": "ishares.main.products",
+    "kind": "table_function",
+    "scores": {
+      "accuracy": 3,
+      "clarity": 4,
+      "completeness": 3,
+      "audience_fit": 4
+    },
+    "suggestions": [
+      "Inconsistent product_view values: the description and doc_md list only 'etf'/'all' while the parameter doc adds 'mutualfund' \u2014 reconcile them and enumerate the full accepted set in one place.",
+      "Add units to the key facts (net_assets and NAV currency/USD, expense_ratio and yields as percent vs. decimal, returns annualized-percent) so screening filters use correct magnitudes.",
+      "Clarify that returns fields may be null for young funds (e.g. nav_return_10y before a fund is 10 years old) to avoid agents misreading nulls as zero."
+    ],
+    "summary": "Useful catalog overview undercut by an inconsistent product_view value list and missing units."
+  },
+  "965b31a1dbd7cf11": {
+    "object": "ishares.main.nav_history",
+    "kind": "table_function",
+    "scores": {
+      "accuracy": 5,
+      "clarity": 5,
+      "completeness": 4,
+      "audience_fit": 5
+    },
+    "suggestions": [
+      "State NAV currency/units and that ex_dividend is null (not zero) on non-distribution days, plus shares_outstanding units.",
+      "Note ordering is not guaranteed (ORDER BY as_of_date) and that rows are business-day granularity back to inception.",
+      "The 'use a market-data source for price candles' caveat is excellent \u2014 extend it by noting NAV returns exclude intraday premium/discount so users know why they may diverge from price returns."
+    ],
+    "summary": "Well-scoped with a strong NAV-vs-price caveat; add currency/units and null-vs-zero notes."
+  },
+  "3571d17d70c53319": {
+    "object": "ishares.main.holdings",
+    "kind": "table_function",
+    "scores": {
+      "accuracy": 5,
+      "clarity": 5,
+      "completeness": 4,
+      "audience_fit": 4
+    },
+    "suggestions": [
+      "Enumerate the always-present columns (issue_name, ticker, isin, cusip, sedol, sector_name, asset_class, country_of_risk, currency_code, exchange, weight_percent, market_value, notional_value, units_held, unit_price, accrual_date) so an agent knows what to SELECT without a trial query.",
+      "The fixed-income list is incomplete: par_value and market_currency_code also populate for bond funds \u2014 list them alongside coupon_percent/maturity_date/duration/ytm_percent, and state they are null/absent for equity funds.",
+      "State the currency/units of market_value, notional_value, and unit_price (USD? fund base currency?), since exposure math depends on it."
+    ],
+    "summary": "Accurate and well-caveated, but hides the actual column set and understates the fixed-income columns."
+  },
+  "73136bcb0bcb18aa": {
+    "object": "ishares.main.holding_dates",
+    "kind": "table_function",
+    "scores": {
+      "accuracy": 5,
+      "clarity": 5,
+      "completeness": 4,
+      "audience_fit": 5
+    },
+    "suggestions": [
+      "State the returned shape explicitly: a single as_of_date column of type DATE, one row per featured date.",
+      "Note the cost/relationship tradeoff \u2014 this is a cheap discovery call, whereas holdings() with arbitrary dates fans out one request per date.",
+      "Mention typical row count (a handful) so agents don't expect a long list."
+    ],
+    "summary": "Clear and correctly scoped; only missing the concrete output-column shape."
+  },
+  "3152c88656558aa7": {
+    "object": "ishares.main.fund_details",
+    "kind": "table_function",
+    "scores": {
+      "accuracy": 5,
+      "clarity": 4,
+      "completeness": 4,
+      "audience_fit": 4
+    },
+    "suggestions": [
+      "Name the exact yield columns rather than saying 'yields' \u2014 e.g. sec_yield_30d_percent and trailing_12m_yield_percent \u2014 so agents can select them directly.",
+      "List which columns are the non-suffixed ratios (pe_ratio, pb_ratio, beta_3y) versus percent-point columns, since the '_percent' convention is the only unit signal.",
+      "Clarify the snapshot's as-of semantics: is it always latest, and does it accept any date argument (it does not) \u2014 state that it takes only `fund`."
+    ],
+    "summary": "Solid one-row snapshot doc; vague on exact yield/ratio column names and units."
+  },
+  "3f23da52365a4874": {
+    "object": "ishares.main.distributions",
+    "kind": "table_function",
+    "scores": {
+      "accuracy": 5,
+      "clarity": 5,
+      "completeness": 4,
+      "audience_fit": 4
+    },
+    "suggestions": [
+      "List the exact component columns (income_amount, short_term_capital_gain, long_term_capital_gain, return_of_capital) so agents can sum them without guessing names.",
+      "State the currency of the per-share amounts (USD) and that non-distributing funds return zero rows.",
+      "Note the parameter ordering quirk (start_date/end_date are named-only, fund is positional) as done for the date functions elsewhere."
+    ],
+    "summary": "Accurate per-share framing with good units caveat; missing the component column names."
+  },
+  "f1577e5c58f37f22": {
+    "object": "ishares.main.products",
+    "kind": "table_function",
+    "scores": {
+      "accuracy": 4,
+      "clarity": 5,
+      "completeness": 4,
+      "audience_fit": 5
+    },
+    "suggestions": [
+      "Reconcile product_view values: the top-level description offers only 'etf'/'all' while the parameter doc adds 'mutualfund' \u2014 state the full accepted set in both.",
+      "State the currency and scale of net_assets and nav (USD; raw dollars vs millions), since ORDER BY net_assets is a headline use case.",
+      "Clarify that when `ticker` is passed, product_view is ignored (the param doc says this, but the main description does not)."
+    ],
+    "summary": "Rich catalog doc and clear percent-points convention, but product_view values and net_assets units are inconsistent/unstated."
+  },
+  "5710efc9cb3e4bf5": {
+    "object": "ishares.main.nav_history",
+    "kind": "table_function",
+    "scores": {
+      "accuracy": 5,
+      "clarity": 5,
+      "completeness": 4,
+      "audience_fit": 5
+    },
+    "suggestions": [
+      "State the returned columns and types explicitly (as_of_date DATE, nav, ex_dividends, shares_outstanding) and note ex_dividends is 0/null on non-dividend days.",
+      "Give the currency/units of nav and ex_dividends (USD per share) and shares_outstanding.",
+      "The NAV-vs-market-price distinction is excellent \u2014 reinforce it by naming a valid downstream use (compute NAV total returns by combining nav with ex_dividends)."
+    ],
+    "summary": "Accurate time-series doc with a strong NAV-not-price caveat; only lacking explicit column shape and units."
+  },
+  "b778a1301ede0cc1": {
+    "object": "ishares.main.holdings",
+    "kind": "table_function",
+    "scores": {
+      "accuracy": 5,
+      "clarity": 5,
+      "completeness": 3,
+      "audience_fit": 4
+    },
+    "suggestions": [
+      "Enumerate the non-obvious returned columns an agent can't guess from the blurb (sector, country_of_risk, currency_code, isin/cusip/sedol, market_value, units_held, unit_price) \u2014 the docs only ever show ticker/name/weight_percent, so agents won't know exposure-by-sector or by-country queries are possible here.",
+      "State the units/currency of the money columns (market_value, notional_value, unit_price) and whether they're fund-base-currency USD \u2014 weight_percent's unit is documented but the dollar columns are not.",
+      "Note that a returned row set is already sorted (weight DESC, NULLS last) so `LIMIT n` yields the top-n without ORDER BY, and spell out that the fixed-income-only columns (coupon_percent/maturity_date/duration/ytm_percent) come back NULL for equity funds rather than being absent."
+    ],
+    "summary": "Accurate and clear on the args/weight semantics, but under-documents the wide column set and money-column units an agent needs to write real queries."
+  },
+  "8c3778538b8488ac": {
+    "object": "ishares.main.fund_details",
+    "kind": "table_function",
+    "scores": {
+      "accuracy": 5,
+      "clarity": 4,
+      "completeness": 3,
+      "audience_fit": 4
+    },
+    "suggestions": [
+      "Clarify the percent-vs-ratio split explicitly: pe_ratio/pb_ratio/beta_3y are plain ratios (no _percent suffix) while yields, premium_discount, spread, and std-dev carry _percent and are in percent points \u2014 'percent columns are in percent points' alone leaves an agent guessing which columns those are.",
+      "List the actual yield column names (e.g. thirty_day_sec_yield_percent, twelve_month_trailing_yield_percent) and other key facts (closing_price, launch_date, distribution_frequency, total_net_assets) \u2014 'yields' and 'key facts' are too vague to select against.",
+      "Flag that populating objective/key_benefits triggers an extra HTML fetch (higher latency), so agents that only need numeric facts should not SELECT those columns."
+    ],
+    "summary": "Positioning vs products and the plain-text/HTML split are well handled; the percent-vs-ratio units and exact column names need to be concrete."
+  },
+  "b0bf0fb84c3c86c5": {
+    "object": "ishares.main.distributions",
+    "kind": "table_function",
+    "scores": {
+      "accuracy": 5,
+      "clarity": 5,
+      "completeness": 4,
+      "audience_fit": 4
+    },
+    "suggestions": [
+      "Name the component columns explicitly (income_amount, short_term_capital_gain, long_term_capital_gain, return_on_capital) and state that total_distribution is their sum \u2014 the blurb describes the split in prose but an agent can't SELECT prose.",
+      "State the currency (USD per share) and that rows are not guaranteed sorted, so ORDER BY ex_date is needed (the TTM sum example is order-independent, but the 'latest N' example relies on ORDER BY \u2014 make that explicit).",
+      "Clarify that start_date/end_date filter on ex_date specifically (not record/payable date), so a distribution can be in-range by ex-date but pay outside it."
+    ],
+    "summary": "Solid on per-share-dollars and ex-date bounding; would benefit from naming the split columns and the sum relationship."
+  },
+  "b8e582c99b376c66": {
+    "object": "ishares.main.nav_history",
+    "kind": "table_function",
+    "scores": {
+      "accuracy": 5,
+      "clarity": 5,
+      "completeness": 4,
+      "audience_fit": 5
+    },
+    "suggestions": [
+      "State nav's unit (USD per share) and that ex_dividends is a per-share dollar amount tying back to distributions on the same ex_date \u2014 helps agents reconstruct total return without a market-data source.",
+      "Note shares_outstanding units (whole shares) and that ex_dividends is 0/NULL on most days (the example filters >0, so document the sentinel).",
+      "Add that rows aren't guaranteed pre-sorted, so ORDER BY as_of_date is required for a proper time series / drawdown calc."
+    ],
+    "summary": "The NAV-vs-market-price caveat and row-volume warning make this the strongest of the four; only per-share units and sort guarantees are missing."
+  },
+  "30c1ab4a643f6823": {
+    "object": "ishares",
+    "kind": "catalog",
+    "scores": {
+      "accuracy": 4,
+      "clarity": 5,
+      "completeness": 4,
+      "audience_fit": 5
+    },
+    "suggestions": [
+      "The comment enumerates 'products, holdings, fund_details, distributions, nav_history' but omits the holding_dates function \u2014 either list all six objects or none (doc_llm already avoids enumeration cleanly).",
+      "The comment calls them 'tables' while doc_llm calls them 'SQL table functions'; reconcile the vocabulary since products is a base table and the other five are table functions \u2014 an agent needs to know which take arguments.",
+      "State the data's freshness/latency and that redistribution needs review once, at the catalog level, so downstream objects can inherit it."
+    ],
+    "summary": "Strong purpose-driven catalog docs; minor comment/doc_llm inconsistency on object count and table-vs-function wording."
+  },
+  "4a52f449f7019e43": {
+    "object": "ishares.main",
+    "kind": "schema",
+    "scores": {
+      "accuracy": 5,
+      "clarity": 5,
+      "completeness": 4,
+      "audience_fit": 5
+    },
+    "suggestions": [
+      "The two-level catalog/fund framing is excellent, but naming no concrete function (e.g. 'resolve via products, then holdings/fund_details/nav_history/distributions') leaves an agent to guess which object does what.",
+      "Mention that ticker resolution costs one screener fetch while a numeric portfolio_id skips it \u2014 a scheduling hint agents can act on.",
+      "Clarify 'characteristics' maps to fund_details so the abstract prose ties to a real callable object."
+    ],
+    "summary": "Clear, accurate two-level model; would benefit from tying abstractions to concrete function names."
+  },
+  "f9575505b8808345": {
+    "object": "ishares.main.products",
+    "kind": "table",
+    "scores": {
+      "accuracy": 4,
+      "clarity": 5,
+      "completeness": 4,
+      "audience_fit": 5
+    },
+    "suggestions": [
+      "product_view is described as comma-joined ('etf,mutualfund'), yet both doc_llm and the example filter with `product_view = 'etf'`, which silently misses multi-view funds \u2014 show `WHERE product_view LIKE '%etf%'` or document the exact single-value convention.",
+      "Note that return/yield columns (nav_return_*, thirty_day_sec_yield_percent, twelve_month_yield_percent) are frequently NULL for young funds and many mutual funds, so agents don't treat NULL as zero.",
+      "The doc_md example selects fund_name but doc_llm/comment lead with 'ticker, name'; standardize on the real column name fund_name to avoid a wrong-column query."
+    ],
+    "summary": "Well-documented catalog table with per-column units; main gap is the comma-joined product_view vs equality-filter examples."
+  }
+}

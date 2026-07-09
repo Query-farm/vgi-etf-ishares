@@ -1,0 +1,2748 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e4] [cursor=pointer]:
+      - img [ref=e6]
+      - button "region" [ref=e9]: United States
+    - generic [ref=e10]:
+      - generic [ref=e11] [cursor=pointer]:
+        - text: "|"
+        - link "News" [ref=e13]:
+          - /url: /news
+      - generic [ref=e14] [cursor=pointer]:
+        - img "Global X ETFs Phone" [ref=e16]
+        - link "Contact" [ref=e19]:
+          - /url: /contact
+  - generic [ref=e21]:
+    - link "Global X ETFs Logo" [ref=e22] [cursor=pointer]:
+      - /url: /
+      - img "Global X ETFs Logo" [ref=e23]
+    - generic [ref=e26]:
+      - link "Our ETFs" [ref=e27] [cursor=pointer]:
+        - /url: /explore
+        - listitem [ref=e28]: Our ETFs
+      - listitem [ref=e29] [cursor=pointer]:
+        - generic [ref=e30]:
+          - text: Insights
+          - img [ref=e31]
+      - listitem [ref=e33] [cursor=pointer]:
+        - link "Investor Center" [ref=e34]:
+          - /url: /investor-center
+      - listitem [ref=e35] [cursor=pointer]:
+        - link "Model Portfolios" [ref=e36]:
+          - /url: /model-portfolios
+      - listitem [ref=e37] [cursor=pointer]:
+        - link "How to Invest" [ref=e38]:
+          - /url: /how-to-invest
+      - listitem [ref=e39] [cursor=pointer]:
+        - link "About Us" [ref=e40]:
+          - /url: /about
+      - listitem [ref=e41] [cursor=pointer]:
+        - img [ref=e43]
+        - button "Search" [ref=e45]
+  - heading "Explore Our ETFs" [level=1] [ref=e49]
+  - generic [ref=e51]:
+    - generic [ref=e52]:
+      - generic [ref=e53]:
+        - text: "Asset Class:"
+        - combobox [ref=e54] [cursor=pointer]:
+          - generic: All (116)
+          - img [ref=e55]
+      - generic [ref=e57]:
+        - text: "Suite:"
+        - combobox [ref=e58] [cursor=pointer]:
+          - generic: All
+          - img [ref=e59]
+    - generic [ref=e61]:
+      - tablist [ref=e63]:
+        - tab "Overview & Fees" [selected] [ref=e64] [cursor=pointer]
+        - tab "Performance" [ref=e65] [cursor=pointer]
+        - tab "Documents" [ref=e66] [cursor=pointer]
+      - paragraph [ref=e69]: Data as of Jul 08 2026
+    - table [ref=e72]:
+      - rowgroup [ref=e73]:
+        - row [ref=e74]:
+          - columnheader [ref=e75]
+          - columnheader [ref=e76]
+          - columnheader [ref=e77]
+        - row "Ticker ETF Name NAV Net Assets Gross Exp. 1 Net Exp. 2 Fact Sheet" [ref=e78]:
+          - columnheader [ref=e79]
+          - columnheader "Ticker" [ref=e80]:
+            - button "Ticker" [ref=e81] [cursor=pointer]:
+              - generic [ref=e82]:
+                - text: Ticker
+                - img [ref=e83]
+          - columnheader "ETF Name" [ref=e85]:
+            - button "ETF Name" [ref=e86] [cursor=pointer]:
+              - generic [ref=e87]:
+                - text: ETF Name
+                - img [ref=e88]
+          - columnheader "NAV" [ref=e90]:
+            - button "NAV" [ref=e91] [cursor=pointer]:
+              - generic [ref=e92]:
+                - text: NAV
+                - img [ref=e93]
+          - columnheader "Net Assets" [ref=e95]:
+            - button "Net Assets" [ref=e96] [cursor=pointer]:
+              - generic [ref=e97]:
+                - text: Net Assets
+                - img [ref=e98]
+          - columnheader "Gross Exp. 1" [ref=e100]:
+            - button "Gross Exp. 1" [ref=e101] [cursor=pointer]:
+              - generic [ref=e102]:
+                - text: Gross Exp.
+                - superscript: "1"
+                - img [ref=e103]
+          - columnheader "Net Exp. 2" [ref=e105]:
+            - button "Net Exp. 2" [ref=e106] [cursor=pointer]:
+              - generic [ref=e107]:
+                - text: Net Exp.
+                - superscript: "2"
+                - img [ref=e108]
+          - columnheader "Fact Sheet" [ref=e110]:
+            - button "Fact Sheet" [disabled] [ref=e111]:
+              - generic [ref=e112]: Fact Sheet
+      - rowgroup [ref=e113]:
+        - row "PAVE U.S. Infrastructure Development ETF $56.07 $14,009,995,580 0.47% -- Fact Sheet PDF" [ref=e114]:
+          - cell [ref=e115]
+          - cell "PAVE" [ref=e116]:
+            - link "PAVE" [ref=e117] [cursor=pointer]:
+              - /url: /funds/PAVE
+              - generic [ref=e118]: PAVE
+          - cell "U.S. Infrastructure Development ETF" [ref=e119]:
+            - link "U.S. Infrastructure Development ETF" [ref=e120] [cursor=pointer]:
+              - /url: /funds/PAVE
+              - generic [ref=e121]: U.S. Infrastructure Development ETF
+          - cell "$56.07" [ref=e122]:
+            - generic [ref=e123]: $56.07
+          - cell "$14,009,995,580" [ref=e124]:
+            - generic [ref=e125]: $14,009,995,580
+          - cell "0.47%" [ref=e126]:
+            - generic [ref=e127]: 0.47%
+          - cell "--" [ref=e128]:
+            - generic [ref=e129]: "--"
+          - cell "Fact Sheet PDF" [ref=e130]:
+            - link "Fact Sheet PDF" [ref=e131] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/pave/Fact-Sheet_PAVE.pdf
+              - img [ref=e133]
+        - row "AIQ Artificial Intelligence & Technology ETF $62.13 $9,889,079,215 0.68% -- Fact Sheet PDF" [ref=e135]:
+          - cell [ref=e136]
+          - cell "AIQ" [ref=e137]:
+            - link "AIQ" [ref=e138] [cursor=pointer]:
+              - /url: /funds/AIQ
+              - generic [ref=e139]: AIQ
+          - cell "Artificial Intelligence & Technology ETF" [ref=e140]:
+            - link "Artificial Intelligence & Technology ETF" [ref=e141] [cursor=pointer]:
+              - /url: /funds/AIQ
+              - generic [ref=e142]: Artificial Intelligence & Technology ETF
+          - cell "$62.13" [ref=e143]:
+            - generic [ref=e144]: $62.13
+          - cell "$9,889,079,215" [ref=e145]:
+            - generic [ref=e146]: $9,889,079,215
+          - cell "0.68%" [ref=e147]:
+            - generic [ref=e148]: 0.68%
+          - cell "--" [ref=e149]:
+            - generic [ref=e150]: "--"
+          - cell "Fact Sheet PDF" [ref=e151]:
+            - link "Fact Sheet PDF" [ref=e152] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/aiq/Fact-Sheet_AIQ.pdf
+              - img [ref=e154]
+        - row "QYLD Nasdaq 100® Covered Call ETF $18.13 $8,224,970,186 0.60% -- Fact Sheet PDF" [ref=e156]:
+          - cell [ref=e157]
+          - cell "QYLD" [ref=e158]:
+            - link "QYLD" [ref=e159] [cursor=pointer]:
+              - /url: /funds/QYLD
+              - generic [ref=e160]: QYLD
+          - cell "Nasdaq 100® Covered Call ETF" [ref=e161]:
+            - link "Nasdaq 100® Covered Call ETF" [ref=e162] [cursor=pointer]:
+              - /url: /funds/QYLD
+              - generic [ref=e163]: Nasdaq 100® Covered Call ETF
+          - cell "$18.13" [ref=e164]:
+            - generic [ref=e165]: $18.13
+          - cell "$8,224,970,186" [ref=e166]:
+            - generic [ref=e167]: $8,224,970,186
+          - cell "0.60%" [ref=e168]:
+            - generic [ref=e169]: 0.60%
+          - cell "--" [ref=e170]:
+            - generic [ref=e171]: "--"
+          - cell "Fact Sheet PDF" [ref=e172]:
+            - link "Fact Sheet PDF" [ref=e173] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/qyld/Fact-Sheet_QYLD.pdf
+              - img [ref=e175]
+        - row "SHLD Defense Tech ETF $62.61 $7,084,488,723 0.50% -- Fact Sheet PDF" [ref=e177]:
+          - cell [ref=e178]
+          - cell "SHLD" [ref=e179]:
+            - link "SHLD" [ref=e180] [cursor=pointer]:
+              - /url: /funds/SHLD
+              - generic [ref=e181]: SHLD
+          - cell "Defense Tech ETF" [ref=e182]:
+            - link "Defense Tech ETF" [ref=e183] [cursor=pointer]:
+              - /url: /funds/SHLD
+              - generic [ref=e184]: Defense Tech ETF
+          - cell "$62.61" [ref=e185]:
+            - generic [ref=e186]: $62.61
+          - cell "$7,084,488,723" [ref=e187]:
+            - generic [ref=e188]: $7,084,488,723
+          - cell "0.50%" [ref=e189]:
+            - generic [ref=e190]: 0.50%
+          - cell "--" [ref=e191]:
+            - generic [ref=e192]: "--"
+          - cell "Fact Sheet PDF" [ref=e193]:
+            - link "Fact Sheet PDF" [ref=e194] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/shld/Fact-Sheet_SHLD.pdf
+              - img [ref=e196]
+        - row "COPX Copper Miners ETF $73.01 $6,676,014,537 0.65% -- Fact Sheet PDF" [ref=e198]:
+          - cell [ref=e199]
+          - cell "COPX" [ref=e200]:
+            - link "COPX" [ref=e201] [cursor=pointer]:
+              - /url: /funds/COPX
+              - generic [ref=e202]: COPX
+          - cell "Copper Miners ETF" [ref=e203]:
+            - link "Copper Miners ETF" [ref=e204] [cursor=pointer]:
+              - /url: /funds/COPX
+              - generic [ref=e205]: Copper Miners ETF
+          - cell "$73.01" [ref=e206]:
+            - generic [ref=e207]: $73.01
+          - cell "$6,676,014,537" [ref=e208]:
+            - generic [ref=e209]: $6,676,014,537
+          - cell "0.65%" [ref=e210]:
+            - generic [ref=e211]: 0.65%
+          - cell "--" [ref=e212]:
+            - generic [ref=e213]: "--"
+          - cell "Fact Sheet PDF" [ref=e214]:
+            - link "Fact Sheet PDF" [ref=e215] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/copx/Fact-Sheet_COPX.pdf
+              - img [ref=e217]
+        - row "URA Uranium ETF $41.46 $5,732,254,067 0.69% -- Fact Sheet PDF" [ref=e219]:
+          - cell [ref=e220]
+          - cell "URA" [ref=e221]:
+            - link "URA" [ref=e222] [cursor=pointer]:
+              - /url: /funds/URA
+              - generic [ref=e223]: URA
+          - cell "Uranium ETF" [ref=e224]:
+            - link "Uranium ETF" [ref=e225] [cursor=pointer]:
+              - /url: /funds/URA
+              - generic [ref=e226]: Uranium ETF
+          - cell "$41.46" [ref=e227]:
+            - generic [ref=e228]: $41.46
+          - cell "$5,732,254,067" [ref=e229]:
+            - generic [ref=e230]: $5,732,254,067
+          - cell "0.69%" [ref=e231]:
+            - generic [ref=e232]: 0.69%
+          - cell "--" [ref=e233]:
+            - generic [ref=e234]: "--"
+          - cell "Fact Sheet PDF" [ref=e235]:
+            - link "Fact Sheet PDF" [ref=e236] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/ura/Fact-Sheet_URA.pdf
+              - img [ref=e238]
+        - row "SIL Silver Miners ETF $73.92 $4,022,324,353 0.65% -- Fact Sheet PDF" [ref=e240]:
+          - cell [ref=e241]
+          - cell "SIL" [ref=e242]:
+            - link "SIL" [ref=e243] [cursor=pointer]:
+              - /url: /funds/SIL
+              - generic [ref=e244]: SIL
+          - cell "Silver Miners ETF" [ref=e245]:
+            - link "Silver Miners ETF" [ref=e246] [cursor=pointer]:
+              - /url: /funds/SIL
+              - generic [ref=e247]: Silver Miners ETF
+          - cell "$73.92" [ref=e248]:
+            - generic [ref=e249]: $73.92
+          - cell "$4,022,324,353" [ref=e250]:
+            - generic [ref=e251]: $4,022,324,353
+          - cell "0.65%" [ref=e252]:
+            - generic [ref=e253]: 0.65%
+          - cell "--" [ref=e254]:
+            - generic [ref=e255]: "--"
+          - cell "Fact Sheet PDF" [ref=e256]:
+            - link "Fact Sheet PDF" [ref=e257] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/sil/Fact-Sheet_SIL.pdf
+              - img [ref=e259]
+        - row "MLPX MLP & Energy Infrastructure ETF $75.64 $3,582,801,768 0.45% -- Fact Sheet PDF" [ref=e261]:
+          - cell [ref=e262]
+          - cell "MLPX" [ref=e263]:
+            - link "MLPX" [ref=e264] [cursor=pointer]:
+              - /url: /funds/MLPX
+              - generic [ref=e265]: MLPX
+          - cell "MLP & Energy Infrastructure ETF" [ref=e266]:
+            - link "MLP & Energy Infrastructure ETF" [ref=e267] [cursor=pointer]:
+              - /url: /funds/MLPX
+              - generic [ref=e268]: MLP & Energy Infrastructure ETF
+          - cell "$75.64" [ref=e269]:
+            - generic [ref=e270]: $75.64
+          - cell "$3,582,801,768" [ref=e271]:
+            - generic [ref=e272]: $3,582,801,768
+          - cell "0.45%" [ref=e273]:
+            - generic [ref=e274]: 0.45%
+          - cell "--" [ref=e275]:
+            - generic [ref=e276]: "--"
+          - cell "Fact Sheet PDF" [ref=e277]:
+            - link "Fact Sheet PDF" [ref=e278] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/mlpx/Fact-Sheet_MLPX.pdf
+              - img [ref=e280]
+        - row "BOTZ Robotics & Artificial Intelligence ETF $35.99 $3,354,220,752 0.68% -- Fact Sheet PDF" [ref=e282]:
+          - cell [ref=e283]
+          - cell "BOTZ" [ref=e284]:
+            - link "BOTZ" [ref=e285] [cursor=pointer]:
+              - /url: /funds/BOTZ
+              - generic [ref=e286]: BOTZ
+          - cell "Robotics & Artificial Intelligence ETF" [ref=e287]:
+            - link "Robotics & Artificial Intelligence ETF" [ref=e288] [cursor=pointer]:
+              - /url: /funds/BOTZ
+              - generic [ref=e289]: Robotics & Artificial Intelligence ETF
+          - cell "$35.99" [ref=e290]:
+            - generic [ref=e291]: $35.99
+          - cell "$3,354,220,752" [ref=e292]:
+            - generic [ref=e293]: $3,354,220,752
+          - cell "0.68%" [ref=e294]:
+            - generic [ref=e295]: 0.68%
+          - cell "--" [ref=e296]:
+            - generic [ref=e297]: "--"
+          - cell "Fact Sheet PDF" [ref=e298]:
+            - link "Fact Sheet PDF" [ref=e299] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/botz/Fact-Sheet_BOTZ.pdf
+              - img [ref=e301]
+        - row "XYLD S&P 500® Covered Call ETF $40.96 $3,199,856,341 0.60% -- Fact Sheet PDF" [ref=e303]:
+          - cell [ref=e304]
+          - cell "XYLD" [ref=e305]:
+            - link "XYLD" [ref=e306] [cursor=pointer]:
+              - /url: /funds/XYLD
+              - generic [ref=e307]: XYLD
+          - cell "S&P 500® Covered Call ETF" [ref=e308]:
+            - link "S&P 500® Covered Call ETF" [ref=e309] [cursor=pointer]:
+              - /url: /funds/XYLD
+              - generic [ref=e310]: S&P 500® Covered Call ETF
+          - cell "$40.96" [ref=e311]:
+            - generic [ref=e312]: $40.96
+          - cell "$3,199,856,341" [ref=e313]:
+            - generic [ref=e314]: $3,199,856,341
+          - cell "0.60%" [ref=e315]:
+            - generic [ref=e316]: 0.60%
+          - cell "--" [ref=e317]:
+            - generic [ref=e318]: "--"
+          - cell "Fact Sheet PDF" [ref=e319]:
+            - link "Fact Sheet PDF" [ref=e320] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/xyld/Fact-Sheet_XYLD.pdf
+              - img [ref=e322]
+        - row "CLIP 1-3 Month T-Bill ETF $100.13 $2,606,310,145 0.07% -- Fact Sheet PDF" [ref=e324]:
+          - cell [ref=e325]
+          - cell "CLIP" [ref=e326]:
+            - link "CLIP" [ref=e327] [cursor=pointer]:
+              - /url: /funds/CLIP
+              - generic [ref=e328]: CLIP
+          - cell "1-3 Month T-Bill ETF" [ref=e329]:
+            - link "1-3 Month T-Bill ETF" [ref=e330] [cursor=pointer]:
+              - /url: /funds/CLIP
+              - generic [ref=e331]: 1-3 Month T-Bill ETF
+          - cell "$100.13" [ref=e332]:
+            - generic [ref=e333]: $100.13
+          - cell "$2,606,310,145" [ref=e334]:
+            - generic [ref=e335]: $2,606,310,145
+          - cell "0.07%" [ref=e336]:
+            - generic [ref=e337]: 0.07%
+          - cell "--" [ref=e338]:
+            - generic [ref=e339]: "--"
+          - cell "Fact Sheet PDF" [ref=e340]:
+            - link "Fact Sheet PDF" [ref=e341] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/clip/Fact-Sheet_CLIP.pdf
+              - img [ref=e343]
+        - row "DTCR Data Center & Digital Infrastructure ETF $28.53 $2,229,576,131 0.50% -- Fact Sheet PDF" [ref=e345]:
+          - cell [ref=e346]
+          - cell "DTCR" [ref=e347]:
+            - link "DTCR" [ref=e348] [cursor=pointer]:
+              - /url: /funds/DTCR
+              - generic [ref=e349]: DTCR
+          - cell "Data Center & Digital Infrastructure ETF" [ref=e350]:
+            - link "Data Center & Digital Infrastructure ETF" [ref=e351] [cursor=pointer]:
+              - /url: /funds/DTCR
+              - generic [ref=e352]: Data Center & Digital Infrastructure ETF
+          - cell "$28.53" [ref=e353]:
+            - generic [ref=e354]: $28.53
+          - cell "$2,229,576,131" [ref=e355]:
+            - generic [ref=e356]: $2,229,576,131
+          - cell "0.50%" [ref=e357]:
+            - generic [ref=e358]: 0.50%
+          - cell "--" [ref=e359]:
+            - generic [ref=e360]: "--"
+          - cell "Fact Sheet PDF" [ref=e361]:
+            - link "Fact Sheet PDF" [ref=e362] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/dtcr/Fact-Sheet_DTCR.pdf
+              - img [ref=e364]
+        - row "MLPA MLP ETF $54.74 $2,198,797,038 0.77% -- Fact Sheet PDF" [ref=e366]:
+          - cell [ref=e367]
+          - cell "MLPA" [ref=e368]:
+            - link "MLPA" [ref=e369] [cursor=pointer]:
+              - /url: /funds/MLPA
+              - generic [ref=e370]: MLPA
+          - cell "MLP ETF" [ref=e371]:
+            - link "MLP ETF" [ref=e372] [cursor=pointer]:
+              - /url: /funds/MLPA
+              - generic [ref=e373]: MLP ETF
+          - cell "$54.74" [ref=e374]:
+            - generic [ref=e375]: $54.74
+          - cell "$2,198,797,038" [ref=e376]:
+            - generic [ref=e377]: $2,198,797,038
+          - cell "0.77%" [ref=e378]:
+            - generic [ref=e379]: 0.77%
+          - cell "--" [ref=e380]:
+            - generic [ref=e381]: "--"
+          - cell "Fact Sheet PDF" [ref=e382]:
+            - link "Fact Sheet PDF" [ref=e383] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/mlpa/Fact-Sheet_MLPA.pdf
+              - img [ref=e385]
+        - row "PFFD U.S. Preferred ETF $18.54 $2,147,176,671 0.23% -- Fact Sheet PDF" [ref=e387]:
+          - cell [ref=e388]
+          - cell "PFFD" [ref=e389]:
+            - link "PFFD" [ref=e390] [cursor=pointer]:
+              - /url: /funds/PFFD
+              - generic [ref=e391]: PFFD
+          - cell "U.S. Preferred ETF" [ref=e392]:
+            - link "U.S. Preferred ETF" [ref=e393] [cursor=pointer]:
+              - /url: /funds/PFFD
+              - generic [ref=e394]: U.S. Preferred ETF
+          - cell "$18.54" [ref=e395]:
+            - generic [ref=e396]: $18.54
+          - cell "$2,147,176,671" [ref=e397]:
+            - generic [ref=e398]: $2,147,176,671
+          - cell "0.23%" [ref=e399]:
+            - generic [ref=e400]: 0.23%
+          - cell "--" [ref=e401]:
+            - generic [ref=e402]: "--"
+          - cell "Fact Sheet PDF" [ref=e403]:
+            - link "Fact Sheet PDF" [ref=e404] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/pffd/Fact-Sheet_PFFD.pdf
+              - img [ref=e406]
+        - row "LIT Lithium & Battery Tech ETF $72.12 $1,593,525,398 0.75% -- Fact Sheet PDF" [ref=e408]:
+          - cell [ref=e409]
+          - cell "LIT" [ref=e410]:
+            - link "LIT" [ref=e411] [cursor=pointer]:
+              - /url: /funds/LIT
+              - generic [ref=e412]: LIT
+          - cell "Lithium & Battery Tech ETF" [ref=e413]:
+            - link "Lithium & Battery Tech ETF" [ref=e414] [cursor=pointer]:
+              - /url: /funds/LIT
+              - generic [ref=e415]: Lithium & Battery Tech ETF
+          - cell "$72.12" [ref=e416]:
+            - generic [ref=e417]: $72.12
+          - cell "$1,593,525,398" [ref=e418]:
+            - generic [ref=e419]: $1,593,525,398
+          - cell "0.75%" [ref=e420]:
+            - generic [ref=e421]: 0.75%
+          - cell "--" [ref=e422]:
+            - generic [ref=e423]: "--"
+          - cell "Fact Sheet PDF" [ref=e424]:
+            - link "Fact Sheet PDF" [ref=e425] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/lit/Fact-Sheet_LIT.pdf
+              - img [ref=e427]
+        - row "RSSL Russell 2000 ETF $114.95 $1,453,026,951 0.08% -- Fact Sheet PDF" [ref=e429]:
+          - cell [ref=e430]
+          - cell "RSSL" [ref=e431]:
+            - link "RSSL" [ref=e432] [cursor=pointer]:
+              - /url: /funds/RSSL
+              - generic [ref=e433]: RSSL
+          - cell "Russell 2000 ETF" [ref=e434]:
+            - link "Russell 2000 ETF" [ref=e435] [cursor=pointer]:
+              - /url: /funds/RSSL
+              - generic [ref=e436]: Russell 2000 ETF
+          - cell "$114.95" [ref=e437]:
+            - generic [ref=e438]: $114.95
+          - cell "$1,453,026,951" [ref=e439]:
+            - generic [ref=e440]: $1,453,026,951
+          - cell "0.08%" [ref=e441]:
+            - generic [ref=e442]: 0.08%
+          - cell "--" [ref=e443]:
+            - generic [ref=e444]: "--"
+          - cell "Fact Sheet PDF" [ref=e445]:
+            - link "Fact Sheet PDF" [ref=e446] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/rssl/Fact-Sheet_RSSL.pdf
+              - img [ref=e448]
+        - row "RYLD Russell 2000 Covered Call ETF $15.94 $1,353,697,446 0.60% -- Fact Sheet PDF" [ref=e450]:
+          - cell [ref=e451]
+          - cell "RYLD" [ref=e452]:
+            - link "RYLD" [ref=e453] [cursor=pointer]:
+              - /url: /funds/RYLD
+              - generic [ref=e454]: RYLD
+          - cell "Russell 2000 Covered Call ETF" [ref=e455]:
+            - link "Russell 2000 Covered Call ETF" [ref=e456] [cursor=pointer]:
+              - /url: /funds/RYLD
+              - generic [ref=e457]: Russell 2000 Covered Call ETF
+          - cell "$15.94" [ref=e458]:
+            - generic [ref=e459]: $15.94
+          - cell "$1,353,697,446" [ref=e460]:
+            - generic [ref=e461]: $1,353,697,446
+          - cell "0.60%" [ref=e462]:
+            - generic [ref=e463]: 0.60%
+          - cell "--" [ref=e464]:
+            - generic [ref=e465]: "--"
+          - cell "Fact Sheet PDF" [ref=e466]:
+            - link "Fact Sheet PDF" [ref=e467] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/ryld/Fact-Sheet_RYLD.pdf
+              - img [ref=e469]
+        - row "CATH S&P 500® Catholic Values ETF $88.57 $1,278,991,123 0.29% -- Fact Sheet PDF" [ref=e471]:
+          - cell [ref=e472]
+          - cell "CATH" [ref=e473]:
+            - link "CATH" [ref=e474] [cursor=pointer]:
+              - /url: /funds/CATH
+              - generic [ref=e475]: CATH
+          - cell "S&P 500® Catholic Values ETF" [ref=e476]:
+            - link "S&P 500® Catholic Values ETF" [ref=e477] [cursor=pointer]:
+              - /url: /funds/CATH
+              - generic [ref=e478]: S&P 500® Catholic Values ETF
+          - cell "$88.57" [ref=e479]:
+            - generic [ref=e480]: $88.57
+          - cell "$1,278,991,123" [ref=e481]:
+            - generic [ref=e482]: $1,278,991,123
+          - cell "0.29%" [ref=e483]:
+            - generic [ref=e484]: 0.29%
+          - cell "--" [ref=e485]:
+            - generic [ref=e486]: "--"
+          - cell "Fact Sheet PDF" [ref=e487]:
+            - link "Fact Sheet PDF" [ref=e488] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/cath/Fact-Sheet_CATH.pdf
+              - img [ref=e490]
+        - row "BUG Cybersecurity ETF $39.65 $1,232,013,284 0.50% -- Fact Sheet PDF" [ref=e492]:
+          - cell [ref=e493]
+          - cell "BUG" [ref=e494]:
+            - link "BUG" [ref=e495] [cursor=pointer]:
+              - /url: /funds/BUG
+              - generic [ref=e496]: BUG
+          - cell "Cybersecurity ETF" [ref=e497]:
+            - link "Cybersecurity ETF" [ref=e498] [cursor=pointer]:
+              - /url: /funds/BUG
+              - generic [ref=e499]: Cybersecurity ETF
+          - cell "$39.65" [ref=e500]:
+            - generic [ref=e501]: $39.65
+          - cell "$1,232,013,284" [ref=e502]:
+            - generic [ref=e503]: $1,232,013,284
+          - cell "0.50%" [ref=e504]:
+            - generic [ref=e505]: 0.50%
+          - cell "--" [ref=e506]:
+            - generic [ref=e507]: "--"
+          - cell "Fact Sheet PDF" [ref=e508]:
+            - link "Fact Sheet PDF" [ref=e509] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/bug/Fact-Sheet_BUG.pdf
+              - img [ref=e511]
+        - row "SDIV SuperDividend® ETF $24.22 $1,181,762,014 0.58% -- Fact Sheet PDF" [ref=e513]:
+          - cell [ref=e514]
+          - cell "SDIV" [ref=e515]:
+            - link "SDIV" [ref=e516] [cursor=pointer]:
+              - /url: /funds/SDIV
+              - generic [ref=e517]: SDIV
+          - cell "SuperDividend® ETF" [ref=e518]:
+            - link "SuperDividend® ETF" [ref=e519] [cursor=pointer]:
+              - /url: /funds/SDIV
+              - generic [ref=e520]: SuperDividend® ETF
+          - cell "$24.22" [ref=e521]:
+            - generic [ref=e522]: $24.22
+          - cell "$1,181,762,014" [ref=e523]:
+            - generic [ref=e524]: $1,181,762,014
+          - cell "0.58%" [ref=e525]:
+            - generic [ref=e526]: 0.58%
+          - cell "--" [ref=e527]:
+            - generic [ref=e528]: "--"
+          - cell "Fact Sheet PDF" [ref=e529]:
+            - link "Fact Sheet PDF" [ref=e530] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/sdiv/Fact-Sheet_SDIV.pdf
+              - img [ref=e532]
+        - row "AUSF Adaptive U.S. Factor ETF $49.61 $858,716,480 0.27% -- Fact Sheet PDF" [ref=e534]:
+          - cell [ref=e535]
+          - cell "AUSF" [ref=e536]:
+            - link "AUSF" [ref=e537] [cursor=pointer]:
+              - /url: /funds/AUSF
+              - generic [ref=e538]: AUSF
+          - cell "Adaptive U.S. Factor ETF" [ref=e539]:
+            - link "Adaptive U.S. Factor ETF" [ref=e540] [cursor=pointer]:
+              - /url: /funds/AUSF
+              - generic [ref=e541]: Adaptive U.S. Factor ETF
+          - cell "$49.61" [ref=e542]:
+            - generic [ref=e543]: $49.61
+          - cell "$858,716,480" [ref=e544]:
+            - generic [ref=e545]: $858,716,480
+          - cell "0.27%" [ref=e546]:
+            - generic [ref=e547]: 0.27%
+          - cell "--" [ref=e548]:
+            - generic [ref=e549]: "--"
+          - cell "Fact Sheet PDF" [ref=e550]:
+            - link "Fact Sheet PDF" [ref=e551] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/ausf/Fact-Sheet_AUSF.pdf
+              - img [ref=e553]
+        - row "ARGT MSCI Argentina ETF $92.64 $841,666,392 0.59% -- Fact Sheet PDF" [ref=e555]:
+          - cell [ref=e556]
+          - cell "ARGT" [ref=e557]:
+            - link "ARGT" [ref=e558] [cursor=pointer]:
+              - /url: /funds/ARGT
+              - generic [ref=e559]: ARGT
+          - cell "MSCI Argentina ETF" [ref=e560]:
+            - link "MSCI Argentina ETF" [ref=e561] [cursor=pointer]:
+              - /url: /funds/ARGT
+              - generic [ref=e562]: MSCI Argentina ETF
+          - cell "$92.64" [ref=e563]:
+            - generic [ref=e564]: $92.64
+          - cell "$841,666,392" [ref=e565]:
+            - generic [ref=e566]: $841,666,392
+          - cell "0.59%" [ref=e567]:
+            - generic [ref=e568]: 0.59%
+          - cell "--" [ref=e569]:
+            - generic [ref=e570]: "--"
+          - cell "Fact Sheet PDF" [ref=e571]:
+            - link "Fact Sheet PDF" [ref=e572] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/argt/Fact-Sheet_ARGT.pdf
+              - img [ref=e574]
+        - row "DIV SuperDividend® U.S. ETF $19.27 $762,055,670 0.45% -- Fact Sheet PDF" [ref=e576]:
+          - cell [ref=e577]
+          - cell "DIV" [ref=e578]:
+            - link "DIV" [ref=e579] [cursor=pointer]:
+              - /url: /funds/DIV
+              - generic [ref=e580]: DIV
+          - cell "SuperDividend® U.S. ETF" [ref=e581]:
+            - link "SuperDividend® U.S. ETF" [ref=e582] [cursor=pointer]:
+              - /url: /funds/DIV
+              - generic [ref=e583]: SuperDividend® U.S. ETF
+          - cell "$19.27" [ref=e584]:
+            - generic [ref=e585]: $19.27
+          - cell "$762,055,670" [ref=e586]:
+            - generic [ref=e587]: $762,055,670
+          - cell "0.45%" [ref=e588]:
+            - generic [ref=e589]: 0.45%
+          - cell "--" [ref=e590]:
+            - generic [ref=e591]: "--"
+          - cell "Fact Sheet PDF" [ref=e592]:
+            - link "Fact Sheet PDF" [ref=e593] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/div/Fact-Sheet_DIV.pdf
+              - img [ref=e595]
+        - row "ZAP U.S. Electrification ETF $33.66 $472,920,495 0.50% -- Fact Sheet PDF" [ref=e597]:
+          - cell [ref=e598]
+          - cell "ZAP" [ref=e599]:
+            - link "ZAP" [ref=e600] [cursor=pointer]:
+              - /url: /funds/ZAP
+              - generic [ref=e601]: ZAP
+          - cell "U.S. Electrification ETF" [ref=e602]:
+            - link "U.S. Electrification ETF" [ref=e603] [cursor=pointer]:
+              - /url: /funds/ZAP
+              - generic [ref=e604]: U.S. Electrification ETF
+          - cell "$33.66" [ref=e605]:
+            - generic [ref=e606]: $33.66
+          - cell "$472,920,495" [ref=e607]:
+            - generic [ref=e608]: $472,920,495
+          - cell "0.50%" [ref=e609]:
+            - generic [ref=e610]: 0.50%
+          - cell "--" [ref=e611]:
+            - generic [ref=e612]: "--"
+          - cell "Fact Sheet PDF" [ref=e613]:
+            - link "Fact Sheet PDF" [ref=e614] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/zap/Fact-Sheet_ZAP.pdf
+              - img [ref=e616]
+        - row "DRIV Autonomous & Electric Vehicles ETF $36.00 $408,224,653 0.68% -- Fact Sheet PDF" [ref=e618]:
+          - cell [ref=e619]
+          - cell "DRIV" [ref=e620]:
+            - link "DRIV" [ref=e621] [cursor=pointer]:
+              - /url: /funds/DRIV
+              - generic [ref=e622]: DRIV
+          - cell "Autonomous & Electric Vehicles ETF" [ref=e623]:
+            - link "Autonomous & Electric Vehicles ETF" [ref=e624] [cursor=pointer]:
+              - /url: /funds/DRIV
+              - generic [ref=e625]: Autonomous & Electric Vehicles ETF
+          - cell "$36.00" [ref=e626]:
+            - generic [ref=e627]: $36.00
+          - cell "$408,224,653" [ref=e628]:
+            - generic [ref=e629]: $408,224,653
+          - cell "0.68%" [ref=e630]:
+            - generic [ref=e631]: 0.68%
+          - cell "--" [ref=e632]:
+            - generic [ref=e633]: "--"
+          - cell "Fact Sheet PDF" [ref=e634]:
+            - link "Fact Sheet PDF" [ref=e635] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/driv/Fact-Sheet_DRIV.pdf
+              - img [ref=e637]
+        - row "PFFV Variable Rate Preferred ETF $22.01 $304,553,050 0.25% -- Fact Sheet PDF" [ref=e639]:
+          - cell [ref=e640]
+          - cell "PFFV" [ref=e641]:
+            - link "PFFV" [ref=e642] [cursor=pointer]:
+              - /url: /funds/PFFV
+              - generic [ref=e643]: PFFV
+          - cell "Variable Rate Preferred ETF" [ref=e644]:
+            - link "Variable Rate Preferred ETF" [ref=e645] [cursor=pointer]:
+              - /url: /funds/PFFV
+              - generic [ref=e646]: Variable Rate Preferred ETF
+          - cell "$22.01" [ref=e647]:
+            - generic [ref=e648]: $22.01
+          - cell "$304,553,050" [ref=e649]:
+            - generic [ref=e650]: $304,553,050
+          - cell "0.25%" [ref=e651]:
+            - generic [ref=e652]: 0.25%
+          - cell "--" [ref=e653]:
+            - generic [ref=e654]: "--"
+          - cell "Fact Sheet PDF" [ref=e655]:
+            - link "Fact Sheet PDF" [ref=e656] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/pffv/Fact-Sheet_PFFV.pdf
+              - img [ref=e658]
+        - row "GREK MSCI Greece ETF $76.11 $284,310,838 0.56% -- Fact Sheet PDF" [ref=e660]:
+          - cell [ref=e661]
+          - cell "GREK" [ref=e662]:
+            - link "GREK" [ref=e663] [cursor=pointer]:
+              - /url: /funds/GREK
+              - generic [ref=e664]: GREK
+          - cell "MSCI Greece ETF" [ref=e665]:
+            - link "MSCI Greece ETF" [ref=e666] [cursor=pointer]:
+              - /url: /funds/GREK
+              - generic [ref=e667]: MSCI Greece ETF
+          - cell "$76.11" [ref=e668]:
+            - generic [ref=e669]: $76.11
+          - cell "$284,310,838" [ref=e670]:
+            - generic [ref=e671]: $284,310,838
+          - cell "0.56%" [ref=e672]:
+            - generic [ref=e673]: 0.56%
+          - cell "--" [ref=e674]:
+            - generic [ref=e675]: "--"
+          - cell "Fact Sheet PDF" [ref=e676]:
+            - link "Fact Sheet PDF" [ref=e677] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/grek/Fact-Sheet_GREK.pdf
+              - img [ref=e679]
+        - row "EMBD Emerging Markets Bond ETF $23.70 $250,051,705 0.39% -- Fact Sheet PDF" [ref=e681]:
+          - cell [ref=e682]
+          - cell "EMBD" [ref=e683]:
+            - link "EMBD" [ref=e684] [cursor=pointer]:
+              - /url: /funds/EMBD
+              - generic [ref=e685]: EMBD
+          - cell "Emerging Markets Bond ETF" [ref=e686]:
+            - link "Emerging Markets Bond ETF" [ref=e687] [cursor=pointer]:
+              - /url: /funds/EMBD
+              - generic [ref=e688]: Emerging Markets Bond ETF
+          - cell "$23.70" [ref=e689]:
+            - generic [ref=e690]: $23.70
+          - cell "$250,051,705" [ref=e691]:
+            - generic [ref=e692]: $250,051,705
+          - cell "0.39%" [ref=e693]:
+            - generic [ref=e694]: 0.39%
+          - cell "--" [ref=e695]:
+            - generic [ref=e696]: "--"
+          - cell "Fact Sheet PDF" [ref=e697]:
+            - link "Fact Sheet PDF" [ref=e698] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/embd/Fact-Sheet_EMBD.pdf
+              - img [ref=e700]
+        - row "CHPX AI Semiconductor & Quantum ETF $96.68 $237,837,919 0.50% -- Fact Sheet PDF" [ref=e702]:
+          - cell [ref=e703]
+          - cell "CHPX" [ref=e704]:
+            - link "CHPX" [ref=e705] [cursor=pointer]:
+              - /url: /funds/CHPX
+              - generic [ref=e706]: CHPX
+          - cell "AI Semiconductor & Quantum ETF" [ref=e707]:
+            - link "AI Semiconductor & Quantum ETF" [ref=e708] [cursor=pointer]:
+              - /url: /funds/CHPX
+              - generic [ref=e709]: AI Semiconductor & Quantum ETF
+          - cell "$96.68" [ref=e710]:
+            - generic [ref=e711]: $96.68
+          - cell "$237,837,919" [ref=e712]:
+            - generic [ref=e713]: $237,837,919
+          - cell "0.50%" [ref=e714]:
+            - generic [ref=e715]: 0.50%
+          - cell "--" [ref=e716]:
+            - generic [ref=e717]: "--"
+          - cell "Fact Sheet PDF" [ref=e718]:
+            - link "Fact Sheet PDF" [ref=e719] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/chpx/Fact-Sheet_CHPX.pdf
+              - img [ref=e721]
+        - row "DAX DAX Germany ETF $44.03 $237,779,989 0.20% -- Fact Sheet PDF" [ref=e723]:
+          - cell [ref=e724]
+          - cell "DAX" [ref=e725]:
+            - link "DAX" [ref=e726] [cursor=pointer]:
+              - /url: /funds/DAX
+              - generic [ref=e727]: DAX
+          - cell "DAX Germany ETF" [ref=e728]:
+            - link "DAX Germany ETF" [ref=e729] [cursor=pointer]:
+              - /url: /funds/DAX
+              - generic [ref=e730]: DAX Germany ETF
+          - cell "$44.03" [ref=e731]:
+            - generic [ref=e732]: $44.03
+          - cell "$237,779,989" [ref=e733]:
+            - generic [ref=e734]: $237,779,989
+          - cell "0.20%" [ref=e735]:
+            - generic [ref=e736]: 0.20%
+          - cell "--" [ref=e737]:
+            - generic [ref=e738]: "--"
+          - cell "Fact Sheet PDF" [ref=e739]:
+            - link "Fact Sheet PDF" [ref=e740] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/dax/Fact-Sheet_DAX.pdf
+              - img [ref=e742]
+        - row "CLOU Cloud Computing ETF $23.75 $235,132,802 0.68% -- Fact Sheet PDF" [ref=e744]:
+          - cell [ref=e745]
+          - cell "CLOU" [ref=e746]:
+            - link "CLOU" [ref=e747] [cursor=pointer]:
+              - /url: /funds/CLOU
+              - generic [ref=e748]: CLOU
+          - cell "Cloud Computing ETF" [ref=e749]:
+            - link "Cloud Computing ETF" [ref=e750] [cursor=pointer]:
+              - /url: /funds/CLOU
+              - generic [ref=e751]: Cloud Computing ETF
+          - cell "$23.75" [ref=e752]:
+            - generic [ref=e753]: $23.75
+          - cell "$235,132,802" [ref=e754]:
+            - generic [ref=e755]: $235,132,802
+          - cell "0.68%" [ref=e756]:
+            - generic [ref=e757]: 0.68%
+          - cell "--" [ref=e758]:
+            - generic [ref=e759]: "--"
+          - cell "Fact Sheet PDF" [ref=e760]:
+            - link "Fact Sheet PDF" [ref=e761] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/clou/Fact-Sheet_CLOU.pdf
+              - img [ref=e763]
+        - row "BKCH Blockchain ETF $70.03 $234,305,704 0.50% -- Fact Sheet PDF" [ref=e765]:
+          - cell [ref=e766]
+          - cell "BKCH" [ref=e767]:
+            - link "BKCH" [ref=e768] [cursor=pointer]:
+              - /url: /funds/BKCH
+              - generic [ref=e769]: BKCH
+          - cell "Blockchain ETF" [ref=e770]:
+            - link "Blockchain ETF" [ref=e771] [cursor=pointer]:
+              - /url: /funds/BKCH
+              - generic [ref=e772]: Blockchain ETF
+          - cell "$70.03" [ref=e773]:
+            - generic [ref=e774]: $70.03
+          - cell "$234,305,704" [ref=e775]:
+            - generic [ref=e776]: $234,305,704
+          - cell "0.50%" [ref=e777]:
+            - generic [ref=e778]: 0.50%
+          - cell "--" [ref=e779]:
+            - generic [ref=e780]: "--"
+          - cell "Fact Sheet PDF" [ref=e781]:
+            - link "Fact Sheet PDF" [ref=e782] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/bkch/Fact-Sheet_BKCH.pdf
+              - img [ref=e784]
+        - row "SRET SuperDividend® REIT ETF $22.44 $230,877,390 0.58% -- Fact Sheet PDF" [ref=e786]:
+          - cell [ref=e787]
+          - cell "SRET" [ref=e788]:
+            - link "SRET" [ref=e789] [cursor=pointer]:
+              - /url: /funds/SRET
+              - generic [ref=e790]: SRET
+          - cell "SuperDividend® REIT ETF" [ref=e791]:
+            - link "SuperDividend® REIT ETF" [ref=e792] [cursor=pointer]:
+              - /url: /funds/SRET
+              - generic [ref=e793]: SuperDividend® REIT ETF
+          - cell "$22.44" [ref=e794]:
+            - generic [ref=e795]: $22.44
+          - cell "$230,877,390" [ref=e796]:
+            - generic [ref=e797]: $230,877,390
+          - cell "0.58%" [ref=e798]:
+            - generic [ref=e799]: 0.58%
+          - cell "--" [ref=e800]:
+            - generic [ref=e801]: "--"
+          - cell "Fact Sheet PDF" [ref=e802]:
+            - link "Fact Sheet PDF" [ref=e803] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/sret/Fact-Sheet_SRET.pdf
+              - img [ref=e805]
+        - row "SNSR Internet of Things ETF $47.88 $229,837,675 0.68% -- Fact Sheet PDF" [ref=e807]:
+          - cell [ref=e808]
+          - cell "SNSR" [ref=e809]:
+            - link "SNSR" [ref=e810] [cursor=pointer]:
+              - /url: /funds/SNSR
+              - generic [ref=e811]: SNSR
+          - cell "Internet of Things ETF" [ref=e812]:
+            - link "Internet of Things ETF" [ref=e813] [cursor=pointer]:
+              - /url: /funds/SNSR
+              - generic [ref=e814]: Internet of Things ETF
+          - cell "$47.88" [ref=e815]:
+            - generic [ref=e816]: $47.88
+          - cell "$229,837,675" [ref=e817]:
+            - generic [ref=e818]: $229,837,675
+          - cell "0.68%" [ref=e819]:
+            - generic [ref=e820]: 0.68%
+          - cell "--" [ref=e821]:
+            - generic [ref=e822]: "--"
+          - cell "Fact Sheet PDF" [ref=e823]:
+            - link "Fact Sheet PDF" [ref=e824] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/snsr/Fact-Sheet_SNSR.pdf
+              - img [ref=e826]
+        - row "COLO MSCI Colombia ETF $43.46 $192,507,985 0.62% -- Fact Sheet PDF" [ref=e828]:
+          - cell [ref=e829]
+          - cell "COLO" [ref=e830]:
+            - link "COLO" [ref=e831] [cursor=pointer]:
+              - /url: /funds/COLO
+              - generic [ref=e832]: COLO
+          - cell "MSCI Colombia ETF" [ref=e833]:
+            - link "MSCI Colombia ETF" [ref=e834] [cursor=pointer]:
+              - /url: /funds/COLO
+              - generic [ref=e835]: MSCI Colombia ETF
+          - cell "$43.46" [ref=e836]:
+            - generic [ref=e837]: $43.46
+          - cell "$192,507,985" [ref=e838]:
+            - generic [ref=e839]: $192,507,985
+          - cell "0.62%" [ref=e840]:
+            - generic [ref=e841]: 0.62%
+          - cell "--" [ref=e842]:
+            - generic [ref=e843]: "--"
+          - cell "Fact Sheet PDF" [ref=e844]:
+            - link "Fact Sheet PDF" [ref=e845] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/colo/Fact-Sheet_COLO.pdf
+              - img [ref=e847]
+        - row "DJIA Dow 30® Covered Call ETF $22.19 $181,278,373 0.60% -- Fact Sheet PDF" [ref=e849]:
+          - cell [ref=e850]
+          - cell "DJIA" [ref=e851]:
+            - link "DJIA" [ref=e852] [cursor=pointer]:
+              - /url: /funds/DJIA
+              - generic [ref=e853]: DJIA
+          - cell "Dow 30® Covered Call ETF" [ref=e854]:
+            - link "Dow 30® Covered Call ETF" [ref=e855] [cursor=pointer]:
+              - /url: /funds/DJIA
+              - generic [ref=e856]: Dow 30® Covered Call ETF
+          - cell "$22.19" [ref=e857]:
+            - generic [ref=e858]: $22.19
+          - cell "$181,278,373" [ref=e859]:
+            - generic [ref=e860]: $181,278,373
+          - cell "0.60%" [ref=e861]:
+            - generic [ref=e862]: 0.60%
+          - cell "--" [ref=e863]:
+            - generic [ref=e864]: "--"
+          - cell "Fact Sheet PDF" [ref=e865]:
+            - link "Fact Sheet PDF" [ref=e866] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/djia/Fact-Sheet_DJIA.pdf
+              - img [ref=e868]
+        - row "FINX FinTech ETF $25.24 $173,931,922 0.68% -- Fact Sheet PDF" [ref=e870]:
+          - cell [ref=e871]
+          - cell "FINX" [ref=e872]:
+            - link "FINX" [ref=e873] [cursor=pointer]:
+              - /url: /funds/FINX
+              - generic [ref=e874]: FINX
+          - cell "FinTech ETF" [ref=e875]:
+            - link "FinTech ETF" [ref=e876] [cursor=pointer]:
+              - /url: /funds/FINX
+              - generic [ref=e877]: FinTech ETF
+          - cell "$25.24" [ref=e878]:
+            - generic [ref=e879]: $25.24
+          - cell "$173,931,922" [ref=e880]:
+            - generic [ref=e881]: $173,931,922
+          - cell "0.68%" [ref=e882]:
+            - generic [ref=e883]: 0.68%
+          - cell "--" [ref=e884]:
+            - generic [ref=e885]: "--"
+          - cell "Fact Sheet PDF" [ref=e886]:
+            - link "Fact Sheet PDF" [ref=e887] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/finx/Fact-Sheet_FINX.pdf
+              - img [ref=e889]
+        - row "GXIG Investment Grade Corporate Bond ETF $24.67 $171,437,077 0.15% -- Fact Sheet PDF" [ref=e891]:
+          - cell [ref=e892]
+          - cell "GXIG" [ref=e893]:
+            - link "GXIG" [ref=e894] [cursor=pointer]:
+              - /url: /funds/GXIG
+              - generic [ref=e895]: GXIG
+          - cell "Investment Grade Corporate Bond ETF" [ref=e896]:
+            - link "Investment Grade Corporate Bond ETF" [ref=e897] [cursor=pointer]:
+              - /url: /funds/GXIG
+              - generic [ref=e898]: Investment Grade Corporate Bond ETF
+          - cell "$24.67" [ref=e899]:
+            - generic [ref=e900]: $24.67
+          - cell "$171,437,077" [ref=e901]:
+            - generic [ref=e902]: $171,437,077
+          - cell "0.15%" [ref=e903]:
+            - generic [ref=e904]: 0.15%
+          - cell "--" [ref=e905]:
+            - generic [ref=e906]: "--"
+          - cell "Fact Sheet PDF" [ref=e907]:
+            - link "Fact Sheet PDF" [ref=e908] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/gxig/Fact-Sheet_GXIG.pdf
+              - img [ref=e910]
+        - row "GXPC PureCap℠ MSCI Communication Services ETF $30.46 $158,696,429 0.25% 0.15% Fact Sheet PDF" [ref=e912]:
+          - cell [ref=e913]
+          - cell "GXPC" [ref=e914]:
+            - link "GXPC" [ref=e915] [cursor=pointer]:
+              - /url: /funds/GXPC
+              - generic [ref=e916]: GXPC
+          - cell "PureCap℠ MSCI Communication Services ETF" [ref=e917]:
+            - link "PureCap℠ MSCI Communication Services ETF" [ref=e918] [cursor=pointer]:
+              - /url: /funds/GXPC
+              - generic [ref=e919]: PureCap℠ MSCI Communication Services ETF
+          - cell "$30.46" [ref=e920]:
+            - generic [ref=e921]: $30.46
+          - cell "$158,696,429" [ref=e922]:
+            - generic [ref=e923]: $158,696,429
+          - cell "0.25%" [ref=e924]:
+            - generic [ref=e925]: 0.25%
+          - cell "0.15%" [ref=e926]:
+            - generic [ref=e927]: 0.15%
+          - cell "Fact Sheet PDF" [ref=e928]:
+            - link "Fact Sheet PDF" [ref=e929] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/gxpc/Fact-Sheet_GXPC.pdf
+              - img [ref=e931]
+        - row "QYLG Nasdaq 100® Covered Call & Growth ETF $29.57 $156,740,972 0.35% -- Fact Sheet PDF" [ref=e933]:
+          - cell [ref=e934]
+          - cell "QYLG" [ref=e935]:
+            - link "QYLG" [ref=e936] [cursor=pointer]:
+              - /url: /funds/QYLG
+              - generic [ref=e937]: QYLG
+          - cell "Nasdaq 100® Covered Call & Growth ETF" [ref=e938]:
+            - link "Nasdaq 100® Covered Call & Growth ETF" [ref=e939] [cursor=pointer]:
+              - /url: /funds/QYLG
+              - generic [ref=e940]: Nasdaq 100® Covered Call & Growth ETF
+          - cell "$29.57" [ref=e941]:
+            - generic [ref=e942]: $29.57
+          - cell "$156,740,972" [ref=e943]:
+            - generic [ref=e944]: $156,740,972
+          - cell "0.35%" [ref=e945]:
+            - generic [ref=e946]: 0.35%
+          - cell "--" [ref=e947]:
+            - generic [ref=e948]: "--"
+          - cell "Fact Sheet PDF" [ref=e949]:
+            - link "Fact Sheet PDF" [ref=e950] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/qylg/Fact-Sheet_QYLG.pdf
+              - img [ref=e952]
+        - row "ONOF Adaptive U.S. Risk Management ETF $39.83 $138,623,853 0.39% -- Fact Sheet PDF" [ref=e954]:
+          - cell [ref=e955]
+          - cell "ONOF" [ref=e956]:
+            - link "ONOF" [ref=e957] [cursor=pointer]:
+              - /url: /funds/ONOF
+              - generic [ref=e958]: ONOF
+          - cell "Adaptive U.S. Risk Management ETF" [ref=e959]:
+            - link "Adaptive U.S. Risk Management ETF" [ref=e960] [cursor=pointer]:
+              - /url: /funds/ONOF
+              - generic [ref=e961]: Adaptive U.S. Risk Management ETF
+          - cell "$39.83" [ref=e962]:
+            - generic [ref=e963]: $39.83
+          - cell "$138,623,853" [ref=e964]:
+            - generic [ref=e965]: $138,623,853
+          - cell "0.39%" [ref=e966]:
+            - generic [ref=e967]: 0.39%
+          - cell "--" [ref=e968]:
+            - generic [ref=e969]: "--"
+          - cell "Fact Sheet PDF" [ref=e970]:
+            - link "Fact Sheet PDF" [ref=e971] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/onof/Fact-Sheet_ONOF.pdf
+              - img [ref=e973]
+        - row "SPFF SuperIncome® Preferred ETF $9.28 $138,617,176 0.48% -- Fact Sheet PDF" [ref=e975]:
+          - cell [ref=e976]
+          - cell "SPFF" [ref=e977]:
+            - link "SPFF" [ref=e978] [cursor=pointer]:
+              - /url: /funds/SPFF
+              - generic [ref=e979]: SPFF
+          - cell "SuperIncome® Preferred ETF" [ref=e980]:
+            - link "SuperIncome® Preferred ETF" [ref=e981] [cursor=pointer]:
+              - /url: /funds/SPFF
+              - generic [ref=e982]: SuperIncome® Preferred ETF
+          - cell "$9.28" [ref=e983]:
+            - generic [ref=e984]: $9.28
+          - cell "$138,617,176" [ref=e985]:
+            - generic [ref=e986]: $138,617,176
+          - cell "0.48%" [ref=e987]:
+            - generic [ref=e988]: 0.48%
+          - cell "--" [ref=e989]:
+            - generic [ref=e990]: "--"
+          - cell "Fact Sheet PDF" [ref=e991]:
+            - link "Fact Sheet PDF" [ref=e992] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/spff/Fact-Sheet_SPFF.pdf
+              - img [ref=e994]
+        - row "GXPT PureCap℠ MSCI Information Technology ETF $32.10 $123,282,217 0.25% 0.15% Fact Sheet PDF" [ref=e996]:
+          - cell [ref=e997]
+          - cell "GXPT" [ref=e998]:
+            - link "GXPT" [ref=e999] [cursor=pointer]:
+              - /url: /funds/GXPT
+              - generic [ref=e1000]: GXPT
+          - cell "PureCap℠ MSCI Information Technology ETF" [ref=e1001]:
+            - link "PureCap℠ MSCI Information Technology ETF" [ref=e1002] [cursor=pointer]:
+              - /url: /funds/GXPT
+              - generic [ref=e1003]: PureCap℠ MSCI Information Technology ETF
+          - cell "$32.10" [ref=e1004]:
+            - generic [ref=e1005]: $32.10
+          - cell "$123,282,217" [ref=e1006]:
+            - generic [ref=e1007]: $123,282,217
+          - cell "0.25%" [ref=e1008]:
+            - generic [ref=e1009]: 0.25%
+          - cell "0.15%" [ref=e1010]:
+            - generic [ref=e1011]: 0.15%
+          - cell "Fact Sheet PDF" [ref=e1012]:
+            - link "Fact Sheet PDF" [ref=e1013] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/gxpt/Fact-Sheet_GXPT.pdf
+              - img [ref=e1015]
+        - row "CHIQ MSCI China Consumer Discretionary ETF $17.13 $122,156,828 0.65% -- Fact Sheet PDF" [ref=e1017]:
+          - cell [ref=e1018]
+          - cell "CHIQ" [ref=e1019]:
+            - link "CHIQ" [ref=e1020] [cursor=pointer]:
+              - /url: /funds/CHIQ
+              - generic [ref=e1021]: CHIQ
+          - cell "MSCI China Consumer Discretionary ETF" [ref=e1022]:
+            - link "MSCI China Consumer Discretionary ETF" [ref=e1023] [cursor=pointer]:
+              - /url: /funds/CHIQ
+              - generic [ref=e1024]: MSCI China Consumer Discretionary ETF
+          - cell "$17.13" [ref=e1025]:
+            - generic [ref=e1026]: $17.13
+          - cell "$122,156,828" [ref=e1027]:
+            - generic [ref=e1028]: $122,156,828
+          - cell "0.65%" [ref=e1029]:
+            - generic [ref=e1030]: 0.65%
+          - cell "--" [ref=e1031]:
+            - generic [ref=e1032]: "--"
+          - cell "Fact Sheet PDF" [ref=e1033]:
+            - link "Fact Sheet PDF" [ref=e1034] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/chiq/Fact-Sheet_CHIQ.pdf
+              - img [ref=e1036]
+        - row "KRMA Conscious Companies ETF $47.41 $116,631,180 0.43% -- Fact Sheet PDF" [ref=e1038]:
+          - cell [ref=e1039]
+          - cell "KRMA" [ref=e1040]:
+            - link "KRMA" [ref=e1041] [cursor=pointer]:
+              - /url: /funds/KRMA
+              - generic [ref=e1042]: KRMA
+          - cell "Conscious Companies ETF" [ref=e1043]:
+            - link "Conscious Companies ETF" [ref=e1044] [cursor=pointer]:
+              - /url: /funds/KRMA
+              - generic [ref=e1045]: Conscious Companies ETF
+          - cell "$47.41" [ref=e1046]:
+            - generic [ref=e1047]: $47.41
+          - cell "$116,631,180" [ref=e1048]:
+            - generic [ref=e1049]: $116,631,180
+          - cell "0.43%" [ref=e1050]:
+            - generic [ref=e1051]: 0.43%
+          - cell "--" [ref=e1052]:
+            - generic [ref=e1053]: "--"
+          - cell "Fact Sheet PDF" [ref=e1054]:
+            - link "Fact Sheet PDF" [ref=e1055] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/krma/Fact-Sheet_KRMA.pdf
+              - img [ref=e1057]
+        - row "GOEX Gold Explorers ETF $68.44 $104,166,828 0.65% -- Fact Sheet PDF" [ref=e1059]:
+          - cell [ref=e1060]
+          - cell "GOEX" [ref=e1061]:
+            - link "GOEX" [ref=e1062] [cursor=pointer]:
+              - /url: /funds/GOEX
+              - generic [ref=e1063]: GOEX
+          - cell "Gold Explorers ETF" [ref=e1064]:
+            - link "Gold Explorers ETF" [ref=e1065] [cursor=pointer]:
+              - /url: /funds/GOEX
+              - generic [ref=e1066]: Gold Explorers ETF
+          - cell "$68.44" [ref=e1067]:
+            - generic [ref=e1068]: $68.44
+          - cell "$104,166,828" [ref=e1069]:
+            - generic [ref=e1070]: $104,166,828
+          - cell "0.65%" [ref=e1071]:
+            - generic [ref=e1072]: 0.65%
+          - cell "--" [ref=e1073]:
+            - generic [ref=e1074]: "--"
+          - cell "Fact Sheet PDF" [ref=e1075]:
+            - link "Fact Sheet PDF" [ref=e1076] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/goex/Fact-Sheet_GOEX.pdf
+              - img [ref=e1078]
+        - row "MILN Millennial Consumer ETF $44.03 $97,742,120 0.50% -- Fact Sheet PDF" [ref=e1080]:
+          - cell [ref=e1081]
+          - cell "MILN" [ref=e1082]:
+            - link "MILN" [ref=e1083] [cursor=pointer]:
+              - /url: /funds/MILN
+              - generic [ref=e1084]: MILN
+          - cell "Millennial Consumer ETF" [ref=e1085]:
+            - link "Millennial Consumer ETF" [ref=e1086] [cursor=pointer]:
+              - /url: /funds/MILN
+              - generic [ref=e1087]: Millennial Consumer ETF
+          - cell "$44.03" [ref=e1088]:
+            - generic [ref=e1089]: $44.03
+          - cell "$97,742,120" [ref=e1090]:
+            - generic [ref=e1091]: $97,742,120
+          - cell "0.50%" [ref=e1092]:
+            - generic [ref=e1093]: 0.50%
+          - cell "--" [ref=e1094]:
+            - generic [ref=e1095]: "--"
+          - cell "Fact Sheet PDF" [ref=e1096]:
+            - link "Fact Sheet PDF" [ref=e1097] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/miln/Fact-Sheet_MILN.pdf
+              - img [ref=e1099]
+        - row "ASEA FTSE Southeast Asia ETF $20.20 $94,513,532 0.65% -- Fact Sheet PDF" [ref=e1101]:
+          - cell [ref=e1102]
+          - cell "ASEA" [ref=e1103]:
+            - link "ASEA" [ref=e1104] [cursor=pointer]:
+              - /url: /funds/ASEA
+              - generic [ref=e1105]: ASEA
+          - cell "FTSE Southeast Asia ETF" [ref=e1106]:
+            - link "FTSE Southeast Asia ETF" [ref=e1107] [cursor=pointer]:
+              - /url: /funds/ASEA
+              - generic [ref=e1108]: FTSE Southeast Asia ETF
+          - cell "$20.20" [ref=e1109]:
+            - generic [ref=e1110]: $20.20
+          - cell "$94,513,532" [ref=e1111]:
+            - generic [ref=e1112]: $94,513,532
+          - cell "0.65%" [ref=e1113]:
+            - generic [ref=e1114]: 0.65%
+          - cell "--" [ref=e1115]:
+            - generic [ref=e1116]: "--"
+          - cell "Fact Sheet PDF" [ref=e1117]:
+            - link "Fact Sheet PDF" [ref=e1118] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/asea/Fact-Sheet_ASEA.pdf
+              - img [ref=e1120]
+        - row "SOCL Social Media ETF $46.41 $92,364,863 0.65% -- Fact Sheet PDF" [ref=e1122]:
+          - cell [ref=e1123]
+          - cell "SOCL" [ref=e1124]:
+            - link "SOCL" [ref=e1125] [cursor=pointer]:
+              - /url: /funds/SOCL
+              - generic [ref=e1126]: SOCL
+          - cell "Social Media ETF" [ref=e1127]:
+            - link "Social Media ETF" [ref=e1128] [cursor=pointer]:
+              - /url: /funds/SOCL
+              - generic [ref=e1129]: Social Media ETF
+          - cell "$46.41" [ref=e1130]:
+            - generic [ref=e1131]: $46.41
+          - cell "$92,364,863" [ref=e1132]:
+            - generic [ref=e1133]: $92,364,863
+          - cell "0.65%" [ref=e1134]:
+            - generic [ref=e1135]: 0.65%
+          - cell "--" [ref=e1136]:
+            - generic [ref=e1137]: "--"
+          - cell "Fact Sheet PDF" [ref=e1138]:
+            - link "Fact Sheet PDF" [ref=e1139] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/socl/Fact-Sheet_SOCL.pdf
+              - img [ref=e1141]
+        - row "HYDR Hydrogen ETF $46.38 $92,296,881 0.50% -- Fact Sheet PDF" [ref=e1143]:
+          - cell [ref=e1144]
+          - cell "HYDR" [ref=e1145]:
+            - link "HYDR" [ref=e1146] [cursor=pointer]:
+              - /url: /funds/HYDR
+              - generic [ref=e1147]: HYDR
+          - cell "Hydrogen ETF" [ref=e1148]:
+            - link "Hydrogen ETF" [ref=e1149] [cursor=pointer]:
+              - /url: /funds/HYDR
+              - generic [ref=e1150]: Hydrogen ETF
+          - cell "$46.38" [ref=e1151]:
+            - generic [ref=e1152]: $46.38
+          - cell "$92,296,881" [ref=e1153]:
+            - generic [ref=e1154]: $92,296,881
+          - cell "0.50%" [ref=e1155]:
+            - generic [ref=e1156]: 0.50%
+          - cell "--" [ref=e1157]:
+            - generic [ref=e1158]: "--"
+          - cell "Fact Sheet PDF" [ref=e1159]:
+            - link "Fact Sheet PDF" [ref=e1160] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/hydr/Fact-Sheet_HYDR.pdf
+              - img [ref=e1162]
+        - row "GNOM Genomics & Biotechnology ETF $57.35 $88,016,841 0.50% -- Fact Sheet PDF" [ref=e1164]:
+          - cell [ref=e1165]
+          - cell "GNOM" [ref=e1166]:
+            - link "GNOM" [ref=e1167] [cursor=pointer]:
+              - /url: /funds/GNOM
+              - generic [ref=e1168]: GNOM
+          - cell "Genomics & Biotechnology ETF" [ref=e1169]:
+            - link "Genomics & Biotechnology ETF" [ref=e1170] [cursor=pointer]:
+              - /url: /funds/GNOM
+              - generic [ref=e1171]: Genomics & Biotechnology ETF
+          - cell "$57.35" [ref=e1172]:
+            - generic [ref=e1173]: $57.35
+          - cell "$88,016,841" [ref=e1174]:
+            - generic [ref=e1175]: $88,016,841
+          - cell "0.50%" [ref=e1176]:
+            - generic [ref=e1177]: 0.50%
+          - cell "--" [ref=e1178]:
+            - generic [ref=e1179]: "--"
+          - cell "Fact Sheet PDF" [ref=e1180]:
+            - link "Fact Sheet PDF" [ref=e1181] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/gnom/Fact-Sheet_GNOM.pdf
+              - img [ref=e1183]
+        - row "NORW MSCI Norway ETF $33.10 $86,937,241 0.50% -- Fact Sheet PDF" [ref=e1185]:
+          - cell [ref=e1186]
+          - cell "NORW" [ref=e1187]:
+            - link "NORW" [ref=e1188] [cursor=pointer]:
+              - /url: /funds/NORW
+              - generic [ref=e1189]: NORW
+          - cell "MSCI Norway ETF" [ref=e1190]:
+            - link "MSCI Norway ETF" [ref=e1191] [cursor=pointer]:
+              - /url: /funds/NORW
+              - generic [ref=e1192]: MSCI Norway ETF
+          - cell "$33.10" [ref=e1193]:
+            - generic [ref=e1194]: $33.10
+          - cell "$86,937,241" [ref=e1195]:
+            - generic [ref=e1196]: $86,937,241
+          - cell "0.50%" [ref=e1197]:
+            - generic [ref=e1198]: 0.50%
+          - cell "--" [ref=e1199]:
+            - generic [ref=e1200]: "--"
+          - cell "Fact Sheet PDF" [ref=e1201]:
+            - link "Fact Sheet PDF" [ref=e1202] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/norw/Fact-Sheet_NORW.pdf
+              - img [ref=e1204]
+        - row "AGNG Aging Population ETF $36.73 $86,320,368 0.50% -- Fact Sheet PDF" [ref=e1206]:
+          - cell [ref=e1207]
+          - cell "AGNG" [ref=e1208]:
+            - link "AGNG" [ref=e1209] [cursor=pointer]:
+              - /url: /funds/AGNG
+              - generic [ref=e1210]: AGNG
+          - cell "Aging Population ETF" [ref=e1211]:
+            - link "Aging Population ETF" [ref=e1212] [cursor=pointer]:
+              - /url: /funds/AGNG
+              - generic [ref=e1213]: Aging Population ETF
+          - cell "$36.73" [ref=e1214]:
+            - generic [ref=e1215]: $36.73
+          - cell "$86,320,368" [ref=e1216]:
+            - generic [ref=e1217]: $86,320,368
+          - cell "0.50%" [ref=e1218]:
+            - generic [ref=e1219]: 0.50%
+          - cell "--" [ref=e1220]:
+            - generic [ref=e1221]: "--"
+          - cell "Fact Sheet PDF" [ref=e1222]:
+            - link "Fact Sheet PDF" [ref=e1223] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/agng/Fact-Sheet_AGNG.pdf
+              - img [ref=e1225]
+        - row "XYLG S&P 500® Covered Call & Growth ETF $28.90 $65,898,911 0.35% -- Fact Sheet PDF" [ref=e1227]:
+          - cell [ref=e1228]
+          - cell "XYLG" [ref=e1229]:
+            - link "XYLG" [ref=e1230] [cursor=pointer]:
+              - /url: /funds/XYLG
+              - generic [ref=e1231]: XYLG
+          - cell "S&P 500® Covered Call & Growth ETF" [ref=e1232]:
+            - link "S&P 500® Covered Call & Growth ETF" [ref=e1233] [cursor=pointer]:
+              - /url: /funds/XYLG
+              - generic [ref=e1234]: S&P 500® Covered Call & Growth ETF
+          - cell "$28.90" [ref=e1235]:
+            - generic [ref=e1236]: $28.90
+          - cell "$65,898,911" [ref=e1237]:
+            - generic [ref=e1238]: $65,898,911
+          - cell "0.35%" [ref=e1239]:
+            - generic [ref=e1240]: 0.35%
+          - cell "--" [ref=e1241]:
+            - generic [ref=e1242]: "--"
+          - cell "Fact Sheet PDF" [ref=e1243]:
+            - link "Fact Sheet PDF" [ref=e1244] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/xylg/Fact-Sheet_XYLG.pdf
+              - img [ref=e1246]
+        - row "HERO Video Games & Esports ETF $25.63 $64,585,820 0.50% -- Fact Sheet PDF" [ref=e1248]:
+          - cell [ref=e1249]
+          - cell "HERO" [ref=e1250]:
+            - link "HERO" [ref=e1251] [cursor=pointer]:
+              - /url: /funds/HERO
+              - generic [ref=e1252]: HERO
+          - cell "Video Games & Esports ETF" [ref=e1253]:
+            - link "Video Games & Esports ETF" [ref=e1254] [cursor=pointer]:
+              - /url: /funds/HERO
+              - generic [ref=e1255]: Video Games & Esports ETF
+          - cell "$25.63" [ref=e1256]:
+            - generic [ref=e1257]: $25.63
+          - cell "$64,585,820" [ref=e1258]:
+            - generic [ref=e1259]: $64,585,820
+          - cell "0.50%" [ref=e1260]:
+            - generic [ref=e1261]: 0.50%
+          - cell "--" [ref=e1262]:
+            - generic [ref=e1263]: "--"
+          - cell "Fact Sheet PDF" [ref=e1264]:
+            - link "Fact Sheet PDF" [ref=e1265] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/hero/Fact-Sheet_HERO.pdf
+              - img [ref=e1267]
+        - row "EMC Emerging Markets Great Consumer ETF $36.47 $64,513,521 0.65% -- Fact Sheet PDF" [ref=e1269]:
+          - cell [ref=e1270]
+          - cell "EMC" [ref=e1271]:
+            - link "EMC" [ref=e1272] [cursor=pointer]:
+              - /url: /funds/EMC
+              - generic [ref=e1273]: EMC
+          - cell "Emerging Markets Great Consumer ETF" [ref=e1274]:
+            - link "Emerging Markets Great Consumer ETF" [ref=e1275] [cursor=pointer]:
+              - /url: /funds/EMC
+              - generic [ref=e1276]: Emerging Markets Great Consumer ETF
+          - cell "$36.47" [ref=e1277]:
+            - generic [ref=e1278]: $36.47
+          - cell "$64,513,521" [ref=e1279]:
+            - generic [ref=e1280]: $64,513,521
+          - cell "0.65%" [ref=e1281]:
+            - generic [ref=e1282]: 0.65%
+          - cell "--" [ref=e1283]:
+            - generic [ref=e1284]: "--"
+          - cell "Fact Sheet PDF" [ref=e1285]:
+            - link "Fact Sheet PDF" [ref=e1286] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/emc/Fact-Sheet_EMC.pdf
+              - img [ref=e1288]
+        - row "GURU Guru® Index ETF $69.02 $62,811,645 0.75% -- Fact Sheet PDF" [ref=e1290]:
+          - cell [ref=e1291]
+          - cell "GURU" [ref=e1292]:
+            - link "GURU" [ref=e1293] [cursor=pointer]:
+              - /url: /funds/GURU
+              - generic [ref=e1294]: GURU
+          - cell "Guru® Index ETF" [ref=e1295]:
+            - link "Guru® Index ETF" [ref=e1296] [cursor=pointer]:
+              - /url: /funds/GURU
+              - generic [ref=e1297]: Guru® Index ETF
+          - cell "$69.02" [ref=e1298]:
+            - generic [ref=e1299]: $69.02
+          - cell "$62,811,645" [ref=e1300]:
+            - generic [ref=e1301]: $62,811,645
+          - cell "0.75%" [ref=e1302]:
+            - generic [ref=e1303]: 0.75%
+          - cell "--" [ref=e1304]:
+            - generic [ref=e1305]: "--"
+          - cell "Fact Sheet PDF" [ref=e1306]:
+            - link "Fact Sheet PDF" [ref=e1307] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/guru/Fact-Sheet_GURU.pdf
+              - img [ref=e1309]
+        - row "GXPS PureCap℠ MSCI Consumer Staples ETF $26.64 $61,007,272 0.25% 0.15% Fact Sheet PDF" [ref=e1311]:
+          - cell [ref=e1312]
+          - cell "GXPS" [ref=e1313]:
+            - link "GXPS" [ref=e1314] [cursor=pointer]:
+              - /url: /funds/GXPS
+              - generic [ref=e1315]: GXPS
+          - cell "PureCap℠ MSCI Consumer Staples ETF" [ref=e1316]:
+            - link "PureCap℠ MSCI Consumer Staples ETF" [ref=e1317] [cursor=pointer]:
+              - /url: /funds/GXPS
+              - generic [ref=e1318]: PureCap℠ MSCI Consumer Staples ETF
+          - cell "$26.64" [ref=e1319]:
+            - generic [ref=e1320]: $26.64
+          - cell "$61,007,272" [ref=e1321]:
+            - generic [ref=e1322]: $61,007,272
+          - cell "0.25%" [ref=e1323]:
+            - generic [ref=e1324]: 0.25%
+          - cell "0.15%" [ref=e1325]:
+            - generic [ref=e1326]: 0.15%
+          - cell "Fact Sheet PDF" [ref=e1327]:
+            - link "Fact Sheet PDF" [ref=e1328] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/gxps/Fact-Sheet_GXPS.pdf
+              - img [ref=e1330]
+        - row "EMM Emerging Markets ex-China ETF $43.00 $58,502,282 0.66% -- Fact Sheet PDF" [ref=e1332]:
+          - cell [ref=e1333]
+          - cell "EMM" [ref=e1334]:
+            - link "EMM" [ref=e1335] [cursor=pointer]:
+              - /url: /funds/EMM
+              - generic [ref=e1336]: EMM
+          - cell "Emerging Markets ex-China ETF" [ref=e1337]:
+            - link "Emerging Markets ex-China ETF" [ref=e1338] [cursor=pointer]:
+              - /url: /funds/EMM
+              - generic [ref=e1339]: Emerging Markets ex-China ETF
+          - cell "$43.00" [ref=e1340]:
+            - generic [ref=e1341]: $43.00
+          - cell "$58,502,282" [ref=e1342]:
+            - generic [ref=e1343]: $58,502,282
+          - cell "0.66%" [ref=e1344]:
+            - generic [ref=e1345]: 0.66%
+          - cell "--" [ref=e1346]:
+            - generic [ref=e1347]: "--"
+          - cell "Fact Sheet PDF" [ref=e1348]:
+            - link "Fact Sheet PDF" [ref=e1349] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/emm/Fact-Sheet_EMM.pdf
+              - img [ref=e1351]
+        - row "NDIA India Active ETF $27.01 $58,067,644 0.75% -- Fact Sheet PDF" [ref=e1353]:
+          - cell [ref=e1354]
+          - cell "NDIA" [ref=e1355]:
+            - link "NDIA" [ref=e1356] [cursor=pointer]:
+              - /url: /funds/NDIA
+              - generic [ref=e1357]: NDIA
+          - cell "India Active ETF" [ref=e1358]:
+            - link "India Active ETF" [ref=e1359] [cursor=pointer]:
+              - /url: /funds/NDIA
+              - generic [ref=e1360]: India Active ETF
+          - cell "$27.01" [ref=e1361]:
+            - generic [ref=e1362]: $27.01
+          - cell "$58,067,644" [ref=e1363]:
+            - generic [ref=e1364]: $58,067,644
+          - cell "0.75%" [ref=e1365]:
+            - generic [ref=e1366]: 0.75%
+          - cell "--" [ref=e1367]:
+            - generic [ref=e1368]: "--"
+          - cell "Fact Sheet PDF" [ref=e1369]:
+            - link "Fact Sheet PDF" [ref=e1370] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/ndia/Fact-Sheet_NDIA.pdf
+              - img [ref=e1372]
+        - row "CEFA S&P Catholic Values Developed ex-U.S. ETF $39.24 $52,185,500 0.35% -- Fact Sheet PDF" [ref=e1374]:
+          - cell [ref=e1375]
+          - cell "CEFA" [ref=e1376]:
+            - link "CEFA" [ref=e1377] [cursor=pointer]:
+              - /url: /funds/CEFA
+              - generic [ref=e1378]: CEFA
+          - cell "S&P Catholic Values Developed ex-U.S. ETF" [ref=e1379]:
+            - link "S&P Catholic Values Developed ex-U.S. ETF" [ref=e1380] [cursor=pointer]:
+              - /url: /funds/CEFA
+              - generic [ref=e1381]: S&P Catholic Values Developed ex-U.S. ETF
+          - cell "$39.24" [ref=e1382]:
+            - generic [ref=e1383]: $39.24
+          - cell "$52,185,500" [ref=e1384]:
+            - generic [ref=e1385]: $52,185,500
+          - cell "0.35%" [ref=e1386]:
+            - generic [ref=e1387]: 0.35%
+          - cell "--" [ref=e1388]:
+            - generic [ref=e1389]: "--"
+          - cell "Fact Sheet PDF" [ref=e1390]:
+            - link "Fact Sheet PDF" [ref=e1391] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/cefa/Fact-Sheet_CEFA.pdf
+              - img [ref=e1393]
+        - row "RMHY Adaptive Risk Managed Yield ETF $25.03 $50,562,825 0.35% 0.30% Fact Sheet PDF" [ref=e1395]:
+          - cell [ref=e1396]
+          - cell "RMHY" [ref=e1397]:
+            - link "RMHY" [ref=e1398] [cursor=pointer]:
+              - /url: /funds/RMHY
+              - generic [ref=e1399]: RMHY
+          - cell "Adaptive Risk Managed Yield ETF" [ref=e1400]:
+            - link "Adaptive Risk Managed Yield ETF" [ref=e1401] [cursor=pointer]:
+              - /url: /funds/RMHY
+              - generic [ref=e1402]: Adaptive Risk Managed Yield ETF
+          - cell "$25.03" [ref=e1403]:
+            - generic [ref=e1404]: $25.03
+          - cell "$50,562,825" [ref=e1405]:
+            - generic [ref=e1406]: $50,562,825
+          - cell "0.35%" [ref=e1407]:
+            - generic [ref=e1408]: 0.35%
+          - cell "0.30%" [ref=e1409]:
+            - generic [ref=e1410]: 0.30%
+          - cell "Fact Sheet PDF" [ref=e1411]:
+            - link "Fact Sheet PDF" [ref=e1412] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/rmhy/Fact-Sheet_RMHY.pdf
+              - img [ref=e1414]
+        - row "XRMI S&P 500® Risk Managed Income ETF $17.27 $49,921,244 0.60% -- Fact Sheet PDF" [ref=e1416]:
+          - cell [ref=e1417]
+          - cell "XRMI" [ref=e1418]:
+            - link "XRMI" [ref=e1419] [cursor=pointer]:
+              - /url: /funds/XRMI
+              - generic [ref=e1420]: XRMI
+          - cell "S&P 500® Risk Managed Income ETF" [ref=e1421]:
+            - link "S&P 500® Risk Managed Income ETF" [ref=e1422] [cursor=pointer]:
+              - /url: /funds/XRMI
+              - generic [ref=e1423]: S&P 500® Risk Managed Income ETF
+          - cell "$17.27" [ref=e1424]:
+            - generic [ref=e1425]: $17.27
+          - cell "$49,921,244" [ref=e1426]:
+            - generic [ref=e1427]: $49,921,244
+          - cell "0.60%" [ref=e1428]:
+            - generic [ref=e1429]: 0.60%
+          - cell "--" [ref=e1430]:
+            - generic [ref=e1431]: "--"
+          - cell "Fact Sheet PDF" [ref=e1432]:
+            - link "Fact Sheet PDF" [ref=e1433] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/xrmi/Fact-Sheet_XRMI.pdf
+              - img [ref=e1435]
+        - row "ORBX Space Tech ETF $48.68 $49,167,615 0.50% -- Fact Sheet PDF" [ref=e1437]:
+          - cell [ref=e1438]
+          - cell "ORBX" [ref=e1439]:
+            - link "ORBX" [ref=e1440] [cursor=pointer]:
+              - /url: /funds/ORBX
+              - generic [ref=e1441]: ORBX
+          - cell "Space Tech ETF" [ref=e1442]:
+            - link "Space Tech ETF" [ref=e1443] [cursor=pointer]:
+              - /url: /funds/ORBX
+              - generic [ref=e1444]: Space Tech ETF
+          - cell "$48.68" [ref=e1445]:
+            - generic [ref=e1446]: $48.68
+          - cell "$49,167,615" [ref=e1447]:
+            - generic [ref=e1448]: $49,167,615
+          - cell "0.50%" [ref=e1449]:
+            - generic [ref=e1450]: 0.50%
+          - cell "--" [ref=e1451]:
+            - generic [ref=e1452]: "--"
+          - cell "Fact Sheet PDF" [ref=e1453]:
+            - link "Fact Sheet PDF" [ref=e1454] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/orbx/Fact-Sheet_ORBX.pdf
+              - img [ref=e1456]
+        - row "EFAS MSCI SuperDividend® EAFE ETF $21.54 $48,669,774 0.55% -- Fact Sheet PDF" [ref=e1458]:
+          - cell [ref=e1459]
+          - cell "EFAS" [ref=e1460]:
+            - link "EFAS" [ref=e1461] [cursor=pointer]:
+              - /url: /funds/EFAS
+              - generic [ref=e1462]: EFAS
+          - cell "MSCI SuperDividend® EAFE ETF" [ref=e1463]:
+            - link "MSCI SuperDividend® EAFE ETF" [ref=e1464] [cursor=pointer]:
+              - /url: /funds/EFAS
+              - generic [ref=e1465]: MSCI SuperDividend® EAFE ETF
+          - cell "$21.54" [ref=e1466]:
+            - generic [ref=e1467]: $21.54
+          - cell "$48,669,774" [ref=e1468]:
+            - generic [ref=e1469]: $48,669,774
+          - cell "0.55%" [ref=e1470]:
+            - generic [ref=e1471]: 0.55%
+          - cell "--" [ref=e1472]:
+            - generic [ref=e1473]: "--"
+          - cell "Fact Sheet PDF" [ref=e1474]:
+            - link "Fact Sheet PDF" [ref=e1475] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/efas/Fact-Sheet_EFAS.pdf
+              - img [ref=e1477]
+        - row "LNGX U.S. Natural Gas ETF $41.41 $46,383,641 0.45% -- Fact Sheet PDF" [ref=e1479]:
+          - cell [ref=e1480]
+          - cell "LNGX" [ref=e1481]:
+            - link "LNGX" [ref=e1482] [cursor=pointer]:
+              - /url: /funds/LNGX
+              - generic [ref=e1483]: LNGX
+          - cell "U.S. Natural Gas ETF" [ref=e1484]:
+            - link "U.S. Natural Gas ETF" [ref=e1485] [cursor=pointer]:
+              - /url: /funds/LNGX
+              - generic [ref=e1486]: U.S. Natural Gas ETF
+          - cell "$41.41" [ref=e1487]:
+            - generic [ref=e1488]: $41.41
+          - cell "$46,383,641" [ref=e1489]:
+            - generic [ref=e1490]: $46,383,641
+          - cell "0.45%" [ref=e1491]:
+            - generic [ref=e1492]: 0.45%
+          - cell "--" [ref=e1493]:
+            - generic [ref=e1494]: "--"
+          - cell "Fact Sheet PDF" [ref=e1495]:
+            - link "Fact Sheet PDF" [ref=e1496] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/lngx/Fact-Sheet_LNGX.pdf
+              - img [ref=e1498]
+        - row "ALTY Alternative Income ETF $12.33 $45,242,294 0.50% -- Fact Sheet PDF" [ref=e1500]:
+          - cell [ref=e1501]
+          - cell "ALTY" [ref=e1502]:
+            - link "ALTY" [ref=e1503] [cursor=pointer]:
+              - /url: /funds/ALTY
+              - generic [ref=e1504]: ALTY
+          - cell "Alternative Income ETF" [ref=e1505]:
+            - link "Alternative Income ETF" [ref=e1506] [cursor=pointer]:
+              - /url: /funds/ALTY
+              - generic [ref=e1507]: Alternative Income ETF
+          - cell "$12.33" [ref=e1508]:
+            - generic [ref=e1509]: $12.33
+          - cell "$45,242,294" [ref=e1510]:
+            - generic [ref=e1511]: $45,242,294
+          - cell "0.50%" [ref=e1512]:
+            - generic [ref=e1513]: 0.50%
+          - cell "--" [ref=e1514]:
+            - generic [ref=e1515]: "--"
+          - cell "Fact Sheet PDF" [ref=e1516]:
+            - link "Fact Sheet PDF" [ref=e1517] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/alty/Fact-Sheet_ALTY.pdf
+              - img [ref=e1519]
+        - row "GXPD PureCap℠ MSCI Consumer Discretionary ETF $25.83 $45,202,144 0.25% 0.15% Fact Sheet PDF" [ref=e1521]:
+          - cell [ref=e1522]
+          - cell "GXPD" [ref=e1523]:
+            - link "GXPD" [ref=e1524] [cursor=pointer]:
+              - /url: /funds/GXPD
+              - generic [ref=e1525]: GXPD
+          - cell "PureCap℠ MSCI Consumer Discretionary ETF" [ref=e1526]:
+            - link "PureCap℠ MSCI Consumer Discretionary ETF" [ref=e1527] [cursor=pointer]:
+              - /url: /funds/GXPD
+              - generic [ref=e1528]: PureCap℠ MSCI Consumer Discretionary ETF
+          - cell "$25.83" [ref=e1529]:
+            - generic [ref=e1530]: $25.83
+          - cell "$45,202,144" [ref=e1531]:
+            - generic [ref=e1532]: $45,202,144
+          - cell "0.25%" [ref=e1533]:
+            - generic [ref=e1534]: 0.25%
+          - cell "0.15%" [ref=e1535]:
+            - generic [ref=e1536]: 0.15%
+          - cell "Fact Sheet PDF" [ref=e1537]:
+            - link "Fact Sheet PDF" [ref=e1538] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/gxpd/Fact-Sheet_GXPD.pdf
+              - img [ref=e1540]
+        - row "SDEM MSCI SuperDividend® Emerging Markets ETF $32.33 $43,623,149 0.66% -- Fact Sheet PDF" [ref=e1542]:
+          - cell [ref=e1543]
+          - cell "SDEM" [ref=e1544]:
+            - link "SDEM" [ref=e1545] [cursor=pointer]:
+              - /url: /funds/SDEM
+              - generic [ref=e1546]: SDEM
+          - cell "MSCI SuperDividend® Emerging Markets ETF" [ref=e1547]:
+            - link "MSCI SuperDividend® Emerging Markets ETF" [ref=e1548] [cursor=pointer]:
+              - /url: /funds/SDEM
+              - generic [ref=e1549]: MSCI SuperDividend® Emerging Markets ETF
+          - cell "$32.33" [ref=e1550]:
+            - generic [ref=e1551]: $32.33
+          - cell "$43,623,149" [ref=e1552]:
+            - generic [ref=e1553]: $43,623,149
+          - cell "0.66%" [ref=e1554]:
+            - generic [ref=e1555]: 0.66%
+          - cell "--" [ref=e1556]:
+            - generic [ref=e1557]: "--"
+          - cell "Fact Sheet PDF" [ref=e1558]:
+            - link "Fact Sheet PDF" [ref=e1559] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/sdem/Fact-Sheet_SDEM.pdf
+              - img [ref=e1561]
+        - row "SLDR Short-Term Treasury Ladder ETF $49.63 $40,693,972 0.12% -- Fact Sheet PDF" [ref=e1563]:
+          - cell [ref=e1564]
+          - cell "SLDR" [ref=e1565]:
+            - link "SLDR" [ref=e1566] [cursor=pointer]:
+              - /url: /funds/SLDR
+              - generic [ref=e1567]: SLDR
+          - cell "Short-Term Treasury Ladder ETF" [ref=e1568]:
+            - link "Short-Term Treasury Ladder ETF" [ref=e1569] [cursor=pointer]:
+              - /url: /funds/SLDR
+              - generic [ref=e1570]: Short-Term Treasury Ladder ETF
+          - cell "$49.63" [ref=e1571]:
+            - generic [ref=e1572]: $49.63
+          - cell "$40,693,972" [ref=e1573]:
+            - generic [ref=e1574]: $40,693,972
+          - cell "0.12%" [ref=e1575]:
+            - generic [ref=e1576]: 0.12%
+          - cell "--" [ref=e1577]:
+            - generic [ref=e1578]: "--"
+          - cell "Fact Sheet PDF" [ref=e1579]:
+            - link "Fact Sheet PDF" [ref=e1580] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/sldr/Fact-Sheet_SLDR.pdf
+              - img [ref=e1582]
+        - row "EART Rare Earth & Critical Materials ETF $26.86 $38,407,058 0.59% -- Fact Sheet PDF" [ref=e1584]:
+          - cell [ref=e1585]
+          - cell "EART" [ref=e1586]:
+            - link "EART" [ref=e1587] [cursor=pointer]:
+              - /url: /funds/EART
+              - generic [ref=e1588]: EART
+          - cell "Rare Earth & Critical Materials ETF" [ref=e1589]:
+            - link "Rare Earth & Critical Materials ETF" [ref=e1590] [cursor=pointer]:
+              - /url: /funds/EART
+              - generic [ref=e1591]: Rare Earth & Critical Materials ETF
+          - cell "$26.86" [ref=e1592]:
+            - generic [ref=e1593]: $26.86
+          - cell "$38,407,058" [ref=e1594]:
+            - generic [ref=e1595]: $38,407,058
+          - cell "0.59%" [ref=e1596]:
+            - generic [ref=e1597]: 0.59%
+          - cell "--" [ref=e1598]:
+            - generic [ref=e1599]: "--"
+          - cell "Fact Sheet PDF" [ref=e1600]:
+            - link "Fact Sheet PDF" [ref=e1601] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/eart/Fact-Sheet_EART.pdf
+              - img [ref=e1603]
+        - row "VNAM MSCI Vietnam ETF $25.14 $37,208,191 0.51% -- Fact Sheet PDF" [ref=e1605]:
+          - cell [ref=e1606]
+          - cell "VNAM" [ref=e1607]:
+            - link "VNAM" [ref=e1608] [cursor=pointer]:
+              - /url: /funds/VNAM
+              - generic [ref=e1609]: VNAM
+          - cell "MSCI Vietnam ETF" [ref=e1610]:
+            - link "MSCI Vietnam ETF" [ref=e1611] [cursor=pointer]:
+              - /url: /funds/VNAM
+              - generic [ref=e1612]: MSCI Vietnam ETF
+          - cell "$25.14" [ref=e1613]:
+            - generic [ref=e1614]: $25.14
+          - cell "$37,208,191" [ref=e1615]:
+            - generic [ref=e1616]: $37,208,191
+          - cell "0.51%" [ref=e1617]:
+            - generic [ref=e1618]: 0.51%
+          - cell "--" [ref=e1619]:
+            - generic [ref=e1620]: "--"
+          - cell "Fact Sheet PDF" [ref=e1621]:
+            - link "Fact Sheet PDF" [ref=e1622] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/vnam/Fact-Sheet_VNAM.pdf
+              - img [ref=e1624]
+        - row "LLDR Long-Term Treasury Ladder ETF $43.96 $36,488,675 0.12% -- Fact Sheet PDF" [ref=e1626]:
+          - cell [ref=e1627]
+          - cell "LLDR" [ref=e1628]:
+            - link "LLDR" [ref=e1629] [cursor=pointer]:
+              - /url: /funds/LLDR
+              - generic [ref=e1630]: LLDR
+          - cell "Long-Term Treasury Ladder ETF" [ref=e1631]:
+            - link "Long-Term Treasury Ladder ETF" [ref=e1632] [cursor=pointer]:
+              - /url: /funds/LLDR
+              - generic [ref=e1633]: Long-Term Treasury Ladder ETF
+          - cell "$43.96" [ref=e1634]:
+            - generic [ref=e1635]: $43.96
+          - cell "$36,488,675" [ref=e1636]:
+            - generic [ref=e1637]: $36,488,675
+          - cell "0.12%" [ref=e1638]:
+            - generic [ref=e1639]: 0.12%
+          - cell "--" [ref=e1640]:
+            - generic [ref=e1641]: "--"
+          - cell "Fact Sheet PDF" [ref=e1642]:
+            - link "Fact Sheet PDF" [ref=e1643] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/lldr/Fact-Sheet_LLDR.pdf
+              - img [ref=e1645]
+        - row "HEAL HealthTech ETF $28.44 $30,138,607 0.50% -- Fact Sheet PDF" [ref=e1647]:
+          - cell [ref=e1648]
+          - cell "HEAL" [ref=e1649]:
+            - link "HEAL" [ref=e1650] [cursor=pointer]:
+              - /url: /funds/HEAL
+              - generic [ref=e1651]: HEAL
+          - cell "HealthTech ETF" [ref=e1652]:
+            - link "HealthTech ETF" [ref=e1653] [cursor=pointer]:
+              - /url: /funds/HEAL
+              - generic [ref=e1654]: HealthTech ETF
+          - cell "$28.44" [ref=e1655]:
+            - generic [ref=e1656]: $28.44
+          - cell "$30,138,607" [ref=e1657]:
+            - generic [ref=e1658]: $30,138,607
+          - cell "0.50%" [ref=e1659]:
+            - generic [ref=e1660]: 0.50%
+          - cell "--" [ref=e1661]:
+            - generic [ref=e1662]: "--"
+          - cell "Fact Sheet PDF" [ref=e1663]:
+            - link "Fact Sheet PDF" [ref=e1664] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/heal/Fact-Sheet_HEAL.pdf
+              - img [ref=e1666]
+        - row "RNRG Renewable Energy Producers ETF $34.75 $30,114,415 0.65% -- Fact Sheet PDF" [ref=e1668]:
+          - cell [ref=e1669]
+          - cell "RNRG" [ref=e1670]:
+            - link "RNRG" [ref=e1671] [cursor=pointer]:
+              - /url: /funds/RNRG
+              - generic [ref=e1672]: RNRG
+          - cell "Renewable Energy Producers ETF" [ref=e1673]:
+            - link "Renewable Energy Producers ETF" [ref=e1674] [cursor=pointer]:
+              - /url: /funds/RNRG
+              - generic [ref=e1675]: Renewable Energy Producers ETF
+          - cell "$34.75" [ref=e1676]:
+            - generic [ref=e1677]: $34.75
+          - cell "$30,114,415" [ref=e1678]:
+            - generic [ref=e1679]: $30,114,415
+          - cell "0.65%" [ref=e1680]:
+            - generic [ref=e1681]: 0.65%
+          - cell "--" [ref=e1682]:
+            - generic [ref=e1683]: "--"
+          - cell "Fact Sheet PDF" [ref=e1684]:
+            - link "Fact Sheet PDF" [ref=e1685] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/rnrg/Fact-Sheet_RNRG.pdf
+              - img [ref=e1687]
+        - row "MLPD MLP & Energy Infrastructure Covered Call ETF $25.15 $29,676,214 0.60% -- Fact Sheet PDF" [ref=e1689]:
+          - cell [ref=e1690]
+          - cell "MLPD" [ref=e1691]:
+            - link "MLPD" [ref=e1692] [cursor=pointer]:
+              - /url: /funds/MLPD
+              - generic [ref=e1693]: MLPD
+          - cell "MLP & Energy Infrastructure Covered Call ETF" [ref=e1694]:
+            - link "MLP & Energy Infrastructure Covered Call ETF" [ref=e1695] [cursor=pointer]:
+              - /url: /funds/MLPD
+              - generic [ref=e1696]: MLP & Energy Infrastructure Covered Call ETF
+          - cell "$25.15" [ref=e1697]:
+            - generic [ref=e1698]: $25.15
+          - cell "$29,676,214" [ref=e1699]:
+            - generic [ref=e1700]: $29,676,214
+          - cell "0.60%" [ref=e1701]:
+            - generic [ref=e1702]: 0.60%
+          - cell "--" [ref=e1703]:
+            - generic [ref=e1704]: "--"
+          - cell "Fact Sheet PDF" [ref=e1705]:
+            - link "Fact Sheet PDF" [ref=e1706] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/mlpd/Fact-Sheet_MLPD.pdf
+              - img [ref=e1708]
+        - row "QDIV S&P 500® Quality Dividend ETF $37.76 $29,074,511 0.20% -- Fact Sheet PDF" [ref=e1710]:
+          - cell [ref=e1711]
+          - cell "QDIV" [ref=e1712]:
+            - link "QDIV" [ref=e1713] [cursor=pointer]:
+              - /url: /funds/QDIV
+              - generic [ref=e1714]: QDIV
+          - cell "S&P 500® Quality Dividend ETF" [ref=e1715]:
+            - link "S&P 500® Quality Dividend ETF" [ref=e1716] [cursor=pointer]:
+              - /url: /funds/QDIV
+              - generic [ref=e1717]: S&P 500® Quality Dividend ETF
+          - cell "$37.76" [ref=e1718]:
+            - generic [ref=e1719]: $37.76
+          - cell "$29,074,511" [ref=e1720]:
+            - generic [ref=e1721]: $29,074,511
+          - cell "0.20%" [ref=e1722]:
+            - generic [ref=e1723]: 0.20%
+          - cell "--" [ref=e1724]:
+            - generic [ref=e1725]: "--"
+          - cell "Fact Sheet PDF" [ref=e1726]:
+            - link "Fact Sheet PDF" [ref=e1727] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/qdiv/Fact-Sheet_QDIV.pdf
+              - img [ref=e1729]
+        - row "NYSX NYSE® 100 ETF $124.42 $28,616,018 0.09% -- Fact Sheet PDF" [ref=e1731]:
+          - cell [ref=e1732]
+          - cell "NYSX" [ref=e1733]:
+            - link "NYSX" [ref=e1734] [cursor=pointer]:
+              - /url: /funds/NYSX
+              - generic [ref=e1735]: NYSX
+          - cell "NYSE® 100 ETF" [ref=e1736]:
+            - link "NYSE® 100 ETF" [ref=e1737] [cursor=pointer]:
+              - /url: /funds/NYSX
+              - generic [ref=e1738]: NYSE® 100 ETF
+          - cell "$124.42" [ref=e1739]:
+            - generic [ref=e1740]: $124.42
+          - cell "$28,616,018" [ref=e1741]:
+            - generic [ref=e1742]: $28,616,018
+          - cell "0.09%" [ref=e1743]:
+            - generic [ref=e1744]: 0.09%
+          - cell "--" [ref=e1745]:
+            - generic [ref=e1746]: "--"
+          - cell "Fact Sheet PDF" [ref=e1747]:
+            - link "Fact Sheet PDF" [ref=e1748] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/nysx/Fact-Sheet_NYSX.pdf
+              - img [ref=e1750]
+        - row "FLOW U.S. Cash Flow Kings™ 100 ETF $38.76 $28,294,566 0.25% -- Fact Sheet PDF" [ref=e1752]:
+          - cell [ref=e1753]
+          - cell "FLOW" [ref=e1754]:
+            - link "FLOW" [ref=e1755] [cursor=pointer]:
+              - /url: /funds/FLOW
+              - generic [ref=e1756]: FLOW
+          - cell "U.S. Cash Flow Kings™ 100 ETF" [ref=e1757]:
+            - link "U.S. Cash Flow Kings™ 100 ETF" [ref=e1758] [cursor=pointer]:
+              - /url: /funds/FLOW
+              - generic [ref=e1759]: U.S. Cash Flow Kings™ 100 ETF
+          - cell "$38.76" [ref=e1760]:
+            - generic [ref=e1761]: $38.76
+          - cell "$28,294,566" [ref=e1762]:
+            - generic [ref=e1763]: $28,294,566
+          - cell "0.25%" [ref=e1764]:
+            - generic [ref=e1765]: 0.25%
+          - cell "--" [ref=e1766]:
+            - generic [ref=e1767]: "--"
+          - cell "Fact Sheet PDF" [ref=e1768]:
+            - link "Fact Sheet PDF" [ref=e1769] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/flow/Fact-Sheet_FLOW.pdf
+              - img [ref=e1771]
+        - row "EBIZ E-commerce ETF $28.55 $26,839,585 0.50% -- Fact Sheet PDF" [ref=e1773]:
+          - cell [ref=e1774]
+          - cell "EBIZ" [ref=e1775]:
+            - link "EBIZ" [ref=e1776] [cursor=pointer]:
+              - /url: /funds/EBIZ
+              - generic [ref=e1777]: EBIZ
+          - cell "E-commerce ETF" [ref=e1778]:
+            - link "E-commerce ETF" [ref=e1779] [cursor=pointer]:
+              - /url: /funds/EBIZ
+              - generic [ref=e1780]: E-commerce ETF
+          - cell "$28.55" [ref=e1781]:
+            - generic [ref=e1782]: $28.55
+          - cell "$26,839,585" [ref=e1783]:
+            - generic [ref=e1784]: $26,839,585
+          - cell "0.50%" [ref=e1785]:
+            - generic [ref=e1786]: 0.50%
+          - cell "--" [ref=e1787]:
+            - generic [ref=e1788]: "--"
+          - cell "Fact Sheet PDF" [ref=e1789]:
+            - link "Fact Sheet PDF" [ref=e1790] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/ebiz/Fact-Sheet_EBIZ.pdf
+              - img [ref=e1792]
+        - row "CTEC ClimateTech ETF $58.53 $25,749,949 0.50% -- Fact Sheet PDF" [ref=e1794]:
+          - cell [ref=e1795]
+          - cell "CTEC" [ref=e1796]:
+            - link "CTEC" [ref=e1797] [cursor=pointer]:
+              - /url: /funds/CTEC
+              - generic [ref=e1798]: CTEC
+          - cell "ClimateTech ETF" [ref=e1799]:
+            - link "ClimateTech ETF" [ref=e1800] [cursor=pointer]:
+              - /url: /funds/CTEC
+              - generic [ref=e1801]: ClimateTech ETF
+          - cell "$58.53" [ref=e1802]:
+            - generic [ref=e1803]: $58.53
+          - cell "$25,749,949" [ref=e1804]:
+            - generic [ref=e1805]: $25,749,949
+          - cell "0.50%" [ref=e1806]:
+            - generic [ref=e1807]: 0.50%
+          - cell "--" [ref=e1808]:
+            - generic [ref=e1809]: "--"
+          - cell "Fact Sheet PDF" [ref=e1810]:
+            - link "Fact Sheet PDF" [ref=e1811] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/ctec/Fact-Sheet_CTEC.pdf
+              - img [ref=e1813]
+        - row "BITS Blockchain & Bitcoin Strategy ETF $56.71 $23,654,548 0.65% -- Fact Sheet PDF" [ref=e1815]:
+          - cell [ref=e1816]
+          - cell "BITS" [ref=e1817]:
+            - link "BITS" [ref=e1818] [cursor=pointer]:
+              - /url: /funds/BITS
+              - generic [ref=e1819]: BITS
+          - cell "Blockchain & Bitcoin Strategy ETF" [ref=e1820]:
+            - link "Blockchain & Bitcoin Strategy ETF" [ref=e1821] [cursor=pointer]:
+              - /url: /funds/BITS
+              - generic [ref=e1822]: Blockchain & Bitcoin Strategy ETF
+          - cell "$56.71" [ref=e1823]:
+            - generic [ref=e1824]: $56.71
+          - cell "$23,654,548" [ref=e1825]:
+            - generic [ref=e1826]: $23,654,548
+          - cell "0.65%" [ref=e1827]:
+            - generic [ref=e1828]: 0.65%
+          - cell "--" [ref=e1829]:
+            - generic [ref=e1830]: "--"
+          - cell "Fact Sheet PDF" [ref=e1831]:
+            - link "Fact Sheet PDF" [ref=e1832] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/bits/Fact-Sheet_BITS.pdf
+              - img [ref=e1834]
+        - row "AQWA Clean Water ETF $18.99 $23,171,803 0.50% -- Fact Sheet PDF" [ref=e1836]:
+          - cell [ref=e1837]
+          - cell "AQWA" [ref=e1838]:
+            - link "AQWA" [ref=e1839] [cursor=pointer]:
+              - /url: /funds/AQWA
+              - generic [ref=e1840]: AQWA
+          - cell "Clean Water ETF" [ref=e1841]:
+            - link "Clean Water ETF" [ref=e1842] [cursor=pointer]:
+              - /url: /funds/AQWA
+              - generic [ref=e1843]: Clean Water ETF
+          - cell "$18.99" [ref=e1844]:
+            - generic [ref=e1845]: $18.99
+          - cell "$23,171,803" [ref=e1846]:
+            - generic [ref=e1847]: $23,171,803
+          - cell "0.50%" [ref=e1848]:
+            - generic [ref=e1849]: 0.50%
+          - cell "--" [ref=e1850]:
+            - generic [ref=e1851]: "--"
+          - cell "Fact Sheet PDF" [ref=e1852]:
+            - link "Fact Sheet PDF" [ref=e1853] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/aqwa/Fact-Sheet_AQWA.pdf
+              - img [ref=e1855]
+        - row "QRMI Nasdaq 100® Risk Managed Income ETF $15.40 $15,706,600 0.60% -- Fact Sheet PDF" [ref=e1857]:
+          - cell [ref=e1858]
+          - cell "QRMI" [ref=e1859]:
+            - link "QRMI" [ref=e1860] [cursor=pointer]:
+              - /url: /funds/QRMI
+              - generic [ref=e1861]: QRMI
+          - cell "Nasdaq 100® Risk Managed Income ETF" [ref=e1862]:
+            - link "Nasdaq 100® Risk Managed Income ETF" [ref=e1863] [cursor=pointer]:
+              - /url: /funds/QRMI
+              - generic [ref=e1864]: Nasdaq 100® Risk Managed Income ETF
+          - cell "$15.40" [ref=e1865]:
+            - generic [ref=e1866]: $15.40
+          - cell "$15,706,600" [ref=e1867]:
+            - generic [ref=e1868]: $15,706,600
+          - cell "0.60%" [ref=e1869]:
+            - generic [ref=e1870]: 0.60%
+          - cell "--" [ref=e1871]:
+            - generic [ref=e1872]: "--"
+          - cell "Fact Sheet PDF" [ref=e1873]:
+            - link "Fact Sheet PDF" [ref=e1874] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/qrmi/Fact-Sheet_QRMI.pdf
+              - img [ref=e1876]
+        - row "TYLG Information Technology Covered Call & Growth ETF $41.10 $14,385,224 0.64% 0.60% Fact Sheet PDF" [ref=e1878]:
+          - cell [ref=e1879]
+          - cell "TYLG" [ref=e1880]:
+            - link "TYLG" [ref=e1881] [cursor=pointer]:
+              - /url: /funds/TYLG
+              - generic [ref=e1882]: TYLG
+          - cell "Information Technology Covered Call & Growth ETF" [ref=e1883]:
+            - link "Information Technology Covered Call & Growth ETF" [ref=e1884] [cursor=pointer]:
+              - /url: /funds/TYLG
+              - generic [ref=e1885]: Information Technology Covered Call & Growth ETF
+          - cell "$41.10" [ref=e1886]:
+            - generic [ref=e1887]: $41.10
+          - cell "$14,385,224" [ref=e1888]:
+            - generic [ref=e1889]: $14,385,224
+          - cell "0.64%" [ref=e1890]:
+            - generic [ref=e1891]: 0.64%
+          - cell "0.60%" [ref=e1892]:
+            - generic [ref=e1893]: 0.60%
+          - cell "Fact Sheet PDF" [ref=e1894]:
+            - link "Fact Sheet PDF" [ref=e1895] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/tylg/Fact-Sheet_TYLG.pdf
+              - img [ref=e1897]
+        - row "TLTX Treasury Bond Enhanced Income ETF $22.08 $14,131,560 0.29% -- Fact Sheet PDF" [ref=e1899]:
+          - cell [ref=e1900]
+          - cell "TLTX" [ref=e1901]:
+            - link "TLTX" [ref=e1902] [cursor=pointer]:
+              - /url: /funds/TLTX
+              - generic [ref=e1903]: TLTX
+          - cell "Treasury Bond Enhanced Income ETF" [ref=e1904]:
+            - link "Treasury Bond Enhanced Income ETF" [ref=e1905] [cursor=pointer]:
+              - /url: /funds/TLTX
+              - generic [ref=e1906]: Treasury Bond Enhanced Income ETF
+          - cell "$22.08" [ref=e1907]:
+            - generic [ref=e1908]: $22.08
+          - cell "$14,131,560" [ref=e1909]:
+            - generic [ref=e1910]: $14,131,560
+          - cell "0.29%" [ref=e1911]:
+            - generic [ref=e1912]: 0.29%
+          - cell "--" [ref=e1913]:
+            - generic [ref=e1914]: "--"
+          - cell "Fact Sheet PDF" [ref=e1915]:
+            - link "Fact Sheet PDF" [ref=e1916] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/tltx/Fact-Sheet_TLTX.pdf
+              - img [ref=e1918]
+        - row "BRAZ Brazil Active ETF $29.18 $9,629,226 0.75% -- Fact Sheet PDF" [ref=e1920]:
+          - cell [ref=e1921]
+          - cell "BRAZ" [ref=e1922]:
+            - link "BRAZ" [ref=e1923] [cursor=pointer]:
+              - /url: /funds/BRAZ
+              - generic [ref=e1924]: BRAZ
+          - cell "Brazil Active ETF" [ref=e1925]:
+            - link "Brazil Active ETF" [ref=e1926] [cursor=pointer]:
+              - /url: /funds/BRAZ
+              - generic [ref=e1927]: Brazil Active ETF
+          - cell "$29.18" [ref=e1928]:
+            - generic [ref=e1929]: $29.18
+          - cell "$9,629,226" [ref=e1930]:
+            - generic [ref=e1931]: $9,629,226
+          - cell "0.75%" [ref=e1932]:
+            - generic [ref=e1933]: 0.75%
+          - cell "--" [ref=e1934]:
+            - generic [ref=e1935]: "--"
+          - cell "Fact Sheet PDF" [ref=e1936]:
+            - link "Fact Sheet PDF" [ref=e1937] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/braz/Fact-Sheet_BRAZ.pdf
+              - img [ref=e1939]
+        - row "KROP AgTech & Food Innovation ETF $34.85 $9,174,215 0.50% -- Fact Sheet PDF" [ref=e1941]:
+          - cell [ref=e1942]
+          - cell "KROP" [ref=e1943]:
+            - link "KROP" [ref=e1944] [cursor=pointer]:
+              - /url: /funds/KROP
+              - generic [ref=e1945]: KROP
+          - cell "AgTech & Food Innovation ETF" [ref=e1946]:
+            - link "AgTech & Food Innovation ETF" [ref=e1947] [cursor=pointer]:
+              - /url: /funds/KROP
+              - generic [ref=e1948]: AgTech & Food Innovation ETF
+          - cell "$34.85" [ref=e1949]:
+            - generic [ref=e1950]: $34.85
+          - cell "$9,174,215" [ref=e1951]:
+            - generic [ref=e1952]: $9,174,215
+          - cell "0.50%" [ref=e1953]:
+            - generic [ref=e1954]: 0.50%
+          - cell "--" [ref=e1955]:
+            - generic [ref=e1956]: "--"
+          - cell "Fact Sheet PDF" [ref=e1957]:
+            - link "Fact Sheet PDF" [ref=e1958] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/krop/Fact-Sheet_KROP.pdf
+              - img [ref=e1960]
+        - row "BCCC Bitcoin Covered Call ETF $11.74 $8,920,421 0.75% -- Fact Sheet PDF" [ref=e1962]:
+          - cell [ref=e1963]
+          - cell "BCCC" [ref=e1964]:
+            - link "BCCC" [ref=e1965] [cursor=pointer]:
+              - /url: /funds/BCCC
+              - generic [ref=e1966]: BCCC
+          - cell "Bitcoin Covered Call ETF" [ref=e1967]:
+            - link "Bitcoin Covered Call ETF" [ref=e1968] [cursor=pointer]:
+              - /url: /funds/BCCC
+              - generic [ref=e1969]: Bitcoin Covered Call ETF
+          - cell "$11.74" [ref=e1970]:
+            - generic [ref=e1971]: $11.74
+          - cell "$8,920,421" [ref=e1972]:
+            - generic [ref=e1973]: $8,920,421
+          - cell "0.75%" [ref=e1974]:
+            - generic [ref=e1975]: 0.75%
+          - cell "--" [ref=e1976]:
+            - generic [ref=e1977]: "--"
+          - cell "Fact Sheet PDF" [ref=e1978]:
+            - link "Fact Sheet PDF" [ref=e1979] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/bccc/Fact-Sheet_BCCC.pdf
+              - img [ref=e1981]
+        - row "MLDR Intermediate-Term Treasury Ladder ETF $48.28 $8,689,578 0.12% -- Fact Sheet PDF" [ref=e1983]:
+          - cell [ref=e1984]
+          - cell "MLDR" [ref=e1985]:
+            - link "MLDR" [ref=e1986] [cursor=pointer]:
+              - /url: /funds/MLDR
+              - generic [ref=e1987]: MLDR
+          - cell "Intermediate-Term Treasury Ladder ETF" [ref=e1988]:
+            - link "Intermediate-Term Treasury Ladder ETF" [ref=e1989] [cursor=pointer]:
+              - /url: /funds/MLDR
+              - generic [ref=e1990]: Intermediate-Term Treasury Ladder ETF
+          - cell "$48.28" [ref=e1991]:
+            - generic [ref=e1992]: $48.28
+          - cell "$8,689,578" [ref=e1993]:
+            - generic [ref=e1994]: $8,689,578
+          - cell "0.12%" [ref=e1995]:
+            - generic [ref=e1996]: 0.12%
+          - cell "--" [ref=e1997]:
+            - generic [ref=e1998]: "--"
+          - cell "Fact Sheet PDF" [ref=e1999]:
+            - link "Fact Sheet PDF" [ref=e2000] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/mldr/Fact-Sheet_MLDR.pdf
+              - img [ref=e2002]
+        - row "RYLG Russell 2000 Covered Call & Growth ETF $24.44 $8,308,015 0.35% -- Fact Sheet PDF" [ref=e2004]:
+          - cell [ref=e2005]
+          - cell "RYLG" [ref=e2006]:
+            - link "RYLG" [ref=e2007] [cursor=pointer]:
+              - /url: /funds/RYLG
+              - generic [ref=e2008]: RYLG
+          - cell "Russell 2000 Covered Call & Growth ETF" [ref=e2009]:
+            - link "Russell 2000 Covered Call & Growth ETF" [ref=e2010] [cursor=pointer]:
+              - /url: /funds/RYLG
+              - generic [ref=e2011]: Russell 2000 Covered Call & Growth ETF
+          - cell "$24.44" [ref=e2012]:
+            - generic [ref=e2013]: $24.44
+          - cell "$8,308,015" [ref=e2014]:
+            - generic [ref=e2015]: $8,308,015
+          - cell "0.35%" [ref=e2016]:
+            - generic [ref=e2017]: 0.35%
+          - cell "--" [ref=e2018]:
+            - generic [ref=e2019]: "--"
+          - cell "Fact Sheet PDF" [ref=e2020]:
+            - link "Fact Sheet PDF" [ref=e2021] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/rylg/Fact-Sheet_RYLG.pdf
+              - img [ref=e2023]
+        - row "EDGQ Nasdaq-100® Income Edge℠ ETF $27.61 $8,007,562 0.53% 0.00% Fact Sheet PDF" [ref=e2025]:
+          - cell [ref=e2026]
+          - cell "EDGQ" [ref=e2027]:
+            - link "EDGQ" [ref=e2028] [cursor=pointer]:
+              - /url: /funds/EDGQ
+              - generic [ref=e2029]: EDGQ
+          - cell "Nasdaq-100® Income Edge℠ ETF" [ref=e2030]:
+            - link "Nasdaq-100® Income Edge℠ ETF" [ref=e2031] [cursor=pointer]:
+              - /url: /funds/EDGQ
+              - generic [ref=e2032]: Nasdaq-100® Income Edge℠ ETF
+          - cell "$27.61" [ref=e2033]:
+            - generic [ref=e2034]: $27.61
+          - cell "$8,007,562" [ref=e2035]:
+            - generic [ref=e2036]: $8,007,562
+          - cell "0.53%" [ref=e2037]:
+            - generic [ref=e2038]: 0.53%
+          - cell "0.00%" [ref=e2039]:
+            - generic [ref=e2040]: 0.00%
+          - cell "Fact Sheet PDF" [ref=e2041]:
+            - link "Fact Sheet PDF" [ref=e2042] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/edgq/Fact-Sheet_EDGQ.pdf
+              - img [ref=e2044]
+        - row "QTR Nasdaq 100® Tail Risk ETF $34.27 $7,539,588 0.25% -- Fact Sheet PDF" [ref=e2046]:
+          - cell [ref=e2047]
+          - cell "QTR" [ref=e2048]:
+            - link "QTR" [ref=e2049] [cursor=pointer]:
+              - /url: /funds/QTR
+              - generic [ref=e2050]: QTR
+          - cell "Nasdaq 100® Tail Risk ETF" [ref=e2051]:
+            - link "Nasdaq 100® Tail Risk ETF" [ref=e2052] [cursor=pointer]:
+              - /url: /funds/QTR
+              - generic [ref=e2053]: Nasdaq 100® Tail Risk ETF
+          - cell "$34.27" [ref=e2054]:
+            - generic [ref=e2055]: $34.27
+          - cell "$7,539,588" [ref=e2056]:
+            - generic [ref=e2057]: $7,539,588
+          - cell "0.25%" [ref=e2058]:
+            - generic [ref=e2059]: 0.25%
+          - cell "--" [ref=e2060]:
+            - generic [ref=e2061]: "--"
+          - cell "Fact Sheet PDF" [ref=e2062]:
+            - link "Fact Sheet PDF" [ref=e2063] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/qtr/Fact-Sheet_QTR.pdf
+              - img [ref=e2065]
+        - row "GXDW Dorsey Wright Thematic ETF $24.69 $7,161,422 0.50% -- Fact Sheet PDF" [ref=e2067]:
+          - cell [ref=e2068]
+          - cell "GXDW" [ref=e2069]:
+            - link "GXDW" [ref=e2070] [cursor=pointer]:
+              - /url: /funds/GXDW
+              - generic [ref=e2071]: GXDW
+          - cell "Dorsey Wright Thematic ETF" [ref=e2072]:
+            - link "Dorsey Wright Thematic ETF" [ref=e2073] [cursor=pointer]:
+              - /url: /funds/GXDW
+              - generic [ref=e2074]: Dorsey Wright Thematic ETF
+          - cell "$24.69" [ref=e2075]:
+            - generic [ref=e2076]: $24.69
+          - cell "$7,161,422" [ref=e2077]:
+            - generic [ref=e2078]: $7,161,422
+          - cell "0.50%" [ref=e2079]:
+            - generic [ref=e2080]: 0.50%
+          - cell "--" [ref=e2081]:
+            - generic [ref=e2082]: "--"
+          - cell "Fact Sheet PDF" [ref=e2083]:
+            - link "Fact Sheet PDF" [ref=e2084] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/gxdw/Fact-Sheet_GXDW.pdf
+              - img [ref=e2086]
+        - row "CHRI S&P 500® Christian Values ETF $88.45 $7,076,226 0.29% -- Fact Sheet PDF" [ref=e2088]:
+          - cell [ref=e2089]
+          - cell "CHRI" [ref=e2090]:
+            - link "CHRI" [ref=e2091] [cursor=pointer]:
+              - /url: /funds/CHRI
+              - generic [ref=e2092]: CHRI
+          - cell "S&P 500® Christian Values ETF" [ref=e2093]:
+            - link "S&P 500® Christian Values ETF" [ref=e2094] [cursor=pointer]:
+              - /url: /funds/CHRI
+              - generic [ref=e2095]: S&P 500® Christian Values ETF
+          - cell "$88.45" [ref=e2096]:
+            - generic [ref=e2097]: $88.45
+          - cell "$7,076,226" [ref=e2098]:
+            - generic [ref=e2099]: $7,076,226
+          - cell "0.29%" [ref=e2100]:
+            - generic [ref=e2101]: 0.29%
+          - cell "--" [ref=e2102]:
+            - generic [ref=e2103]: "--"
+          - cell "Fact Sheet PDF" [ref=e2104]:
+            - link "Fact Sheet PDF" [ref=e2105] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/chri/Fact-Sheet_CHRI.pdf
+              - img [ref=e2107]
+        - row "DYLG Dow 30® Covered Call & Growth ETF $27.96 $6,152,247 0.35% -- Fact Sheet PDF" [ref=e2109]:
+          - cell [ref=e2110]
+          - cell "DYLG" [ref=e2111]:
+            - link "DYLG" [ref=e2112] [cursor=pointer]:
+              - /url: /funds/DYLG
+              - generic [ref=e2113]: DYLG
+          - cell "Dow 30® Covered Call & Growth ETF" [ref=e2114]:
+            - link "Dow 30® Covered Call & Growth ETF" [ref=e2115] [cursor=pointer]:
+              - /url: /funds/DYLG
+              - generic [ref=e2116]: Dow 30® Covered Call & Growth ETF
+          - cell "$27.96" [ref=e2117]:
+            - generic [ref=e2118]: $27.96
+          - cell "$6,152,247" [ref=e2119]:
+            - generic [ref=e2120]: $6,152,247
+          - cell "0.35%" [ref=e2121]:
+            - generic [ref=e2122]: 0.35%
+          - cell "--" [ref=e2123]:
+            - generic [ref=e2124]: "--"
+          - cell "Fact Sheet PDF" [ref=e2125]:
+            - link "Fact Sheet PDF" [ref=e2126] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/dylg/Fact-Sheet_DYLG.pdf
+              - img [ref=e2128]
+        - row "IPAV Infrastructure Development ex-U.S. ETF $30.79 $5,233,729 0.55% -- Fact Sheet PDF" [ref=e2130]:
+          - cell [ref=e2131]
+          - cell "IPAV" [ref=e2132]:
+            - link "IPAV" [ref=e2133] [cursor=pointer]:
+              - /url: /funds/IPAV
+              - generic [ref=e2134]: IPAV
+          - cell "Infrastructure Development ex-U.S. ETF" [ref=e2135]:
+            - link "Infrastructure Development ex-U.S. ETF" [ref=e2136] [cursor=pointer]:
+              - /url: /funds/IPAV
+              - generic [ref=e2137]: Infrastructure Development ex-U.S. ETF
+          - cell "$30.79" [ref=e2138]:
+            - generic [ref=e2139]: $30.79
+          - cell "$5,233,729" [ref=e2140]:
+            - generic [ref=e2141]: $5,233,729
+          - cell "0.55%" [ref=e2142]:
+            - generic [ref=e2143]: 0.55%
+          - cell "--" [ref=e2144]:
+            - generic [ref=e2145]: "--"
+          - cell "Fact Sheet PDF" [ref=e2146]:
+            - link "Fact Sheet PDF" [ref=e2147] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/ipav/Fact-Sheet_IPAV.pdf
+              - img [ref=e2149]
+        - row "AUAU Gold Miners ETF $31.69 $5,071,025 0.35% -- Fact Sheet PDF" [ref=e2151]:
+          - cell [ref=e2152]
+          - cell "AUAU" [ref=e2153]:
+            - link "AUAU" [ref=e2154] [cursor=pointer]:
+              - /url: /funds/AUAU
+              - generic [ref=e2155]: AUAU
+          - cell "Gold Miners ETF" [ref=e2156]:
+            - link "Gold Miners ETF" [ref=e2157] [cursor=pointer]:
+              - /url: /funds/AUAU
+              - generic [ref=e2158]: Gold Miners ETF
+          - cell "$31.69" [ref=e2159]:
+            - generic [ref=e2160]: $31.69
+          - cell "$5,071,025" [ref=e2161]:
+            - generic [ref=e2162]: $5,071,025
+          - cell "0.35%" [ref=e2163]:
+            - generic [ref=e2164]: 0.35%
+          - cell "--" [ref=e2165]:
+            - generic [ref=e2166]: "--"
+          - cell "Fact Sheet PDF" [ref=e2167]:
+            - link "Fact Sheet PDF" [ref=e2168] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/auau/Fact-Sheet_AUAU.pdf
+              - img [ref=e2170]
+        - row "XTR S&P 500® Tail Risk ETF $28.33 $4,816,273 0.25% -- Fact Sheet PDF" [ref=e2172]:
+          - cell [ref=e2173]
+          - cell "XTR" [ref=e2174]:
+            - link "XTR" [ref=e2175] [cursor=pointer]:
+              - /url: /funds/XTR
+              - generic [ref=e2176]: XTR
+          - cell "S&P 500® Tail Risk ETF" [ref=e2177]:
+            - link "S&P 500® Tail Risk ETF" [ref=e2178] [cursor=pointer]:
+              - /url: /funds/XTR
+              - generic [ref=e2179]: S&P 500® Tail Risk ETF
+          - cell "$28.33" [ref=e2180]:
+            - generic [ref=e2181]: $28.33
+          - cell "$4,816,273" [ref=e2182]:
+            - generic [ref=e2183]: $4,816,273
+          - cell "0.25%" [ref=e2184]:
+            - generic [ref=e2185]: 0.25%
+          - cell "--" [ref=e2186]:
+            - generic [ref=e2187]: "--"
+          - cell "Fact Sheet PDF" [ref=e2188]:
+            - link "Fact Sheet PDF" [ref=e2189] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/xtr/Fact-Sheet_XTR.pdf
+              - img [ref=e2191]
+        - row "GXLC U.S. 500 ETF $90.00 $4,499,951 0.02% -- Fact Sheet PDF" [ref=e2193]:
+          - cell [ref=e2194]
+          - cell "GXLC" [ref=e2195]:
+            - link "GXLC" [ref=e2196] [cursor=pointer]:
+              - /url: /funds/GXLC
+              - generic [ref=e2197]: GXLC
+          - cell "U.S. 500 ETF" [ref=e2198]:
+            - link "U.S. 500 ETF" [ref=e2199] [cursor=pointer]:
+              - /url: /funds/GXLC
+              - generic [ref=e2200]: U.S. 500 ETF
+          - cell "$90.00" [ref=e2201]:
+            - generic [ref=e2202]: $90.00
+          - cell "$4,499,951" [ref=e2203]:
+            - generic [ref=e2204]: $4,499,951
+          - cell "0.02%" [ref=e2205]:
+            - generic [ref=e2206]: 0.02%
+          - cell "--" [ref=e2207]:
+            - generic [ref=e2208]: "--"
+          - cell "Fact Sheet PDF" [ref=e2209]:
+            - link "Fact Sheet PDF" [ref=e2210] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/gxlc/Fact-Sheet_GXLC.pdf
+              - img [ref=e2212]
+        - row "EDGX U.S. 500 Income Edge℠ ETF $26.51 $3,977,165 0.50% 0.00% Fact Sheet PDF" [ref=e2214]:
+          - cell [ref=e2215]
+          - cell "EDGX" [ref=e2216]:
+            - link "EDGX" [ref=e2217] [cursor=pointer]:
+              - /url: /funds/EDGX
+              - generic [ref=e2218]: EDGX
+          - cell "U.S. 500 Income Edge℠ ETF" [ref=e2219]:
+            - link "U.S. 500 Income Edge℠ ETF" [ref=e2220] [cursor=pointer]:
+              - /url: /funds/EDGX
+              - generic [ref=e2221]: U.S. 500 Income Edge℠ ETF
+          - cell "$26.51" [ref=e2222]:
+            - generic [ref=e2223]: $26.51
+          - cell "$3,977,165" [ref=e2224]:
+            - generic [ref=e2225]: $3,977,165
+          - cell "0.50%" [ref=e2226]:
+            - generic [ref=e2227]: 0.50%
+          - cell "0.00%" [ref=e2228]:
+            - generic [ref=e2229]: 0.00%
+          - cell "Fact Sheet PDF" [ref=e2230]:
+            - link "Fact Sheet PDF" [ref=e2231] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/edgx/Fact-Sheet_EDGX.pdf
+              - img [ref=e2233]
+        - row "QCLR Nasdaq 100® Collar 95-110 ETF $28.28 $3,393,857 0.25% -- Fact Sheet PDF" [ref=e2235]:
+          - cell [ref=e2236]
+          - cell "QCLR" [ref=e2237]:
+            - link "QCLR" [ref=e2238] [cursor=pointer]:
+              - /url: /funds/QCLR
+              - generic [ref=e2239]: QCLR
+          - cell "Nasdaq 100® Collar 95-110 ETF" [ref=e2240]:
+            - link "Nasdaq 100® Collar 95-110 ETF" [ref=e2241] [cursor=pointer]:
+              - /url: /funds/QCLR
+              - generic [ref=e2242]: Nasdaq 100® Collar 95-110 ETF
+          - cell "$28.28" [ref=e2243]:
+            - generic [ref=e2244]: $28.28
+          - cell "$3,393,857" [ref=e2245]:
+            - generic [ref=e2246]: $3,393,857
+          - cell "0.25%" [ref=e2247]:
+            - generic [ref=e2248]: 0.25%
+          - cell "--" [ref=e2249]:
+            - generic [ref=e2250]: "--"
+          - cell "Fact Sheet PDF" [ref=e2251]:
+            - link "Fact Sheet PDF" [ref=e2252] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/qclr/Fact-Sheet_QCLR.pdf
+              - img [ref=e2254]
+        - row "XCLR S&P 500® Collar 95-110 ETF $27.51 $3,300,676 0.25% -- Fact Sheet PDF" [ref=e2256]:
+          - cell [ref=e2257]
+          - cell "XCLR" [ref=e2258]:
+            - link "XCLR" [ref=e2259] [cursor=pointer]:
+              - /url: /funds/XCLR
+              - generic [ref=e2260]: XCLR
+          - cell "S&P 500® Collar 95-110 ETF" [ref=e2261]:
+            - link "S&P 500® Collar 95-110 ETF" [ref=e2262] [cursor=pointer]:
+              - /url: /funds/XCLR
+              - generic [ref=e2263]: S&P 500® Collar 95-110 ETF
+          - cell "$27.51" [ref=e2264]:
+            - generic [ref=e2265]: $27.51
+          - cell "$3,300,676" [ref=e2266]:
+            - generic [ref=e2267]: $3,300,676
+          - cell "0.25%" [ref=e2268]:
+            - generic [ref=e2269]: 0.25%
+          - cell "--" [ref=e2270]:
+            - generic [ref=e2271]: "--"
+          - cell "Fact Sheet PDF" [ref=e2272]:
+            - link "Fact Sheet PDF" [ref=e2273] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/xclr/Fact-Sheet_XCLR.pdf
+              - img [ref=e2275]
+        - row "COMD Commodity Strategy ETF $26.66 $3,199,472 0.55% -- Fact Sheet PDF" [ref=e2277]:
+          - cell [ref=e2278]
+          - cell "COMD" [ref=e2279]:
+            - link "COMD" [ref=e2280] [cursor=pointer]:
+              - /url: /funds/COMD
+              - generic [ref=e2281]: COMD
+          - cell "Commodity Strategy ETF" [ref=e2282]:
+            - link "Commodity Strategy ETF" [ref=e2283] [cursor=pointer]:
+              - /url: /funds/COMD
+              - generic [ref=e2284]: Commodity Strategy ETF
+          - cell "$26.66" [ref=e2285]:
+            - generic [ref=e2286]: $26.66
+          - cell "$3,199,472" [ref=e2287]:
+            - generic [ref=e2288]: $3,199,472
+          - cell "0.55%" [ref=e2289]:
+            - generic [ref=e2290]: 0.55%
+          - cell "--" [ref=e2291]:
+            - generic [ref=e2292]: "--"
+          - cell "Fact Sheet PDF" [ref=e2293]:
+            - link "Fact Sheet PDF" [ref=e2294] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/comd/Fact-Sheet_COMD.pdf
+              - img [ref=e2296]
+        - row "EGLE S&P 500® U.S. Revenue Leaders ETF $30.68 $2,147,912 0.19% -- Fact Sheet PDF" [ref=e2298]:
+          - cell [ref=e2299]
+          - cell "EGLE" [ref=e2300]:
+            - link "EGLE" [ref=e2301] [cursor=pointer]:
+              - /url: /funds/EGLE
+              - generic [ref=e2302]: EGLE
+          - cell "S&P 500® U.S. Revenue Leaders ETF" [ref=e2303]:
+            - link "S&P 500® U.S. Revenue Leaders ETF" [ref=e2304] [cursor=pointer]:
+              - /url: /funds/EGLE
+              - generic [ref=e2305]: S&P 500® U.S. Revenue Leaders ETF
+          - cell "$30.68" [ref=e2306]:
+            - generic [ref=e2307]: $30.68
+          - cell "$2,147,912" [ref=e2308]:
+            - generic [ref=e2309]: $2,147,912
+          - cell "0.19%" [ref=e2310]:
+            - generic [ref=e2311]: 0.19%
+          - cell "--" [ref=e2312]:
+            - generic [ref=e2313]: "--"
+          - cell "Fact Sheet PDF" [ref=e2314]:
+            - link "Fact Sheet PDF" [ref=e2315] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/egle/Fact-Sheet_EGLE.pdf
+              - img [ref=e2317]
+        - row "FLAG S&P 500® U.S. Market Leaders Top 50 ETF $27.80 $1,667,863 0.29% -- Fact Sheet PDF" [ref=e2319]:
+          - cell [ref=e2320]
+          - cell "FLAG" [ref=e2321]:
+            - link "FLAG" [ref=e2322] [cursor=pointer]:
+              - /url: /funds/FLAG
+              - generic [ref=e2323]: FLAG
+          - cell "S&P 500® U.S. Market Leaders Top 50 ETF" [ref=e2324]:
+            - link "S&P 500® U.S. Market Leaders Top 50 ETF" [ref=e2325] [cursor=pointer]:
+              - /url: /funds/FLAG
+              - generic [ref=e2326]: S&P 500® U.S. Market Leaders Top 50 ETF
+          - cell "$27.80" [ref=e2327]:
+            - generic [ref=e2328]: $27.80
+          - cell "$1,667,863" [ref=e2329]:
+            - generic [ref=e2330]: $1,667,863
+          - cell "0.29%" [ref=e2331]:
+            - generic [ref=e2332]: 0.29%
+          - cell "--" [ref=e2333]:
+            - generic [ref=e2334]: "--"
+          - cell "Fact Sheet PDF" [ref=e2335]:
+            - link "Fact Sheet PDF" [ref=e2336] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/flag/Fact-Sheet_FLAG.pdf
+              - img [ref=e2338]
+        - row "BTRN Bitcoin Trend Strategy ETF $24.56 $1,473,827 0.95% -- Fact Sheet PDF" [ref=e2340]:
+          - cell [ref=e2341]
+          - cell "BTRN" [ref=e2342]:
+            - link "BTRN" [ref=e2343] [cursor=pointer]:
+              - /url: /funds/BTRN
+              - generic [ref=e2344]: BTRN
+          - cell "Bitcoin Trend Strategy ETF" [ref=e2345]:
+            - link "Bitcoin Trend Strategy ETF" [ref=e2346] [cursor=pointer]:
+              - /url: /funds/BTRN
+              - generic [ref=e2347]: Bitcoin Trend Strategy ETF
+          - cell "$24.56" [ref=e2348]:
+            - generic [ref=e2349]: $24.56
+          - cell "$1,473,827" [ref=e2350]:
+            - generic [ref=e2351]: $1,473,827
+          - cell "0.95%" [ref=e2352]:
+            - generic [ref=e2353]: 0.95%
+          - cell "--" [ref=e2354]:
+            - generic [ref=e2355]: "--"
+          - cell "Fact Sheet PDF" [ref=e2356]:
+            - link "Fact Sheet PDF" [ref=e2357] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/btrn/Fact-Sheet_BTRN.pdf
+              - img [ref=e2359]
+        - row "IRVH Interest Rate Volatility & Inflation Hedge ETF $19.21 $1,344,642 0.45% -- Fact Sheet PDF" [ref=e2361]:
+          - cell [ref=e2362]
+          - cell "IRVH" [ref=e2363]:
+            - link "IRVH" [ref=e2364] [cursor=pointer]:
+              - /url: /funds/IRVH
+              - generic [ref=e2365]: IRVH
+          - cell "Interest Rate Volatility & Inflation Hedge ETF" [ref=e2366]:
+            - link "Interest Rate Volatility & Inflation Hedge ETF" [ref=e2367] [cursor=pointer]:
+              - /url: /funds/IRVH
+              - generic [ref=e2368]: Interest Rate Volatility & Inflation Hedge ETF
+          - cell "$19.21" [ref=e2369]:
+            - generic [ref=e2370]: $19.21
+          - cell "$1,344,642" [ref=e2371]:
+            - generic [ref=e2372]: $1,344,642
+          - cell "0.45%" [ref=e2373]:
+            - generic [ref=e2374]: 0.45%
+          - cell "--" [ref=e2375]:
+            - generic [ref=e2376]: "--"
+          - cell "Fact Sheet PDF" [ref=e2377]:
+            - link "Fact Sheet PDF" [ref=e2378] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/irvh/Fact-Sheet_IRVH.pdf
+              - img [ref=e2380]
+        - row "GXPE PureCap℠ MSCI Energy ETF $32.37 $1,294,631 0.25% 0.15% Fact Sheet PDF" [ref=e2382]:
+          - cell [ref=e2383]
+          - cell "GXPE" [ref=e2384]:
+            - link "GXPE" [ref=e2385] [cursor=pointer]:
+              - /url: /funds/GXPE
+              - generic [ref=e2386]: GXPE
+          - cell "PureCap℠ MSCI Energy ETF" [ref=e2387]:
+            - link "PureCap℠ MSCI Energy ETF" [ref=e2388] [cursor=pointer]:
+              - /url: /funds/GXPE
+              - generic [ref=e2389]: PureCap℠ MSCI Energy ETF
+          - cell "$32.37" [ref=e2390]:
+            - generic [ref=e2391]: $32.37
+          - cell "$1,294,631" [ref=e2392]:
+            - generic [ref=e2393]: $1,294,631
+          - cell "0.25%" [ref=e2394]:
+            - generic [ref=e2395]: 0.25%
+          - cell "0.15%" [ref=e2396]:
+            - generic [ref=e2397]: 0.15%
+          - cell "Fact Sheet PDF" [ref=e2398]:
+            - link "Fact Sheet PDF" [ref=e2399] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/gxpe/Fact-Sheet_GXPE.pdf
+              - img [ref=e2401]
+        - row "ZCBA Zero Coupon Bond 2030 ETF $48.89 $977,878 0.07% -- Fact Sheet PDF" [ref=e2403]:
+          - cell [ref=e2404]
+          - cell "ZCBA" [ref=e2405]:
+            - link "ZCBA" [ref=e2406] [cursor=pointer]:
+              - /url: /funds/ZCBA
+              - generic [ref=e2407]: ZCBA
+          - cell "Zero Coupon Bond 2030 ETF" [ref=e2408]:
+            - link "Zero Coupon Bond 2030 ETF" [ref=e2409] [cursor=pointer]:
+              - /url: /funds/ZCBA
+              - generic [ref=e2410]: Zero Coupon Bond 2030 ETF
+          - cell "$48.89" [ref=e2411]:
+            - generic [ref=e2412]: $48.89
+          - cell "$977,878" [ref=e2413]:
+            - generic [ref=e2414]: $977,878
+          - cell "0.07%" [ref=e2415]:
+            - generic [ref=e2416]: 0.07%
+          - cell "--" [ref=e2417]:
+            - generic [ref=e2418]: "--"
+          - cell "Fact Sheet PDF" [ref=e2419]:
+            - link "Fact Sheet PDF" [ref=e2420] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/zcba/Fact-Sheet_ZCBA.pdf
+              - img [ref=e2422]
+        - row "ZCBB Zero Coupon Bond 2031 ETF $48.81 $976,180 0.07% -- Fact Sheet PDF" [ref=e2424]:
+          - cell [ref=e2425]
+          - cell "ZCBB" [ref=e2426]:
+            - link "ZCBB" [ref=e2427] [cursor=pointer]:
+              - /url: /funds/ZCBB
+              - generic [ref=e2428]: ZCBB
+          - cell "Zero Coupon Bond 2031 ETF" [ref=e2429]:
+            - link "Zero Coupon Bond 2031 ETF" [ref=e2430] [cursor=pointer]:
+              - /url: /funds/ZCBB
+              - generic [ref=e2431]: Zero Coupon Bond 2031 ETF
+          - cell "$48.81" [ref=e2432]:
+            - generic [ref=e2433]: $48.81
+          - cell "$976,180" [ref=e2434]:
+            - generic [ref=e2435]: $976,180
+          - cell "0.07%" [ref=e2436]:
+            - generic [ref=e2437]: 0.07%
+          - cell "--" [ref=e2438]:
+            - generic [ref=e2439]: "--"
+          - cell "Fact Sheet PDF" [ref=e2440]:
+            - link "Fact Sheet PDF" [ref=e2441] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/zcbb/Fact-Sheet_ZCBB.pdf
+              - img [ref=e2443]
+        - row "ZCBC Zero Coupon Bond 2032 ETF $48.81 $976,122 0.07% -- Fact Sheet PDF" [ref=e2445]:
+          - cell [ref=e2446]
+          - cell "ZCBC" [ref=e2447]:
+            - link "ZCBC" [ref=e2448] [cursor=pointer]:
+              - /url: /funds/ZCBC
+              - generic [ref=e2449]: ZCBC
+          - cell "Zero Coupon Bond 2032 ETF" [ref=e2450]:
+            - link "Zero Coupon Bond 2032 ETF" [ref=e2451] [cursor=pointer]:
+              - /url: /funds/ZCBC
+              - generic [ref=e2452]: Zero Coupon Bond 2032 ETF
+          - cell "$48.81" [ref=e2453]:
+            - generic [ref=e2454]: $48.81
+          - cell "$976,122" [ref=e2455]:
+            - generic [ref=e2456]: $976,122
+          - cell "0.07%" [ref=e2457]:
+            - generic [ref=e2458]: 0.07%
+          - cell "--" [ref=e2459]:
+            - generic [ref=e2460]: "--"
+          - cell "Fact Sheet PDF" [ref=e2461]:
+            - link "Fact Sheet PDF" [ref=e2462] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/zcbc/Fact-Sheet_ZCBC.pdf
+              - img [ref=e2464]
+        - row "ZCBE Zero Coupon Bond 2033 ETF $48.78 $975,582 0.07% -- Fact Sheet PDF" [ref=e2466]:
+          - cell [ref=e2467]
+          - cell "ZCBE" [ref=e2468]:
+            - link "ZCBE" [ref=e2469] [cursor=pointer]:
+              - /url: /funds/ZCBE
+              - generic [ref=e2470]: ZCBE
+          - cell "Zero Coupon Bond 2033 ETF" [ref=e2471]:
+            - link "Zero Coupon Bond 2033 ETF" [ref=e2472] [cursor=pointer]:
+              - /url: /funds/ZCBE
+              - generic [ref=e2473]: Zero Coupon Bond 2033 ETF
+          - cell "$48.78" [ref=e2474]:
+            - generic [ref=e2475]: $48.78
+          - cell "$975,582" [ref=e2476]:
+            - generic [ref=e2477]: $975,582
+          - cell "0.07%" [ref=e2478]:
+            - generic [ref=e2479]: 0.07%
+          - cell "--" [ref=e2480]:
+            - generic [ref=e2481]: "--"
+          - cell "Fact Sheet PDF" [ref=e2482]:
+            - link "Fact Sheet PDF" [ref=e2483] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/zcbe/Fact-Sheet_ZCBE.pdf
+              - img [ref=e2485]
+        - row "ZCBG Zero Coupon Bond 2035 ETF $48.75 $974,954 0.07% -- Fact Sheet PDF" [ref=e2487]:
+          - cell [ref=e2488]
+          - cell "ZCBG" [ref=e2489]:
+            - link "ZCBG" [ref=e2490] [cursor=pointer]:
+              - /url: /funds/ZCBG
+              - generic [ref=e2491]: ZCBG
+          - cell "Zero Coupon Bond 2035 ETF" [ref=e2492]:
+            - link "Zero Coupon Bond 2035 ETF" [ref=e2493] [cursor=pointer]:
+              - /url: /funds/ZCBG
+              - generic [ref=e2494]: Zero Coupon Bond 2035 ETF
+          - cell "$48.75" [ref=e2495]:
+            - generic [ref=e2496]: $48.75
+          - cell "$974,954" [ref=e2497]:
+            - generic [ref=e2498]: $974,954
+          - cell "0.07%" [ref=e2499]:
+            - generic [ref=e2500]: 0.07%
+          - cell "--" [ref=e2501]:
+            - generic [ref=e2502]: "--"
+          - cell "Fact Sheet PDF" [ref=e2503]:
+            - link "Fact Sheet PDF" [ref=e2504] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/zcbg/Fact-Sheet_ZCBG.pdf
+              - img [ref=e2506]
+        - row "ZCBF Zero Coupon Bond 2034 ETF $48.72 $974,402 0.07% -- Fact Sheet PDF" [ref=e2508]:
+          - cell [ref=e2509]
+          - cell "ZCBF" [ref=e2510]:
+            - link "ZCBF" [ref=e2511] [cursor=pointer]:
+              - /url: /funds/ZCBF
+              - generic [ref=e2512]: ZCBF
+          - cell "Zero Coupon Bond 2034 ETF" [ref=e2513]:
+            - link "Zero Coupon Bond 2034 ETF" [ref=e2514] [cursor=pointer]:
+              - /url: /funds/ZCBF
+              - generic [ref=e2515]: Zero Coupon Bond 2034 ETF
+          - cell "$48.72" [ref=e2516]:
+            - generic [ref=e2517]: $48.72
+          - cell "$974,402" [ref=e2518]:
+            - generic [ref=e2519]: $974,402
+          - cell "0.07%" [ref=e2520]:
+            - generic [ref=e2521]: 0.07%
+          - cell "--" [ref=e2522]:
+            - generic [ref=e2523]: "--"
+          - cell "Fact Sheet PDF" [ref=e2524]:
+            - link "Fact Sheet PDF" [ref=e2525] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/zcbf/Fact-Sheet_ZCBF.pdf
+              - img [ref=e2527]
+        - row "EHCC Ethereum Covered Call ETF $18.99 $759,623 0.75% -- Fact Sheet PDF" [ref=e2529]:
+          - cell [ref=e2530]
+          - cell "EHCC" [ref=e2531]:
+            - link "EHCC" [ref=e2532] [cursor=pointer]:
+              - /url: /funds/EHCC
+              - generic [ref=e2533]: EHCC
+          - cell "Ethereum Covered Call ETF" [ref=e2534]:
+            - link "Ethereum Covered Call ETF" [ref=e2535] [cursor=pointer]:
+              - /url: /funds/EHCC
+              - generic [ref=e2536]: Ethereum Covered Call ETF
+          - cell "$18.99" [ref=e2537]:
+            - generic [ref=e2538]: $18.99
+          - cell "$759,623" [ref=e2539]:
+            - generic [ref=e2540]: $759,623
+          - cell "0.75%" [ref=e2541]:
+            - generic [ref=e2542]: 0.75%
+          - cell "--" [ref=e2543]:
+            - generic [ref=e2544]: "--"
+          - cell "Fact Sheet PDF" [ref=e2545]:
+            - link "Fact Sheet PDF" [ref=e2546] [cursor=pointer]:
+              - /url: https://assets.globalxetfs.com/funds/documents/ehcc/Fact-Sheet_EHCC.pdf
+              - img [ref=e2548]
+    - paragraph [ref=e2552]:
+      - text: Click the ETF tickers above for standard performance data.
+      - strong [ref=e2554]: The performance data quoted represents past performance. Past performance does not guarantee future results. The investment return and principal value of an investment will fluctuate so that an investor's shares, when sold or redeemed, may be worth more or less than their original cost and current performance may be lower or higher than the performance quoted.
+    - generic [ref=e2555]:
+      - link "Fund Map" [ref=e2556] [cursor=pointer]:
+        - /url: https://assets-cms.globalxetfs.com/FundMap.pdf
+        - button "Fund Map" [ref=e2557]
+      - link "Additional Quarterly Holdings" [ref=e2558] [cursor=pointer]:
+        - /url: https://assets-cms.globalxetfs.com/Global_X_Quarterly_Reports_2025.zip
+        - button "Additional Quarterly Holdings" [ref=e2559]
+      - link "XBRL Filings" [ref=e2560] [cursor=pointer]:
+        - /url: https://go.globalxetfs.com/l/750543/2026-06-10/cwm9f1/750543/1781112551nLnk5ras/All_XBRL_Filings_10May26.zip
+        - button "XBRL Filings" [ref=e2561]
+      - link "Proxy Statement" [ref=e2562] [cursor=pointer]:
+        - /url: https://assets-cms.globalxetfs.com/Proxy-Statement.pdf
+        - button "Proxy Statement" [ref=e2563]
+  - generic [ref=e2565]:
+    - link "Global X ETFs Logo" [ref=e2567] [cursor=pointer]:
+      - /url: /
+      - img "Global X ETFs Logo" [ref=e2568]
+    - generic [ref=e2570]:
+      - link "OUR ETFs" [ref=e2571] [cursor=pointer]:
+        - /url: /explore
+        - button "OUR ETFs" [ref=e2572]
+      - link "INSIGHTS" [ref=e2573] [cursor=pointer]:
+        - /url: /insights
+        - button "INSIGHTS" [ref=e2574]
+      - link "ABOUT" [ref=e2575] [cursor=pointer]:
+        - /url: /about
+        - button "ABOUT" [ref=e2576]
+    - generic [ref=e2577]:
+      - link "CONTACT" [ref=e2578] [cursor=pointer]:
+        - /url: /contact
+        - button "CONTACT" [ref=e2579]
+      - link "NEWS" [ref=e2580] [cursor=pointer]:
+        - /url: /news
+        - button "NEWS" [ref=e2581]
+      - link "PRIVACY POLICY" [ref=e2582] [cursor=pointer]:
+        - /url: /privacy-policy
+        - button "PRIVACY POLICY" [ref=e2583]
+    - generic [ref=e2584]:
+      - button "Subscribe to Updates →" [ref=e2586] [cursor=pointer]:
+        - generic [ref=e2587]:
+          - img [ref=e2588]
+          - generic [ref=e2590]: Subscribe to Updates
+          - text: →
+      - generic [ref=e2591]:
+        - link "Global X ETFs LinkedIn" [ref=e2592] [cursor=pointer]:
+          - /url: https://www.linkedin.com/company/globalxetfs
+          - img "Global X ETFs LinkedIn" [ref=e2593]
+        - link "Global X ETFs Twitter" [ref=e2595] [cursor=pointer]:
+          - /url: https://twitter.com/GlobalXETFs
+          - img "Global X ETFs Twitter" [ref=e2596]
+        - link "Global X ETFs Facebook" [ref=e2598] [cursor=pointer]:
+          - /url: https://www.facebook.com/globalxetfs/
+          - img "Global X ETFs Facebook" [ref=e2599]
+        - link "Global X ETFs Instagram" [ref=e2601] [cursor=pointer]:
+          - /url: https://www.instagram.com/globalxetfs/
+          - img "Global X ETFs Instagram" [ref=e2602]
+        - link "Global X ETFs Youtube" [ref=e2605] [cursor=pointer]:
+          - /url: https://www.youtube.com/c/GlobalXETFs
+          - img "Global X ETFs Youtube" [ref=e2606]
+        - link "Global X ETFs TikTok" [ref=e2608] [cursor=pointer]:
+          - /url: https://www.tiktok.com/@globalxetfs
+          - img "Global X ETFs TikTok" [ref=e2609]
+  - paragraph [ref=e2612]:
+    - text: SEI Investments Distribution Co. (1 Freedom Valley Drive, Oaks, PA, 19456) is the distributor for the Global X Funds. Check the background of SIDCO and Global X’s Registered Representatives on FINRA’s
+    - link "BrokerCheck" [ref=e2613] [cursor=pointer]:
+      - /url: https://brokercheck.finra.org/
+      - button "BrokerCheck" [ref=e2614]
+  - generic [ref=e2617]:
+    - paragraph [ref=e2618]:
+      - superscript [ref=e2619]: "1"
+      - text: Gross expenses reflect fees incurred by the Fund before waivers and reimbursements, including but not limited to management fees, 12b-1 fees, and acquired fund fees and expenses.
+    - paragraph [ref=e2620]:
+      - superscript [ref=e2621]: "2"
+      - text: Net expenses reflect fees incurred by the Fund after waivers and reimbursements, where applicable. All applicable fee waivers are contractual – until at least March 1, 2027 for TYLG, EDGQ and EDGX and April 1, 2027 for GXPS, GXPD, GXPE, GXPC and GXPT and April 1, 2028 for RMHY.
+    - paragraph [ref=e2622]: Investing involves risk, including the possible loss of principal. In addition to the normal risks associated with investing, international investments may involve risk of capital loss from unfavorable fluctuation in currency values, from differences in generally accepted accounting principles or from economic or political instability in other nations. Emerging markets involve heightened risks related to the same factors as well as increased volatility and lower trading volume. Narrowly focused investments and investments focusing on a single country may be subject to higher volatility.
+    - paragraph [ref=e2623]: Technology-themed investments may be subject to rapid changes in technology, intense competition, rapid obsolescence of products and services, loss of intellectual property protections, evolving industry standards and frequent new product productions, and changes in business cycles and government regulation.
+    - paragraph [ref=e2624]: Shares of ETFs are bought and sold at market price (not NAV) and are not individually redeemed from the funds. Brokerage commissions will reduce returns.
+    - paragraph [ref=e2625]:
+      - strong [ref=e2627]: Carefully consider the funds’ investment objectives, risk factors, charges, and expenses before investing. This and additional information can be found in the funds’ summary or full prospectus, which may be obtained by calling 888-493-8631 or by visiting globalxetfs.com. Please read the prospectus carefully before investing.
+    - paragraph [ref=e2628]: Global X Management Company LLC serves as an advisor to the Global X Funds. The funds are distributed by SEI Investments Distribution Co. (SIDCO, 1 Freedom Valley Drive, Oaks, PA, 19456), which is not affiliated with Global X Management Company LLC or Mirae Asset Global Investments.
+    - paragraph [ref=e2629]: MSCI, S&P, NASDAQ and FTSE indexes have been licensed by MSCI, Standard & Poor’s, NASDAQ OMX and FTSE, respectively, for use by Global X Management Company LLC. Global X Funds are not sponsored, endorsed, issued, sold, or promoted by these entities, nor do these entities make any representations regarding the advisability of investing in the Global X Funds. Neither SIDCO, Global X nor Mirae Asset Global Investments are affiliated with these entities.
+    - paragraph [ref=e2630]: DAX, QYLD, and XYLD were re-organized effective December 24, 2018. Any returns presented above reflect the performance of the predecessor Funds through December 21, 2018. Please click on the individual ETF tickers for more detail.
+    - paragraph [ref=e2631]: NORW was re-organized effective at the close of business on October 29, 2021. Performance for periods prior to November 1, 2021 reflects the historical performance of the Global X MSCI Norway ETF, CUSIP 37950E747, the predecessor fund. Effective as of the close of business on October 29, 2021, the predecessor fund was reorganized into the Fund.
+    - paragraph [ref=e2632]: EMM & EMC were re-organized effective May 12, 2023. Any returns presented above reflect the performance of the predecessor Funds’ I shares through May 12, 2023. Please click on the individual ETF tickers for more detail. Market price returns prior to that date reflects the predecessor fund’s NAV return.
+  - link "→ Back to Top" [ref=e2635] [cursor=pointer]:
+    - /url: "#"
+    - button "→ Back to Top" [ref=e2636]
+  - alert [ref=e2637]
+  - iframe

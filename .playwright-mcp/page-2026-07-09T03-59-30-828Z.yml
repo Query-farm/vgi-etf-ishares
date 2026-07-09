@@ -1,0 +1,351 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#inv-main-content"
+    - strong [ref=e3]: Skip to main content
+  - banner [ref=e4]:
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - generic [ref=e9]:
+          - link "Invesco QQQ" [ref=e11] [cursor=pointer]:
+            - /url: /qqq-etf/en/home.html
+            - generic:
+              - img "Invesco QQQ"
+          - generic:  
+        - generic [ref=e13]:
+          - navigation "Main navigation menu" [ref=e15]:
+            - list:
+              - listitem [ref=e16]:
+                - link "About QQQ" [ref=e17] [cursor=pointer]:
+                  - /url: /qqq-etf/en/about.html
+              - listitem [ref=e18]:
+                - link "Performance" [ref=e19] [cursor=pointer]:
+                  - /url: /qqq-etf/en/performance.html
+              - listitem [ref=e20]:
+                - button "Insights & Education " [ref=e21] [cursor=pointer]: Insights & Education  
+              - listitem [ref=e22]:
+                - link "About Invesco" [ref=e23] [cursor=pointer]:
+                  - /url: /qqq-etf/en/about-invesco.html
+              - listitem [ref=e24]:
+                - link "Other ETFs" [ref=e25] [cursor=pointer]:
+                  - /url: /us/en/solutions/invesco-etfs.html
+          - button "checkout widget cta" [ref=e26] [cursor=pointer]: Invest now
+      - text: 
+  - generic [ref=e27]:
+    - alert "alert / information banner" [ref=e28]:
+      - generic [ref=e29]:
+        - paragraph [ref=e32]:
+          - text: Discover a more balanced way to access the innovative leaders of the Nasdaq-100 with Invesco QQQ Equal Weight ETF (QEW).
+          - link "Learn more" [ref=e33] [cursor=pointer]:
+            - /url: https://www.invesco.com/us/en/financial-products/etfs/invesco-qqq-equal-weight-etf.html
+        - button "close banner" [ref=e35] [cursor=pointer]: 
+    - generic [ref=e38]:
+      - main [ref=e39]:
+        - generic [ref=e41]:
+          - generic [ref=e49]:
+            - heading "Help power your portfolio with innovation" [level=1] [ref=e50]:
+              - generic [ref=e51]:
+                - text: Help power your portfolio with
+                - generic [ref=e54]: innovation
+            - generic [ref=e55]: Invesco QQQ lets you access 100 innovative companies in a single investment.
+          - generic [ref=e58]:
+            - button "Invest now" [ref=e59] [cursor=pointer]:
+              - generic [ref=e61]: Invest now
+            - link "Learn about ETFs" [ref=e62] [cursor=pointer]:
+              - /url: https://www.invesco.com/us/en/solutions/invesco-etfs.html
+              - generic [ref=e64]: Learn about ETFs
+          - img [ref=e69]
+          - generic [ref=e75]:
+            - generic [ref=e77]:
+              - heading "Top 1% rated" [level=2] [ref=e79]
+              - paragraph [ref=e81]: Ranked in the top 1% (3 of 396) of large-cap growth funds for 15-year total return by Lipper, as of March 31, 2026
+            - generic [ref=e83]:
+              - heading "2nd-most traded" [level=2] [ref=e85]
+              - paragraph [ref=e87]:
+                - text: Named the 2nd-most traded ETF in the U.S., based on average daily volume traded, as of March 31, 2026
+                - superscript [ref=e88]: "1"
+            - generic [ref=e90]:
+              - heading "5-star Morningstar rating" [level=2] [ref=e92]
+              - paragraph [ref=e94]: Received a 5-star rating (10-year, risk-adjusted) among 898 large-cap growth funds, as of March 31, 2026
+            - generic [ref=e96]:
+              - heading "25+ years of history" [level=2] [ref=e98]
+              - paragraph [ref=e100]: Recognized as one of the oldest ETFs, with over 25 years of history pioneering the democratization of investing
+          - generic [ref=e108]:
+            - generic [ref=e110]:
+              - generic [ref=e117]:
+                - heading "Access 100 top innovators in a single ETF" [level=2] [ref=e118]
+                - paragraph [ref=e120]: QQQ provides exposure to companies at the forefront of innovation across a diverse range of sectors, all in one investment.
+              - link "See fund details" [ref=e124] [cursor=pointer]:
+                - /url: /qqq-etf/en/about.html
+                - generic [ref=e125]:
+                  - generic [ref=e126]: 
+                  - generic [ref=e127]: See fund details
+            - figure [ref=e133]:
+              - img "Top 20 Innovators" [ref=e135]
+          - generic [ref=e148]:
+            - heading "See how your investments can grow" [level=2] [ref=e156]:
+              - generic [ref=e157]: See how your investments can grow
+            - generic [ref=e162]:
+              - generic [ref=e164]:
+                - paragraph [ref=e166]: Your investment in Invesco QQQ would be worth
+                - paragraph [ref=e168]: $56,852
+                - paragraph [ref=e170]:
+                  - text: if you had invested
+                  - strong [ref=e171]: $10,000
+                  - text: in QQQ
+                  - strong [ref=e172]: 10 years ago
+              - generic [ref=e174]:
+                - generic [ref=e175]:
+                  - generic "Investment Amount" [ref=e176]:
+                    - heading "Investment Amount" [level=3] [ref=e177]
+                    - textbox [ref=e180]: $10,000
+                  - generic "Investment Growth Period" [ref=e181]:
+                    - heading "Investment Growth Period" [level=3] [ref=e182]
+                    - generic [ref=e183]:
+                      - generic [ref=e185] [cursor=pointer]:
+                        - radio "1Y" [ref=e186]
+                        - generic [ref=e187]: 1Y
+                      - generic [ref=e189] [cursor=pointer]:
+                        - radio "3Y" [ref=e190]
+                        - generic [ref=e191]: 3Y
+                      - generic [ref=e193] [cursor=pointer]:
+                        - radio "5Y" [ref=e194]
+                        - generic [ref=e195]: 5Y
+                      - generic [ref=e197] [cursor=pointer]:
+                        - radio "10Y" [checked] [ref=e198]
+                        - generic [ref=e199]: 10Y
+                  - button "Calculate" [ref=e201] [cursor=pointer]
+                - paragraph [ref=e203]: Returns shown are as of 03/31/2026
+          - generic [ref=e211]:
+            - heading "Frequently asked questions" [level=2] [ref=e221]
+            - generic [ref=e227]:
+              - tablist [ref=e231]:
+                - tab "Already investing" [selected] [ref=e233] [cursor=pointer]
+                - tab "Professionals" [ref=e235] [cursor=pointer]
+                - tab "New to ETFs" [ref=e237] [cursor=pointer]
+              - generic [ref=e238]:
+                - tabpanel "Already investing" [ref=e240]:
+                  - generic [ref=e243]:
+                    - generic [ref=e244]:
+                      - heading "How does QQQ compare to other ETFs?" [level=3] [ref=e245]:
+                        - button "How does QQQ compare to other ETFs?" [ref=e246] [cursor=pointer]:
+                          - generic: How does QQQ compare to other ETFs?
+                          - generic:
+                            - generic: 
+                      - region "How does QQQ compare to other ETFs?":
+                        - generic [ref=e247]:
+                          - paragraph [ref=e248]: Invesco QQQ is highly liquid because it is one of the most actively traded securities, with a history dating back to 1999. Like other passively managed ETFs, QQQ tracks an index. The Nasdaq-100 index includes many of the world’s leading technology stocks, as well as the companies at the forefront of many long-term innovative themes shaping today’s economy.
+                          - paragraph [ref=e249]:
+                            - text: For more information on how innovation may help drive the performance of Invesco QQQ,
+                            - link "click here" [ref=e250] [cursor=pointer]:
+                              - /url: https://www.invesco.com/qqq-etf/en/innovation-performance.html
+                            - text: .
+                          - paragraph [ref=e251]: "Source: Bloomberg L.P., QQQ is the 2nd most-traded ETF in the US based on average daily volume traded, as of March 31, 2026."
+                    - generic [ref=e252]:
+                      - heading "What are the potential benefits of ETFs when compared to individual stocks?" [level=3] [ref=e253]:
+                        - button "What are the potential benefits of ETFs when compared to individual stocks?" [ref=e254] [cursor=pointer]:
+                          - generic: What are the potential benefits of ETFs when compared to individual stocks?
+                          - generic:
+                            - generic: 
+                      - region "What are the potential benefits of ETFs when compared to individual stocks?":
+                        - paragraph [ref=e256]: Some investors use ETFs to gain exposure to broad ranges of companies rather than picking individual stocks, which reduces single-stock risk. For example, Invesco QQQ provides diversified exposure to many innovative companies, including leaders in software, hardware, e-commerce, social media, biotechnology, and other areas.
+                    - generic [ref=e257]:
+                      - heading "Are there any tax advantages to owning an ETF?" [level=3] [ref=e258]:
+                        - button "Are there any tax advantages to owning an ETF?" [ref=e259] [cursor=pointer]:
+                          - generic: Are there any tax advantages to owning an ETF?
+                          - generic:
+                            - generic: 
+                      - region "Are there any tax advantages to owning an ETF?":
+                        - generic [ref=e260]:
+                          - paragraph [ref=e261]: Typically, yes. ETFs are generally more tax efficient than comparable mutual funds because the “in-kind” creation and redemption feature of ETFs is designed to reduce cash transactions and capital gains distributions. As a result, investors tend to keep more of their returns.
+                          - paragraph [ref=e262]: Invesco does not provide tax advice. Federal and state tax laws are complex and constantly changing. Investors should always consult their own legal or tax advisor for information concerning their individual situation.
+                    - generic [ref=e263]:
+                      - heading "Do ETFs belong in my portfolio?" [level=3] [ref=e264]:
+                        - button "Do ETFs belong in my portfolio?" [ref=e265] [cursor=pointer]:
+                          - generic: Do ETFs belong in my portfolio?
+                          - generic:
+                            - generic: 
+                      - region "Do ETFs belong in my portfolio?":
+                        - paragraph [ref=e267]: The decision to include ETFs in your portfolio will vary by your unique goals, time horizon, and risk tolerance. Investors can help diversify their portfolio with a handful of broad-based ETFs for various asset classes.
+                    - generic [ref=e268]:
+                      - heading "How is the market price of an ETF determined?" [level=3] [ref=e269]:
+                        - button "How is the market price of an ETF determined?" [ref=e270] [cursor=pointer]:
+                          - generic: How is the market price of an ETF determined?
+                          - generic:
+                            - generic: 
+                      - region "How is the market price of an ETF determined?":
+                        - generic [ref=e271]:
+                          - paragraph [ref=e272]: The market price of an ETF share is determined by the net asset value (NAV) of the underlying portfolio as well as supply and demand in the marketplace. Bid-ask spreads and premiums and discounts to NAV may also impact the price an investor pays for an ETF share.
+                          - paragraph [ref=e273]:
+                            - text: For more details on how ETFs work,
+                            - link "click here." [ref=e274] [cursor=pointer]:
+                              - /url: https://www.invesco.com/qqq-etf/en/etf-insights/a-quick-qa-on-etfs.html
+                          - paragraph [ref=e275]: Bid/ask spread is the amount by which the ask price exceeds the bid price for an asset in the market.
+                - generic:    
+                - generic:     
+          - generic [ref=e278]:
+            - img "A surfer maintains perfect balance while riding inside the curling tunnel of a powerful ocean wave." [ref=e280]
+            - generic [ref=e287]:
+              - generic [ref=e294]:
+                - 'heading "Same companies, different exposure: Meet QEW" [level=2] [ref=e295]'
+                - paragraph [ref=e297]: Discover a more balanced way to access the innovative leaders of the Nasdaq-100 with QEW.
+              - link "Learn more Opens in a new tab" [ref=e301] [cursor=pointer]:
+                - /url: https://www.invesco.com/us/en/financial-products/etfs/invesco-qqq-equal-weight-etf.html
+                - generic [ref=e302]:
+                  - generic [ref=e303]: 
+                  - generic [ref=e304]: Learn more
+                  - generic [ref=e305]: Opens in a new tab
+          - generic [ref=e313]:
+            - heading "Learn more" [level=2] [ref=e316]
+            - list [ref=e320]:
+              - listitem [ref=e321]:
+                - article [ref=e322]:
+                  - link "Market outlook Stay informed with the latest perspectives on markets and how QQQ fits into today’s economy. Learn more" [ref=e323] [cursor=pointer]:
+                    - /url: /qqq-etf/en/market-outlook.html
+                    - generic [ref=e326]:
+                      - heading "Market outlook" [level=3] [ref=e328]:
+                        - generic [ref=e329]: Market outlook
+                      - paragraph [ref=e332]: Stay informed with the latest perspectives on markets and how QQQ fits into today’s economy.
+                      - paragraph [ref=e334]:
+                        - text: Learn more
+                        - generic [ref=e335]: 
+              - listitem [ref=e336]:
+                - article [ref=e337]:
+                  - link "Innovation in action See how the ground-breaking companies in QQQ are changing the world and helping drive performance. Learn more" [ref=e338] [cursor=pointer]:
+                    - /url: /qqq-etf/en/innovation.html
+                    - generic [ref=e341]:
+                      - heading "Innovation in action" [level=3] [ref=e343]:
+                        - generic [ref=e344]: Innovation in action
+                      - paragraph [ref=e347]: See how the ground-breaking companies in QQQ are changing the world and helping drive performance.
+                      - paragraph [ref=e349]:
+                        - text: Learn more
+                        - generic [ref=e350]: 
+              - listitem [ref=e351]:
+                - article [ref=e352]:
+                  - link "ETF strategies Explore the full lineup of Invesco ETFs and see how they can help you pursue your investing goals. Learn more Opens in a new tab" [ref=e353] [cursor=pointer]:
+                    - /url: https://www.invesco.com/us/en/solutions/invesco-etfs.html
+                    - generic [ref=e356]:
+                      - heading "ETF strategies" [level=3] [ref=e358]:
+                        - generic [ref=e359]: ETF strategies
+                      - paragraph [ref=e362]: Explore the full lineup of Invesco ETFs and see how they can help you pursue your investing goals.
+                      - paragraph [ref=e364]:
+                        - text: Learn more
+                        - generic [ref=e365]: 
+                    - generic [ref=e366]: Opens in a new tab
+          - generic [ref=e374]:
+            - generic [ref=e381]:
+              - heading "Access Innovation" [level=2] [ref=e382]:
+                - generic [ref=e383]: Access Innovation
+              - paragraph [ref=e385]: Sign up for our monthly newsletter to receive expert insights on innovative themes related to Invesco QQQ and our expansive line-up of ETFs.
+            - generic [ref=e395]:
+              - group [ref=e396]:
+                - generic [ref=e399]:
+                  - generic [ref=e401]:
+                    - generic [ref=e402]: First Name
+                    - textbox "First Name" [ref=e403]
+                    - text: 
+                  - generic [ref=e405]:
+                    - generic [ref=e406]: Last Name
+                    - textbox "Last Name" [ref=e407]
+                    - text: 
+                  - generic [ref=e409]:
+                    - generic [ref=e410]: Email Address
+                    - textbox "Email Address" [ref=e411]
+                    - text:  
+                  - generic [ref=e413] [cursor=pointer]:
+                    - generic: Select Your Role
+                    - combobox "Select Your Role" [ref=e414]:
+                      - option "Financial Professional"
+                      - option "Individual Investor"
+                    - text:  
+              - text:  
+              - navigation [ref=e415]:
+                - button "Subscribe now" [disabled] [ref=e416]:
+                  - generic [ref=e418]: Subscribe now
+              - paragraph [ref=e420]:
+                - text: When you interact with us, we may collect information about you which constitutes personal data under applicable laws and regulations. Our
+                - link "privacy notice" [ref=e421] [cursor=pointer]:
+                  - /url: https://www.invesco.com/content/dam/invesco/us/en/documents/FINAL-Invesco-Online-Privacy-Policy-2022-v01.pdf
+                - text: explains how we use and protect your personal data.
+          - generic [ref=e427]:
+            - paragraph [ref=e428]: "¹ Source: Bloomberg L.P., in the US based on average daily volume traded, as of March 31, 2026."
+            - paragraph [ref=e429]: "Source: Lipper fund percentile rankings are based on total returns, excluding sales charges and including fees and expenses, and are versus mutual funds, ETFs and funds of funds in the category tracked by Lipper. Source: The Lipper one-year rank 11% (75 of 708), five-year rank 5% (29 of 610), 10-year rank 3% (13 of 508), 15-year rank 1% (3 of 396) as of March 31, 2026."
+            - paragraph [ref=e430]: Morningstar ratings are based on a risk-adjusted return measure that accounts for variation in a fund’s monthly performance, placing more emphasis on the downward variations and rewarding consistent performance. Open-end mutual funds and exchange-traded funds are considered a single population for comparison purposes. Ratings are calculated for funds with at least a three year history. The overall rating is derived from a weighted average of three-, five- and 10-year rating metrics, as applicable, excluding sales charges and including fees and expenses. Had fees not been waived and/or expenses reimbursed currently or in the past, the Morningstar rating would have been lower. The fund received 5 stars for the overall, 5 stars for the three years, 5 stars for the five years and 5 stars for the 10 years. As of March 31, 2026, the fund had an overall rating of 5 Stars out of 1103 funds, 4 Stars out of 1034 funds for the 3-year period, 5 Stars out of 985 funds for the 5-year period and 5 Stars out of 898 funds for the 10-year period, respectively, in the Large Growth category. The top 10% of funds in a category receive five stars, the next 22.5% four stars, the next 35% three stars, the next 22.5% two stars and the bottom 10% one star. Ratings for other share classes may differ due to different performance characteristics. ©2026 Morningstar, Inc. All rights reserved. The information contained herein is proprietary to Morningstar and/or its content providers. It may not be copied or distributed and is not warranted to be accurate, complete or timely. Neither Morningstar nor its content providers are responsible for any damages or losses arising from any use of this information. Past performance cannot guarantee comparable future results.
+            - paragraph [ref=e431]: An investor cannot invest directly in an index. The results assume that no cash was added to or assets withdrawn from the Index. Index returns do not represent Fund returns. The Index does not charge management fees or brokerage expenses, nor does the Index lend securities, and no revenues from securities lending were added to the performance shown.
+            - paragraph [ref=e432]: The NASDAQ Composite Index measures all NASDAQ domestic and international-based common stocks listed on The Nasdaq Stock Market.
+            - paragraph [ref=e433]: The Russell 1000 Index represents the top 1000 companies by market capitalization in the United States.
+            - paragraph [ref=e434]: Invesco does not offer tax advice. Investors should consult their own tax professionals for information regarding their own tax situations.
+      - contentinfo [ref=e435]:
+        - generic [ref=e436]:
+          - list [ref=e444]:
+            - listitem [ref=e445]:
+              - link "linkedin, Opens in a new tab" [ref=e446] [cursor=pointer]:
+                - /url: https://www.linkedin.com/showcase/invescous/
+                - generic [ref=e447]: 
+            - listitem [ref=e448]:
+              - link "instagram, Opens in a new tab" [ref=e449] [cursor=pointer]:
+                - /url: https://www.instagram.com/invescous
+                - generic [ref=e450]: 
+            - listitem [ref=e451]:
+              - link "tiktok, Opens in a new tab" [ref=e452] [cursor=pointer]:
+                - /url: https://www.tiktok.com/@invescous
+                - generic [ref=e453]: 
+            - listitem [ref=e454]:
+              - link "x, Opens in a new tab" [ref=e455] [cursor=pointer]:
+                - /url: https://twitter.com/InvescoUS
+                - generic [ref=e456]: 
+            - listitem [ref=e457]:
+              - link "facebook, Opens in a new tab" [ref=e458] [cursor=pointer]:
+                - /url: https://www.facebook.com/InvescoUS
+                - generic [ref=e459]: 
+            - listitem [ref=e460]:
+              - link "youtube, Opens in a new tab" [ref=e461] [cursor=pointer]:
+                - /url: https://www.youtube.com/c/Invesco/featured
+                - generic [ref=e462]: 
+          - list [ref=e463]:
+            - listitem [ref=e464]:
+              - link "Prospectus Opens in a new tab" [ref=e465] [cursor=pointer]:
+                - /url: https://pex.broadridge.com/summary.asp?doctype=pros&cid=invesco&fid=46090E103
+                - text: Prospectus
+                - generic [ref=e466]: Opens in a new tab
+            - listitem [ref=e467]:
+              - link "Terms of Use Opens in a new tab" [ref=e468] [cursor=pointer]:
+                - /url: https://www.invesco.com/us/contentdetail?contentId=258d54c4a0561410VgnVCM100000c2f1bf0aRCRD&audienceType=Investor
+                - text: Terms of Use
+                - generic [ref=e469]: Opens in a new tab
+            - listitem [ref=e470]:
+              - link "Privacy" [ref=e471] [cursor=pointer]:
+                - /url: /pp/en/privacy-portal.html
+            - listitem [ref=e472]:
+              - link "Cookie notice" [ref=e473] [cursor=pointer]:
+                - /url: /pp/en/privacy-portal/cookie-notice.html
+            - listitem [ref=e474]:
+              - link "Legal Opens in a new tab" [ref=e475] [cursor=pointer]:
+                - /url: https://www.invesco.com/us/contentdetail?contentId=b04d54c4a0561410VgnVCM100000c2f1bf0aRCRD&audienceType=Investor
+                - text: Legal
+                - generic [ref=e476]: Opens in a new tab
+            - listitem [ref=e477]:
+              - button "Manage Cookies" [ref=e478] [cursor=pointer]
+          - generic [ref=e481]:
+            - paragraph [ref=e482]: Questions about Invesco QQQ ETF?
+            - paragraph [ref=e483]: If you have general questions about Invesco QQQ or ETFs, we are here to help.
+            - paragraph [ref=e484]:
+              - link "Call 1-800-983-0903" [ref=e485] [cursor=pointer]:
+                - /url: tel:18009830903
+            - paragraph [ref=e486]: Invesco Distributors, Inc., ETF distributor, and Invesco Capital Management LLC, ETF sponsor, do not provide financial advisory services or tax advice. Investors should consult a financial professional before making any investment decisions. Investors should also consult their own tax professionals for information regarding their own tax situations. This content is for informational purposes only and should not be construed as legal, tax, investment, financial, or other advice; nor should it be construed as a solicitation, recommendation, endorsement, or offer for any investment strategy or product for a particular investor.
+            - paragraph [ref=e487]
+            - paragraph [ref=e488]: Not a Deposit | Not FDIC Insured | Not Guaranteed by the Bank | May Lose Value | Not Insured by any Federal Government Agency
+            - paragraph [ref=e489]: There are risks involved with investing in ETFs, including possible loss of money. Shares are not actively managed and are subject to risks similar to those of stocks, including those regarding short selling and margin maintenance requirements. Ordinary brokerage commissions apply. The Fund's return may not match the return of the Underlying Index. The Fund is subject to certain other risks. Please see the current prospectus for more information regarding the risk associated with an investment in the Fund.
+            - paragraph [ref=e490]: Investments focused in a particular sector, such as technology, are subject to greater risk, and are more greatly impacted by market volatility, than more diversified investments.
+            - paragraph [ref=e491]: The Fund is non-diversified and may experience greater volatility than a more diversified investment.
+            - paragraph [ref=e492]: The risks of investing in securities of foreign issuers can include fluctuations in foreign currencies, political and economic instability, and foreign taxation issues.
+            - paragraph [ref=e493]:
+              - link "QQQ Top 10 Holdings" [ref=e494] [cursor=pointer]:
+                - /url: https://www.invesco.com/qqq-etf/en/about.html#top-10-holdings
+              - text: . Holdings are subject to change and are not buy/sell recommendations.
+            - paragraph [ref=e495]: The Nasdaq-100® Index comprises the 100 largest non-financial companies traded on the Nasdaq. An investor cannot invest directly in an index.
+            - paragraph [ref=e496]: Diversification does not guarantee a profit or eliminate the risk of loss.
+            - paragraph [ref=e497]: "Transparency: Most ETFs disclose their holdings daily."
+            - paragraph [ref=e498]: "Low cost: Since ordinary brokerage commissions apply for each ETF buy and sell transaction, frequent trading activity may increase the cost of ETFs."
+            - paragraph [ref=e499]: Shares are not individually redeemable and owners of the Shares may acquire those Shares from the Funds and tender those shares for redemption to the Funds in Creation Unit aggregations only, typically consisting of 50,000 Shares.
+            - paragraph [ref=e500]: The sponsor of the Invesco QQQ TrustSM is Invesco Capital Management LLC (Invesco). NASDAQ, Nasdaq-100 Index, Nasdaq-100 Index Tracking Stock and QQQ are trade/service marks of The Nasdaq Stock Market, Inc. and have been licensed for use by Invesco, QQQ's sponsor. NASDAQ makes no representation regarding the advisability of investing in QQQ and makes no warranty and bears no liability with respect to QQQ, the Nasdaq-100 Index, its use or any data included therein.
+          - generic [ref=e501]: ©2026 Invesco Ltd. All rights reserved

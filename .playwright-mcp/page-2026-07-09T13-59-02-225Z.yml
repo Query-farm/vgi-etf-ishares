@@ -1,0 +1,218 @@
+- generic [ref=e4]:
+  - generic [ref=e5]:
+    - banner [ref=e7]:
+      - generic [ref=e10]:
+        - link "Skip to main content" [ref=e11] [cursor=pointer]:
+          - /url: "#contentStart"
+        - generic [ref=e12]:
+          - link "JP Morgan Asset Management - Home" [ref=e14] [cursor=pointer]:
+            - /url: /us/en/asset-management/adv/
+            - img "JP Morgan Asset Management - Home" [ref=e15]
+          - generic [ref=e16]:
+            - text:     
+            - navigation "global main" [ref=e17]:
+              - list [ref=e18]:
+                - listitem [ref=e19]:
+                  - generic [ref=e20]:
+                    - link "Products" [ref=e21] [cursor=pointer]:
+                      - /url: /us/en/asset-management/adv/funds/
+                    - button "Submenu":
+                      - generic: 
+                  - text: 
+                - listitem [ref=e22]:
+                  - generic [ref=e23]:
+                    - link "Investment Strategies" [ref=e24] [cursor=pointer]:
+                      - /url: /us/en/asset-management/adv/investment-strategies/
+                    - button "Submenu":
+                      - generic: 
+                  - text: 
+                - listitem [ref=e25]:
+                  - generic [ref=e26]:
+                    - link "Insights" [ref=e27] [cursor=pointer]:
+                      - /url: /us/en/asset-management/adv/insights/
+                    - button "Submenu":
+                      - generic: 
+                  - text: 
+                - listitem [ref=e28]:
+                  - generic [ref=e29]:
+                    - link "Tools" [ref=e30] [cursor=pointer]:
+                      - /url: /us/en/asset-management/adv/tools/
+                    - button "Submenu":
+                      - generic: 
+                  - text: 
+                - listitem [ref=e31]:
+                  - generic [ref=e32]:
+                    - link "Resources" [ref=e33] [cursor=pointer]:
+                      - /url: /us/en/asset-management/adv/resources/
+                    - button "Submenu":
+                      - generic: 
+                  - text: 
+                - listitem [ref=e34]:
+                  - generic [ref=e35]:
+                    - link "About Us" [ref=e36] [cursor=pointer]:
+                      - /url: /us/en/asset-management/adv/about-us/
+                    - button "Submenu":
+                      - generic: 
+                  - text: 
+                - listitem [ref=e37]:
+                  - link "Contact Us" [ref=e39] [cursor=pointer]:
+                    - /url: /us/en/asset-management/adv/contact-us/
+            - navigation "Primary" [ref=e42]:
+              - list [ref=e44]:
+                - listitem [ref=e45]:
+                  - link "Role " [ref=e46] [cursor=pointer]:
+                    - /url: javascript:void(0)
+                - listitem [ref=e47]:
+                  - link "Country " [ref=e48] [cursor=pointer]:
+                    - /url: javascript:void(0)
+              - generic [ref=e49]:
+                - generic "DST Vision access" [ref=e50]:
+                  - link "DST Vision external link - opens in new window/tab" [ref=e51] [cursor=pointer]:
+                    - /url: https://vision.ssnc.cloud/tf/Vision?tx=VisStartup&cz=6210818081413%20
+                    - generic [ref=e52]: DST Vision
+                    - img [ref=e53]
+                - generic "Shareholder Account Login" [ref=e56]:
+                  - link "Shareholder Login" [ref=e57] [cursor=pointer]:
+                    - /url: /us/en/asset-management/adv/shareholder-account-access/
+                    - generic [ref=e58]: Shareholder Login
+                - text:  
+                - link "Financial Professional Login" [ref=e60] [cursor=pointer]:
+                  - /url: /authe/login?countryCode=us&languageCode=en&roleCode=adv&ref=
+          - generic [ref=e61]:
+            - button "search" [ref=e62] [cursor=pointer]: Search 
+            - text: 
+          - text: 
+    - generic:
+      - generic:   
+  - main [ref=e63]
+  - text: 
+  - contentinfo [ref=e72]:
+    - generic [ref=e75]:
+      - img "JP Morgan Asset Management" [ref=e77]
+      - generic [ref=e78]:
+        - navigation [ref=e79]:
+          - list [ref=e81]:
+            - listitem [ref=e82]:
+              - link "Capital Gains Distributions" [ref=e83] [cursor=pointer]:
+                - /url: /us/en/asset-management/adv/resources/tax-planning/capital-gain-distributions/
+            - listitem [ref=e84]:
+              - link "eDelivery" [ref=e85] [cursor=pointer]:
+                - /url: /us/en/asset-management/adv/shareholder-account-access/edelivery/
+            - listitem [ref=e86]:
+              - link "Fund Documents" [ref=e87] [cursor=pointer]:
+                - /url: /us/en/asset-management/adv/products/fund-documents/
+            - listitem [ref=e88]:
+              - link "Glossary" [ref=e89] [cursor=pointer]:
+                - /url: /us/en/asset-management/adv/resources/glossary-of-investment-terms/
+            - listitem [ref=e90]:
+              - link "Help" [ref=e91] [cursor=pointer]:
+                - /url: /us/en/asset-management/adv/resources/help/
+            - listitem [ref=e92]:
+              - link "How to invest" [ref=e93] [cursor=pointer]:
+                - /url: /us/en/asset-management/adv/resources/how-to-invest/
+            - listitem [ref=e94]:
+              - link "Important Links" [ref=e95] [cursor=pointer]:
+                - /url: /us/en/asset-management/adv/resources/important-links/
+            - listitem [ref=e96]:
+              - link "Mutual Fund Fee Calculator" [ref=e97] [cursor=pointer]:
+                - /url: /us/en/asset-management/adv/mutual-fund-fee-calculator/
+            - listitem [ref=e98]:
+              - link "Accessibility" [ref=e99] [cursor=pointer]:
+                - /url: /us/en/asset-management/adv/accessibility/
+          - list [ref=e101]:
+            - listitem [ref=e102]:
+              - link "Form CRS and Form ADV Brochures" [ref=e103] [cursor=pointer]:
+                - /url: /us/en/asset-management/mod/form-crs-adv/
+            - listitem [ref=e104]:
+              - link "Investment stewardship" [ref=e105] [cursor=pointer]:
+                - /url: /us/en/asset-management/adv/about-us/investment-stewardship/
+            - listitem [ref=e106]:
+              - link "J.P. Morgan Funds U.S. Consumer Privacy Notice opens in new tab/window" [ref=e107] [cursor=pointer]:
+                - /url: /content/dam/jpm-am-aem/americas/us/en/literature/jpmorgan-funds-us-consumer-privacy-notice.pdf
+                - text: J.P. Morgan Funds U.S. Consumer Privacy Notice
+            - listitem [ref=e108]:
+              - link "J.P. Morgan Online Privacy Policy opens in new tab/window" [ref=e109] [cursor=pointer]:
+                - /url: https://www.jpmorgan.com/privacy
+                - text: J.P. Morgan Online Privacy Policy
+            - listitem [ref=e110]:
+              - link "Proxy Information" [ref=e111] [cursor=pointer]:
+                - /url: /us/en/asset-management/adv/resources/proxy-information/
+            - listitem [ref=e112]:
+              - link "Senior Officer Fee Summary" [ref=e113] [cursor=pointer]:
+                - /url: /us/en/asset-management/adv/resources/summary-of-senior-officer-fee-evaluation/
+            - listitem [ref=e114]:
+              - link "SIMPLE IRAs" [ref=e115] [cursor=pointer]:
+                - /url: /us/en/asset-management/adv/resources/simple-iras/
+            - listitem [ref=e116]:
+              - link "Site disclaimer" [ref=e117] [cursor=pointer]:
+                - /url: /us/en/asset-management/adv/site-disclaimer/
+            - listitem [ref=e118]:
+              - link "Terms of use" [ref=e119] [cursor=pointer]:
+                - /url: /us/en/asset-management/adv/terms-of-use/
+        - generic [ref=e121]:
+          - list [ref=e122]:
+            - listitem [ref=e123]:
+              - link "undefinedLinkedIn opens in new tab/window" [ref=e124] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/jpmorganassetmanagement
+            - listitem [ref=e125]:
+              - link "YoutubeOpens Youtube site in new window" [ref=e126] [cursor=pointer]:
+                - /url: https://www.youtube.com/c/Jpmorganfunds
+            - listitem [ref=e127]:
+              - link "InstagramOpens Instagram site in new window" [ref=e128] [cursor=pointer]:
+                - /url: https://www.instagram.com/jpmorganassetmanagement/
+          - list [ref=e129]:
+            - listitem [ref=e130]:
+              - link "J.P. MorganJ.P. Morgan" [ref=e131] [cursor=pointer]:
+                - /url: https://www.jpmorgan.com/
+                - paragraph [ref=e132]: J.P. Morgan
+            - listitem [ref=e133]:
+              - link "JPMorgan ChaseJPMorgan Chase" [ref=e134] [cursor=pointer]:
+                - /url: http://www.jpmorganchase.com/
+                - paragraph [ref=e135]: JPMorgan Chase
+            - listitem [ref=e136]:
+              - link "ChaseChase" [ref=e137] [cursor=pointer]:
+                - /url: http://www.chase.com/
+                - paragraph [ref=e138]: Chase
+        - region "disclaimer" [ref=e139]:
+          - paragraph [ref=e140]: This website is a general communication being provided for informational purposes only. It is educational in nature and not designed to be a recommendation for any specific investment product, strategy, plan feature or other purposes. By receiving this communication you agree with the intended purpose described above. Any examples used in this material are generic, hypothetical and for illustration purposes only. None of J.P. Morgan Asset Management, its affiliates or representatives is suggesting that the recipient or any other person take a specific course of action or any action at all. Communications such as this are not impartial and are provided in connection with the advertising and marketing of products and services. Prior to making any investment or financial decisions, an investor should seek individualized advice from personal financial, legal, tax and other professionals that take into account all of the particular facts and circumstances of an investor's own situation.
+          - paragraph [ref=e141]
+          - paragraph [ref=e142]: Variable annuity guarantees are only as good as the insurance company that gives them. While it is an uncommon occurrence that the insurance companies that back these guarantees are unable to meet their obligations, it may happen. Annuity withdrawals prior to 59½ may be subject to tax penalties, are subject to market risk and may lose value. Riders have additional fees and costs associated with them, and are subject to additional conditions, restrictions, and limitations.
+          - paragraph [ref=e143]
+          - paragraph [ref=e144]: Opinions and statements of financial market trends that are based on current market conditions constitute our judgment and are subject to change without notice. We believe the information provided here is reliable but should not be assumed to be accurate or complete. The views and strategies described may not be suitable for all investors.
+          - paragraph [ref=e145]
+          - paragraph [ref=e146]:
+            - text: "INFORMATION REGARDING MUTUAL FUNDS/ETF: Investors should carefully consider the investment objectives and risks as well as charges and expenses of a mutual fund or ETF before investing. The summary and full prospectuses contain this and other information about the mutual fund or ETF and should be read carefully before investing. To obtain a prospectus for Mutual Funds: Contact JPMorgan Distribution Services, Inc. at 1-800-480-4111 or"
+            - link "download" [ref=e147] [cursor=pointer]:
+              - /url: /content/jpm-am-aem/americas/us/en/adv/products/fund-documents.html
+            - text: "it from this site. Exchange Traded Funds: Call 1-844-4JPM-ETF or"
+            - link "download" [ref=e148] [cursor=pointer]:
+              - /url: /content/jpm-am-aem/americas/us/en/adv/products/fund-documents.html
+            - text: it from this site.
+          - paragraph [ref=e149]
+          - paragraph [ref=e150]:
+            - text: J.P. Morgan Funds and J.P. Morgan ETFs are distributed by JPMorgan Distribution Services, Inc. JPMorgan Private Markets Fund is distributed by J.P. Morgan Institutional Investments Inc. Both are affiliates of JPMorgan Chase & Co. Affiliates of JPMorgan Chase & Co. receive fees for providing various services to the funds. JPMorgan Distribution Services, Inc. is a member of
+            - link "FINRA" [ref=e151] [cursor=pointer]:
+              - /url: https://www.finra.org/
+            - link "FINRA's BrokerCheck" [ref=e152] [cursor=pointer]:
+              - /url: https://brokercheck.finra.org/
+          - paragraph [ref=e153]
+          - paragraph [ref=e154]: "INFORMATION REGARDING SEPARATELY MANAGED ACCOUNTS AND MODELS: Investment advisory services are provided by J.P. Morgan Investment Management Inc."
+          - paragraph [ref=e155]
+          - paragraph [ref=e156]: "INFORMATION REGARDING COMMINGLED FUNDS: For additional information regarding the Commingled Pension Trust Funds of JPMorgan Chase Bank, N.A., please contact your J.P. Morgan Asset Management representative."
+          - paragraph [ref=e157]
+          - paragraph [ref=e158]: The Commingled Pension Trust Funds of JPMorgan Chase Bank N.A. are collective trust funds established and maintained by JPMorgan Chase Bank, N.A. under a declaration of trust. The funds are not required to file a prospectus or registration statement with the SEC, and accordingly, neither is available. The funds are available only to certain qualified retirement plans and governmental plans and is not offered to the general public. Units of the funds are not bank deposits and are not insured or guaranteed by any bank, government entity, the FDIC or any other type of deposit insurance. You should carefully consider the investment objectives, risk, charges, and expenses of the fund before investing.
+          - paragraph [ref=e159]
+          - paragraph [ref=e160]: "INFORMATION FOR ALL SITE USERS: J.P. Morgan Asset Management is the brand name for the asset management business of JPMorgan Chase & Co. and its affiliates worldwide."
+          - paragraph [ref=e161]
+          - paragraph [ref=e162]: NOT FDIC INSURED | NO BANK GUARANTEE | MAY LOSE VALUE
+          - paragraph [ref=e163]
+          - paragraph [ref=e164]:
+            - text: Telephone calls and electronic communications may be monitored and/or recorded.
+            - text: Personal data will be collected, stored and processed by J.P. Morgan Asset Management in accordance with our privacy policies at
+            - link "https://www.jpmorgan.com/privacy" [ref=e165] [cursor=pointer]:
+              - /url: https://www.jpmorgan.com/privacy
+            - text: .
+          - paragraph [ref=e166]
+          - paragraph [ref=e167]: If you are a person with a disability and need additional support in viewing the material, please call us at 1-800-343-1113 for assistance.
+          - paragraph [ref=e168]
+          - paragraph [ref=e169]: Copyright © 2026 JPMorgan Chase & Co., All rights reserved

@@ -1,0 +1,218 @@
+- generic [ref=f8e2]:
+  - banner [ref=f8e3]:
+    - navigation [ref=f8e5]:
+      - link [ref=f8e6] [cursor=pointer]:
+        - /url: /
+        - img [ref=f8e7]
+      - list [ref=f8e9]:
+        - listitem [ref=f8e10]:
+          - button "Our ETFs" [ref=f8e11] [cursor=pointer]
+        - listitem [ref=f8e12]:
+          - button "Strategies" [ref=f8e13] [cursor=pointer]
+        - listitem [ref=f8e14]:
+          - button "Insights" [ref=f8e15] [cursor=pointer]
+        - listitem [ref=f8e16]:
+          - button "Resources" [ref=f8e17] [cursor=pointer]
+        - listitem [ref=f8e18]:
+          - button "About" [ref=f8e19] [cursor=pointer]
+      - list [ref=f8e20]:
+        - listitem [ref=f8e21]:
+          - button "Search search" [ref=f8e22] [cursor=pointer]:
+            - generic [ref=f8e23]: Search
+            - img "search" [ref=f8e24]
+  - main [ref=f8e25]:
+    - generic [ref=f8e26]:
+      - heading "Page Not Found" [level=1] [ref=f8e29]
+      - generic [ref=f8e34]:
+        - paragraph [ref=f8e35]:
+          - text: We've updated our website. Please visit our
+          - link "homepage" [ref=f8e36] [cursor=pointer]:
+            - /url: /
+          - text: and use the navigation or search function to locate your desired content.
+        - paragraph [ref=f8e37]
+        - paragraph [ref=f8e38]
+        - paragraph [ref=f8e39]
+  - contentinfo [ref=f8e41]:
+    - navigation "Footer" [ref=f8e42]:
+      - generic [ref=f8e44]:
+        - link [ref=f8e46] [cursor=pointer]:
+          - /url: /
+        - generic [ref=f8e50]:
+          - link "Twitter-icon This link opens a new window" [ref=f8e52] [cursor=pointer]:
+            - /url: https://x.com/ProShares
+            - img "Twitter-icon" [ref=f8e53]
+            - generic [ref=f8e54]: This link opens a new window
+          - link "Instagram-icon This link opens a new window" [ref=f8e56] [cursor=pointer]:
+            - /url: https://www.instagram.com/proshares/
+            - img "Instagram-icon" [ref=f8e57]
+            - generic [ref=f8e58]: This link opens a new window
+          - link "YouTube-icon This link opens a new window" [ref=f8e60] [cursor=pointer]:
+            - /url: https://www.youtube.com/channel/UCru1lf6iEvBVDf2Hb9Trjgg
+            - img "YouTube-icon" [ref=f8e61]
+            - generic [ref=f8e62]: This link opens a new window
+          - link "LinkedIn-icon This link opens a new window" [ref=f8e64] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/proshare-advisors-llc/
+            - img "LinkedIn-icon" [ref=f8e65]
+            - generic [ref=f8e66]: This link opens a new window
+    - generic [ref=f8e69]:
+      - generic [ref=f8e71]:
+        - generic [ref=f8e72]: Our ETFs
+        - generic [ref=f8e73]: Equity
+        - list [ref=f8e74]:
+          - listitem [ref=f8e75]:
+            - link "Dividend Growers" [ref=f8e76] [cursor=pointer]:
+              - /url: /our-etfs/find-proshares-etfs?strategy=DividendGrowers&product=Product+Overview&search=
+          - listitem [ref=f8e77]:
+            - link "Stock Buybacks" [ref=f8e78] [cursor=pointer]:
+              - /url: /our-etfs/find-proshares-etfs?strategy=StockBuybacks&product=Product+Overview&search=
+          - listitem [ref=f8e79]:
+            - link "High Income" [ref=f8e80] [cursor=pointer]:
+              - /url: /our-etfs/find-proshares-etfs?strategy=HighIncome&product=Product%2bOverview%2b&search=
+          - listitem [ref=f8e81]:
+            - link "Ex-Sector" [ref=f8e82] [cursor=pointer]:
+              - /url: /our-etfs/find-proshares-etfs?strategy=Ex-Sector&product=Product+Overview+&search=
+        - generic [ref=f8e83]: Other
+        - list [ref=f8e84]:
+          - listitem [ref=f8e85]:
+            - link "Crypto" [ref=f8e86] [cursor=pointer]:
+              - /url: /strategies/cryptocurrency-etf-investing-strategies
+          - listitem [ref=f8e87]:
+            - link "Money Market" [ref=f8e88] [cursor=pointer]:
+              - /url: /strategies/money-market
+          - listitem [ref=f8e89]:
+            - link "Alternative" [ref=f8e90] [cursor=pointer]:
+              - /url: /our-etfs/find-proshares-etfs/?strategy=Alternative&product=Product%2bOverview%2b&search=
+          - listitem [ref=f8e91]:
+            - link "Volatility" [ref=f8e92] [cursor=pointer]:
+              - /url: /strategies/volatility
+      - generic [ref=f8e94]:
+        - generic [ref=f8e95]: Geared (Leveraged & Inverse) ETFs
+        - generic [ref=f8e96]: Equity
+        - list [ref=f8e97]:
+          - listitem [ref=f8e98]:
+            - link "Broad Market" [ref=f8e99] [cursor=pointer]:
+              - /url: /our-etfs/find-leveraged-and-inverse-etfs?etftype=&strategy=Broad+Market&benchmark=&product=Product+Overview+&search=+
+          - listitem [ref=f8e100]:
+            - link "Sector" [ref=f8e101] [cursor=pointer]:
+              - /url: /our-etfs/find-leveraged-and-inverse-etfs?etftype=&strategy=Sector&benchmark=&product=Product+Overview+&search=+
+          - listitem [ref=f8e102]:
+            - link "International" [ref=f8e103] [cursor=pointer]:
+              - /url: /our-etfs/find-leveraged-and-inverse-etfs?etftype=&strategy=International&benchmark=&product=Product+Overview+&search=+
+          - listitem [ref=f8e104]:
+            - link "Single Stock" [ref=f8e105] [cursor=pointer]:
+              - /url: /our-etfs/find-leveraged-and-inverse-etfs?etftype=&strategy=Single+Stock&benchmark=&product=Product+Overview+&search=
+        - generic [ref=f8e106]: Other
+        - list [ref=f8e107]:
+          - listitem [ref=f8e108]:
+            - link "Crypto" [ref=f8e109] [cursor=pointer]:
+              - /url: /our-etfs/find-leveraged-and-inverse-etfs?etftype=&strategy=Crypto-Linked&benchmark=&product=Product+Overview+&search=+
+          - listitem [ref=f8e110]:
+            - link "Fixed Income" [ref=f8e111] [cursor=pointer]:
+              - /url: /our-etfs/find-leveraged-and-inverse-etfs?etftype=&strategy=Fixed+Income&benchmark=&product=Product+Overview+&search=+
+          - listitem [ref=f8e112]:
+            - link "Commodity" [ref=f8e113] [cursor=pointer]:
+              - /url: /our-etfs/find-leveraged-and-inverse-etfs?etftype=&strategy=Commodity&benchmark=&product=Product+Overview+&search=+
+          - listitem [ref=f8e114]:
+            - link "Currency" [ref=f8e115] [cursor=pointer]:
+              - /url: /our-etfs/find-leveraged-and-inverse-etfs?etftype=&strategy=Currency&benchmark=&product=Product+Overview+&search=
+      - generic [ref=f8e117]:
+        - generic [ref=f8e118]: Strategies
+        - list [ref=f8e119]:
+          - listitem [ref=f8e120]:
+            - link "Explore Dividend Growth" [ref=f8e121] [cursor=pointer]:
+              - /url: /strategies/dividend-growers
+          - listitem [ref=f8e122]:
+            - link "Eliminate an S&P 500 Sector" [ref=f8e123] [cursor=pointer]:
+              - /url: /strategies/ex-sector-sp-500-etfs
+          - listitem [ref=f8e124]:
+            - link "Seek High Income" [ref=f8e125] [cursor=pointer]:
+              - /url: /strategies/high-income-etf-strategies
+          - listitem [ref=f8e126]:
+            - link "Strategies for Rising Rates" [ref=f8e127] [cursor=pointer]:
+              - /url: /strategies/interest-rate-hedged-bonds
+          - listitem [ref=f8e128]:
+            - link "Target Crypto Performance" [ref=f8e129] [cursor=pointer]:
+              - /url: /strategies/cryptocurrency-etf-investing-strategies
+          - listitem [ref=f8e130]:
+            - link "Leveraged & Inverse Strategies" [ref=f8e131] [cursor=pointer]:
+              - /url: /strategies/leveraged-and-inverse
+          - listitem [ref=f8e132]:
+            - link "Opportunities in Market Volatility" [ref=f8e133] [cursor=pointer]:
+              - /url: /strategies/volatility
+        - generic [ref=f8e134]: Insights
+        - list [ref=f8e135]:
+          - listitem [ref=f8e136]:
+            - link "Insights Library" [ref=f8e137] [cursor=pointer]:
+              - /url: /browse-all-insights
+        - generic [ref=f8e138]: About
+        - list [ref=f8e139]:
+          - listitem [ref=f8e140]:
+            - link "Careers" [ref=f8e141] [cursor=pointer]:
+              - /url: /about/careers
+          - listitem [ref=f8e142]:
+            - link "Press Releases" [ref=f8e143] [cursor=pointer]:
+              - /url: /press-releases
+          - listitem [ref=f8e144]:
+            - link "In the News" [ref=f8e145] [cursor=pointer]:
+              - /url: /news
+          - listitem [ref=f8e146]:
+            - link "ProFunds Mutual Funds" [ref=f8e147] [cursor=pointer]:
+              - /url: https://www.profunds.com/
+      - generic [ref=f8e149]:
+        - generic [ref=f8e150]: Resources
+        - generic [ref=f8e151]: Documents
+        - list [ref=f8e152]:
+          - listitem [ref=f8e153]:
+            - link "Tax & Filing" [ref=f8e154] [cursor=pointer]:
+              - /url: /resources/tax-and-filing-documents/index
+          - listitem [ref=f8e155]:
+            - link "Prospectus & Reports" [ref=f8e156] [cursor=pointer]:
+              - /url: /fund-documents
+          - listitem [ref=f8e157]:
+            - link "Product Guide" [ref=f8e158] [cursor=pointer]:
+              - /url: /resources/product-guide
+        - generic [ref=f8e159]: Tools and Downloads
+        - list [ref=f8e160]:
+          - listitem [ref=f8e161]:
+            - link "Premium/Discount Tool" [ref=f8e162] [cursor=pointer]:
+              - /url: /resources/tools/premium-discount
+          - listitem [ref=f8e163]:
+            - link "Rebalancing Calculator" [ref=f8e164] [cursor=pointer]:
+              - /url: /resources/tools/rebalancing-calculator
+          - listitem [ref=f8e165]:
+            - link "Data Downloads" [ref=f8e166] [cursor=pointer]:
+              - /url: /resources/data-downloads
+        - generic [ref=f8e167]: Additional Information
+        - list [ref=f8e168]:
+          - listitem [ref=f8e169]:
+            - link "How to Buy" [ref=f8e170] [cursor=pointer]:
+              - /url: /resources/how-to-buy
+          - listitem [ref=f8e171]:
+            - link "FAQs" [ref=f8e172] [cursor=pointer]:
+              - /url: /faqs
+          - listitem [ref=f8e173]:
+            - link "Distribution Information" [ref=f8e174] [cursor=pointer]:
+              - /url: /resources/distributions
+    - list [ref=f8e177]:
+      - listitem [ref=f8e178]:
+        - link "Terms & Conditions" [ref=f8e179] [cursor=pointer]:
+          - /url: /legal/terms-and-conditions
+      - listitem [ref=f8e180]:
+        - link "Privacy Policy" [ref=f8e181] [cursor=pointer]:
+          - /url: /legal/privacy-policy
+      - listitem [ref=f8e182]:
+        - link "Privacy for CA Residents" [ref=f8e183] [cursor=pointer]:
+          - /url: /legal/notice-for-california-residents
+      - listitem [ref=f8e184]:
+        - link "Cookies & Online Tracking" [ref=f8e185] [cursor=pointer]:
+          - /url: /legal/cookies-and-online-tracking
+      - listitem [ref=f8e186]:
+        - link "Proxy Voting Procedures" [ref=f8e187] [cursor=pointer]:
+          - /url: /legal/proxy-voting-policy
+  - generic [ref=f8e188]:
+    - paragraph [ref=f8e189]: ProShares are distributed by SEI Investments Distribution Co., which is not affiliated with the funds’ advisor or sponsor.
+    - paragraph [ref=f8e190]:
+      - text: Your use of this site signifies that you accept our
+      - link "Terms and Conditions of Use" [ref=f8e191] [cursor=pointer]:
+        - /url: /legal/terms-and-conditions
+      - text: .
