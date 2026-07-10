@@ -147,7 +147,7 @@ export function productsBatch(schema: Schema, rows: ProductRow[]) {
 
 export function holdingsSchema(): Schema {
   return new Schema([
-    // fund_ticker is the hive partition key: holdings_scan emits one SINGLE_VALUE partition per fund.
+    // fund_ticker is the hive partition key: the holdings scan emits one SINGLE_VALUE partition per fund.
     partitionField("fund_ticker", new Utf8()),
     f("as_of_date", date()),
     f("ticker", new Utf8()),

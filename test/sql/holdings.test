@@ -51,8 +51,9 @@ SELECT (count(*) >= 1)::INT FROM (SELECT * FROM ish.holdings LIMIT 5);
 ----
 1
 
-# The backing scan function also works directly (pushdown, no time travel).
+# The backing scan function also works directly (pushdown, no time travel). It shares the table's
+# name; call it WITH parentheses to reach the function rather than the `holdings` table.
 query I
-SELECT (count(*) > 100)::INT FROM ish.holdings_scan() WHERE fund_ticker = 'IVV';
+SELECT (count(*) > 100)::INT FROM ish.holdings() WHERE fund_ticker = 'IVV';
 ----
 1

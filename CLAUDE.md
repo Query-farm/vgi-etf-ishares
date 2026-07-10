@@ -2,8 +2,8 @@
 
 A VGI (DuckDB) worker exposing iShares (BlackRock) US fund data as two base **tables** —
 `products` (the catalog) and `holdings` (partitioned + time-travel) — plus table **functions**:
-`holding_dates`, `fund_details`, `distributions`, `nav_history` (and the listed `holdings_scan`
-backing the holdings table). TypeScript, runs on Bun, built on `@query-farm/vgi` (the TS SDK).
+`holding_dates`, `fund_details`, `distributions`, `nav_history` (and the listed backing scan
+that shares the `holdings` name). TypeScript, runs on Bun, built on `@query-farm/vgi` (the TS SDK).
 Keyless — no secret type, no auth. Modeled on the sibling `vgi-yfinance` worker.
 
 ## Base tables (`products`, `holdings`) — two layers: registry vs listing
@@ -21,8 +21,13 @@ its docs on `tags`/`comment`/`columnComments`. Two INDEPENDENT layers matter:
 (no redundant `products()`), and it needs no pushdown. `holdings`: backing `holdingsScan` MUST
 be **listed** (`functions: [...functions, holdingsScan]`) — proven with haybarn that an unlisted
 backing scan gets **no** `pushdown_filters` (the extension can't see its `filter_pushdown`
-capability), so the `fund_ticker` partition filter never reaches it. Hence a visible
-`holdings_scan()` function is unavoidable; VGI311 (parameterless-fn) is waived in `vgi-lint.toml`.
+capability), so the `fund_ticker` partition filter never reaches it. So the backing scan is
+`name: "holdings"` — it **shares the `holdings` table's name** (call it with parens,
+`FROM ishares.main.holdings()`, to reach the function; bare `FROM ishares.main.holdings` is the
+table). Naming it after the table clears VGI311 (a parameterless table function that is exposed as
+a same-named table is fine) without hiding the finding — verified under haybarn that ATTACH,
+DESCRIBE, and `fund_ticker` pushdown all still work with the shared name. (Earlier it was named
+`holdings_scan` and VGI311 was suppressed in `vgi-lint.toml`; that suppression is now removed.)
 
 ## `holdings` — hive-partitioned by `fund_ticker`, time-travel on the as-of date
 
@@ -48,10 +53,13 @@ Query `FROM ishares.main.holdings WHERE fund_ticker = 'IVV'` (fund selector) and
   ticker; overloading one column broke `WHERE`/`count(DISTINCT ticker)` semantics. The scan tags
   every row of a fund with `fundTicker` (the requested fund ticker, upper-cased).
 - The internal iShares `portfolio_id` is NOT exposed as an output column (funds are keyed by
-  `ticker`); it's still used internally (`resolveFund`, `productDataUrl`). Constraints: `products`
-  advisory PK `[isin]`, `holdings` `notNull [fund_ticker]` (advisory PKs are NOT enforced on scan).
-  There's no cross-table FK (ticker/isin/etc. recur with different meanings), and VGI311/807/809
-  are waived in `vgi-lint.toml` with reasons.
+  `ticker`); it's still used internally (`resolveFund`, `productDataUrl`). Constraints (all
+  advisory — NOT enforced on scan): `products` PK `[isin]`; `holdings` `notNull
+  [fund_ticker, as_of_date]` + advisory composite PK `[fund_ticker, as_of_date, ticker]` (one
+  constituent of one fund on one as-of date — `ticker` is null for the rare cash/derivative line
+  item, hence advisory). There's no cross-table FK (ticker/isin/etc. recur with different
+  meanings). `vgi-lint.toml` no longer suppresses any rule — VGI311 is cleared by the shared
+  scan name, VGI807 by the advisory PK, and VGI809 no longer fires.
 - The old `holdings(fund, as_of_date)` table FUNCTION was replaced by this table.
 
 ## Architecture (keep this separation)

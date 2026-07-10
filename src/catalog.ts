@@ -233,9 +233,9 @@ const CATALOG_TAGS: Record<string, string> = {
     },
     {
       name: "ivv_holdings_scan",
-      prompt: "Using the holdings backing scan, list a few IVV constituents by weight.",
-      check_sql: "SELECT count(*) > 0 FROM ishares.main.holdings_scan() WHERE fund_ticker = 'IVV'",
-      success_criteria: "The answer returns IVV constituents via holdings_scan() filtered by ticker.",
+      prompt: "Using the holdings backing scan function (call it with parentheses), list a few IVV constituents by weight.",
+      check_sql: "SELECT count(*) > 0 FROM ishares.main.holdings() WHERE fund_ticker = 'IVV'",
+      success_criteria: "The answer returns IVV constituents via the holdings() backing scan function filtered by ticker.",
     },
     {
       name: "ivv_expense_ratio",
@@ -346,8 +346,14 @@ export function makeCatalog(
             name: "holdings",
             function: holdingsScan,
             arguments: new Arguments([], new Map()),
-            // fund_ticker is always populated (the scan tags every row with its fund).
-            notNull: ["fund_ticker"],
+            // fund_ticker and as_of_date are always populated (the scan stamps every row with its
+            // fund and the resolved as-of date).
+            notNull: ["fund_ticker", "as_of_date"],
+            // Advisory composite key (NOT enforced on scan): a holdings row is one constituent of
+            // one fund on one as-of date, so (fund_ticker, as_of_date, ticker) is how an agent
+            // references a row. `ticker` completes the key for securities; a small number of
+            // non-equity line items (cash, derivatives) carry a null constituent ticker.
+            primaryKey: [["fund_ticker", "as_of_date", "ticker"]],
             // Hive partition key: fund_ticker. A WHERE fund_ticker = … / IN (…) filter is pushed
             // down to fetch just those funds; an unfiltered scan streams every fund (all partitions).
             // The as-of date is the time-travel coordinate: AT (TIMESTAMP => DATE '…').

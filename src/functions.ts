@@ -231,7 +231,7 @@ export function makeProductsScan(get: IsharesGet) {
 export function makeHoldingsScan(get: IsharesGet) {
   const schema = holdingsSchema();
   return defineTableFunction<Record<string, never>, Record<string, never>>({
-    name: "holdings_scan",
+    name: "holdings",
     description:
       "Backing scan for the holdings table — prefer the `holdings` table (it adds AT time travel " +
       "on the as-of date). Detailed fund holdings, hive-partitioned by fund_ticker: filter WHERE " +
@@ -290,8 +290,8 @@ export function makeHoldingsScan(get: IsharesGet) {
       }
     },
     examples: [
-      { sql: "SELECT ticker, name, weight_percent FROM ishares.main.holdings_scan() WHERE fund_ticker = 'IVV' ORDER BY weight_percent DESC LIMIT 10", description: "Top 10 holdings of IVV via the backing scan" },
-      { sql: "SELECT fund_ticker, count(*) FROM ishares.main.holdings_scan() WHERE fund_ticker IN ('IVV', 'AGG') GROUP BY fund_ticker", description: "Two partitions at once (fan-out)" },
+      { sql: "SELECT ticker, name, weight_percent FROM ishares.main.holdings() WHERE fund_ticker = 'IVV' ORDER BY weight_percent DESC LIMIT 10", description: "Top 10 holdings of IVV via the backing scan" },
+      { sql: "SELECT fund_ticker, count(*) FROM ishares.main.holdings() WHERE fund_ticker IN ('IVV', 'AGG') GROUP BY fund_ticker", description: "Two partitions at once (fan-out)" },
     ],
     tags: {
       "vgi.category": "holdings",
@@ -303,7 +303,7 @@ export function makeHoldingsScan(get: IsharesGet) {
         "(hundreds of partitions — slow). weight_percent is in percent points (7.38 = 7.38%); " +
         "fixed-income funds also fill coupon/maturity/duration/ytm.",
       "vgi.doc_md":
-        "## holdings_scan\n\n" +
+        "## holdings (backing scan)\n\n" +
         "The backing scan for the **`holdings` table** — prefer the table (it also supports `AT " +
         "(TIMESTAMP => DATE '…')` time travel). Hive-partitioned by `fund_ticker`: filter `WHERE " +
         "fund_ticker = 'IVV'` for one fund, or scan with no filter to stream every fund (see the " +

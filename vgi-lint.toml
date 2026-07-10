@@ -1,16 +1,5 @@
 [tool.vgi-lint-check]
 select = ["ALL"]
-# VGI311 (parameterless-table-function): waived for `holdings_scan`. It is the backing scan for
-# the `holdings` base table and MUST be a LISTED, parameterless table function so the DuckDB vgi
-# extension can discover its filter_pushdown capability and push the `fund_ticker` partition
-# filter into the table scan (verified: unlisted → no pushdown). The user-facing surface is the
-# `holdings` table (which also adds AT time travel); holdings_scan is intentionally exposed too.
-# VGI807 (table-has-primary-key) / VGI809 (shared key-shaped column): waived. Funds are keyed by
-# their exchange `ticker` (the iShares internal portfolio_id is deliberately NOT exposed), which
-# is nullable for a few non-ETF products, so no PRIMARY KEY / FOREIGN KEY is declared. The
-# identifier columns (ticker/isin/cusip/sedol) legitimately recur across products & holdings with
-# different meanings (fund vs constituent), so a cross-table FK would be wrong.
-ignore = ["VGI311", "VGI807", "VGI809"]
 fail_on = "info"
 
 [tool.vgi-lint-check.options]

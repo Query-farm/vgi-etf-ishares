@@ -168,9 +168,10 @@ facts. Columns: `fund_ticker`, `as_of_date` (DATE), `ticker`, `name`,
 (DATE), plus the fixed-income-only `coupon_percent`, `maturity_date` (DATE), `duration`,
 `ytm_percent`, `par_value`, `market_currency` (null for equity funds).
 
-> A backing `holdings_scan()` function is also exposed (it's what the table scans, and it's what
-> lets DuckDB push the `fund_ticker` filter) — prefer the `holdings` table, which adds the `AT`
-> time travel.
+> A backing table **function** that shares the `holdings` name is also exposed (it's what the
+> table scans, and its listing is what lets DuckDB push the `fund_ticker` filter). Call it with
+> parentheses — `FROM ishares.holdings()` — to reach the function; `FROM ishares.holdings` (no
+> parens) is the table. Prefer the `holdings` table, which adds the `AT` time travel.
 
 ### holding_dates — featured as-of dates
 
