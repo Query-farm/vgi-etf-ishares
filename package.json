@@ -10,9 +10,9 @@
     "typecheck": "bash scripts/typecheck.sh"
   },
   "dependencies": {
-    "@query-farm/vgi": "^0.15.0",
+    "@query-farm/vgi": "^0.17.0",
     "@query-farm/apache-arrow": "^21.1.1",
-    "@query-farm/vgi-rpc": "^0.12.0"
+    "@query-farm/vgi-rpc": "^0.13.0"
   },
   "devDependencies": {
     "typescript": "^6.0.3",
