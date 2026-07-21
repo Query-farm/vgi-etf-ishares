@@ -308,6 +308,14 @@ export function makeHoldingsScan(get: IsharesGet) {
         "(TIMESTAMP => DATE '…')` time travel). Hive-partitioned by `fund_ticker`: filter `WHERE " +
         "fund_ticker = 'IVV'` for one fund, or scan with no filter to stream every fund (see the " +
         "example queries). `fund_ticker` is distinct from the constituent `ticker` column.",
+      // Carry the same examples through the description-preserving example_queries tag: the VGI
+      // extension re-surfaces Meta.examples into duckdb_functions().examples as a bare SQL VARCHAR[]
+      // (descriptions dropped), so without this the descriptions are invisible to vgi-lint (VGI515).
+      // Byte-identical SQL to the `examples:` above; the linter dedups by normalized SQL.
+      "vgi.example_queries": JSON.stringify([
+        { description: "Top 10 holdings of IVV via the backing scan", sql: "SELECT ticker, name, weight_percent FROM ishares.main.holdings() WHERE fund_ticker = 'IVV' ORDER BY weight_percent DESC LIMIT 10" },
+        { description: "Two partitions at once (fan-out)", sql: "SELECT fund_ticker, count(*) FROM ishares.main.holdings() WHERE fund_ticker IN ('IVV', 'AGG') GROUP BY fund_ticker" },
+      ]),
       "vgi.result_columns_schema": resultColumnsSchema(holdingsSchema(), HOLDINGS_SCAN_DESCS),
     },
   });
@@ -364,6 +372,12 @@ export function makeHoldingDatesFunction(get: IsharesGet) {
         "month-/year-ends. Use it to pick a date for `holdings()`.\n\n" +
         "This is *not* the full set of valid dates: `holdings` accepts any business day back to " +
         "inception, not just these (see the example queries).",
+      // example_queries carries the descriptions vgi-lint needs (native examples drop them) — VGI515.
+      // Byte-identical SQL to the `examples:` above.
+      "vgi.example_queries": JSON.stringify([
+        { description: "Featured holdings dates for IVV", sql: "SELECT as_of_date FROM ishares.main.holding_dates('IVV') ORDER BY as_of_date DESC" },
+        { description: "The most recent featured holdings date (feed it to holdings())", sql: "SELECT max(as_of_date) AS latest_featured FROM ishares.main.holding_dates('IVV')" },
+      ]),
       "vgi.result_columns_schema": resultColumnsSchema(holdingDatesSchema(), HOLDING_DATES_DESCS),
     },
   });
@@ -418,6 +432,13 @@ export function makeFundDetailsFunction(get: IsharesGet) {
         "columns are in percent points. `objective` is clean plain text; `key_benefits_html` is raw " +
         "HTML (the `_html` suffix signals the format).\n\n" +
         "It returns exactly one row; for the whole lineup use `products` (see the example queries).",
+      // example_queries carries the descriptions vgi-lint needs (native examples drop them) — VGI515.
+      // Byte-identical SQL to the `examples:` above.
+      "vgi.example_queries": JSON.stringify([
+        { description: "Key characteristics for IVV", sql: "SELECT ticker, index_name, num_holdings, pe_ratio FROM ishares.main.fund_details('IVV')" },
+        { description: "Trading quality: premium/discount and spread", sql: "SELECT ticker, premium_discount_percent, median_bid_ask_spread_percent FROM ishares.main.fund_details('IVV')" },
+        { description: "The fund's investment objective (plain text)", sql: "SELECT objective FROM ishares.main.fund_details('IVV')" },
+      ]),
       "vgi.result_columns_schema": resultColumnsSchema(fundDetailsSchema(), FUND_DETAILS_DESCS),
     },
   });
@@ -487,6 +508,12 @@ export function makeDistributionsFunction(get: IsharesGet) {
         "## distributions\n\n" +
         "Full distribution history, one row per distribution. Amounts are **per-share** dollars (not " +
         "percentages). Bound the ex-date range with `start_date`/`end_date` (see the example queries).",
+      // example_queries carries the descriptions vgi-lint needs (native examples drop them) — VGI515.
+      // Byte-identical SQL to the `examples:` above.
+      "vgi.example_queries": JSON.stringify([
+        { description: "Recent IVV distributions", sql: "SELECT ex_date, total_distribution FROM ishares.main.distributions('IVV') ORDER BY ex_date DESC LIMIT 8" },
+        { description: "Total distributions since a start date", sql: "SELECT sum(total_distribution) AS ttm_income FROM ishares.main.distributions('IVV', start_date := DATE '2025-01-01')" },
+      ]),
       "vgi.result_columns_schema": resultColumnsSchema(distributionsSchema(), DISTRIBUTIONS_DESCS),
     },
   });
@@ -542,6 +569,12 @@ export function makeNavHistoryFunction(get: IsharesGet) {
         "Daily NAV history back to inception, one row per business day. This is **fund NAV**, not a " +
         "market-price candle series. Old funds return thousands of rows — bound with " +
         "`start_date`/`end_date` (see the example queries).",
+      // example_queries carries the descriptions vgi-lint needs (native examples drop them) — VGI515.
+      // Byte-identical SQL to the `examples:` above.
+      "vgi.example_queries": JSON.stringify([
+        { description: "IVV NAV since the start of the year", sql: "SELECT as_of_date, nav FROM ishares.main.nav_history('IVV', start_date := DATE '2026-01-01') ORDER BY as_of_date DESC" },
+        { description: "Days IVV went ex-dividend", sql: "SELECT as_of_date, ex_dividends FROM ishares.main.nav_history('IVV') WHERE ex_dividends > 0 ORDER BY as_of_date DESC" },
+      ]),
       "vgi.result_columns_schema": resultColumnsSchema(navHistorySchema(), NAV_HISTORY_DESCS),
     },
   });

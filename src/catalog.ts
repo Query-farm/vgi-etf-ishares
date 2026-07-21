@@ -297,6 +297,7 @@ const SCHEMA_TAGS: Record<string, string> = {
   "vgi.example_queries": JSON.stringify([
     { description: "Ten largest iShares ETFs by net assets", sql: "SELECT ticker, fund_name, net_assets FROM ishares.main.products ORDER BY net_assets DESC LIMIT 10" },
     { description: "Top holdings of IVV", sql: "SELECT ticker, name, weight_percent FROM ishares.main.holdings WHERE fund_ticker = 'IVV' ORDER BY weight_percent DESC LIMIT 10" },
+    { description: "Join holdings to the catalog: a fund's top holdings alongside its fund-level facts (holdings.fund_ticker = products.ticker)", sql: "SELECT p.fund_name, p.expense_ratio_percent, h.ticker, h.name, h.weight_percent FROM ishares.main.holdings h JOIN ishares.main.products p ON h.fund_ticker = p.ticker WHERE h.fund_ticker = 'IVV' ORDER BY h.weight_percent DESC LIMIT 10" },
     { description: "Recent daily NAV history for IVV", sql: "SELECT as_of_date, nav FROM ishares.main.nav_history('IVV', start_date := DATE '2026-01-01') ORDER BY as_of_date DESC" },
   ]),
 };
@@ -364,7 +365,7 @@ export function makeCatalog(
             comment:
               "Detailed fund holdings, hive-partitioned by fund_ticker (filter WHERE fund_ticker = … for " +
               "one fund, or scan unfiltered for all) with the as-of date as a time-travel coordinate " +
-              "(AT (TIMESTAMP => DATE '…')).",
+              "(AT (`TIMESTAMP` => `DATE` '…')).",
             columnComments: HOLDINGS_COLUMN_COMMENTS,
             tags: HOLDINGS_TABLE_TAGS,
           },
