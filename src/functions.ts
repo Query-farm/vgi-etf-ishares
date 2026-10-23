@@ -10,7 +10,6 @@ import {
   batchFromColumns,
   serializeBatch,
   deserializeFilters,
-  buildJoinKeysLookup,
   DEFAULT_MAX_WORKERS,
   type OutputCollector,
 } from "@query-farm/vgi";
@@ -247,11 +246,13 @@ export function makeHoldingsScan(get: IsharesGet) {
     maxWorkers: DEFAULT_MAX_WORKERS,
     onBind: () => ({ outputSchema: schema }),
     // Seed the work queue (once, on the coordinator): one item per target fund.
-    onInit: async ({ initCall, executionId, storage }) => {
+    onInit: async ({ initCall, outputSchema, executionId, storage }) => {
       // Pushed fund_ticker value(s) from WHERE (= or IN), if any. Absent → scan all funds.
-      const joinKeys = buildJoinKeysLookup(initCall.join_keys);
       const filters = initCall.pushdown_filters
-        ? deserializeFilters(initCall.pushdown_filters, joinKeys)
+        ? deserializeFilters(initCall.pushdown_filters, {
+            outputSchema,
+            joinKeyBatches: initCall.join_keys,
+          })
         : undefined;
       const requested = (filters?.getColumnValues("fund_ticker") ?? []).map((t) =>
         String(t).toUpperCase(),

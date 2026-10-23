@@ -208,64 +208,45 @@ const CATALOG_TAGS: Record<string, string> = {
       sql: "SELECT ticker, name, weight_percent FROM ishares.main.holdings WHERE fund_ticker = 'IVV' ORDER BY weight_percent DESC LIMIT 5",
     },
   ]),
-  // Agent-suitability suite (catalog only). Each task carries a deterministic check_sql that
-  // asserts specific ground truth; reference_sql is deliberately omitted (live data + free-form
-  // analyst queries won't reproduce an exact result set). success_criteria records what a
-  // correct answer looks like for the LLM judge.
+  // Agent-suitability suite (catalog only). Only each task's name + prompt is published
+  // here (VGI416); the grader fields live in the private sidecar vgi-agent-tests.yaml,
+  // keyed by task name, and are never shown to the analyst.
   "vgi.agent_test_tasks": JSON.stringify([
     {
       name: "ivv_exists",
       prompt: "Does iShares offer an ETF with the ticker IVV, and what is it called?",
-      check_sql: "SELECT count(*) > 0 FROM ishares.main.products WHERE ticker = 'IVV'",
-      success_criteria: "The answer confirms IVV is the iShares Core S&P 500 ETF, found via the products function.",
     },
     {
       name: "ivv_top_holding",
       prompt: "What is the single largest holding of the iShares Core S&P 500 ETF (IVV) right now?",
-      check_sql: "SELECT count(*) > 0 FROM ishares.main.holdings WHERE fund_ticker = 'IVV'",
-      success_criteria: "The answer names IVV's top holding by weight, obtained from the holdings table.",
     },
     {
       name: "ivv_holdings_past_date",
       prompt: "What were the top holdings of IVV as of the end of 2025?",
-      check_sql: "SELECT count(*) > 0 FROM ishares.main.holdings AT (TIMESTAMP => DATE '2025-12-31') WHERE fund_ticker = 'IVV'",
-      success_criteria: "The answer reports IVV's holdings as of 2025-12-31 using the holdings table's AT time travel.",
     },
     {
       name: "ivv_holdings_scan",
       prompt: "Using the holdings backing scan function (call it with parentheses), list a few IVV constituents by weight.",
-      check_sql: "SELECT count(*) > 0 FROM ishares.main.holdings() WHERE fund_ticker = 'IVV'",
-      success_criteria: "The answer returns IVV constituents via the holdings() backing scan function filtered by ticker.",
     },
     {
       name: "ivv_expense_ratio",
       prompt: "What is the expense ratio of the iShares Core S&P 500 ETF (IVV)?",
-      check_sql: "SELECT count(*) > 0 FROM ishares.main.products WHERE ticker = 'IVV' AND expense_ratio_percent IS NOT NULL",
-      success_criteria: "The answer reports IVV's expense ratio (a small percentage) from the products function.",
     },
     {
       name: "ivv_tracked_index",
       prompt: "Which index does the iShares Core S&P 500 ETF (IVV) track?",
-      check_sql: "SELECT count(*) > 0 FROM ishares.main.fund_details('IVV') WHERE index_name IS NOT NULL",
-      success_criteria: "The answer names IVV's tracked index (the S&P 500), obtained from the fund_details function.",
     },
     {
       name: "ivv_recent_nav",
       prompt: "What was the iShares Core S&P 500 ETF's (IVV) net asset value on its most recent valuation date?",
-      check_sql: "SELECT count(*) > 0 FROM ishares.main.nav_history('IVV') WHERE nav > 0",
-      success_criteria: "The answer reports a recent IVV NAV per share, obtained from the nav_history function.",
     },
     {
       name: "ivv_last_distribution",
       prompt: "When did the iShares Core S&P 500 ETF (IVV) most recently pay a distribution, and how much?",
-      check_sql: "SELECT count(*) > 0 FROM ishares.main.distributions('IVV')",
-      success_criteria: "The answer gives IVV's most recent distribution (ex-date and per-share amount) from the distributions function.",
     },
     {
       name: "ivv_holdings_dates",
       prompt: "Which recent holdings as-of dates does iShares feature for the Core S&P 500 ETF (IVV)?",
-      check_sql: "SELECT count(*) > 0 FROM ishares.main.holding_dates('IVV')",
-      success_criteria: "The answer lists one or more featured holdings dates for IVV from the holding_dates function.",
     },
   ]),
 };

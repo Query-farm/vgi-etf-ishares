@@ -190,7 +190,7 @@ Typecheck must be a `bash scripts/typecheck.sh` file (not an inline package.json
   enumerate the worker's own functions (VGI173 — describe purpose/concepts instead); argument
   docs must NOT restate the data type (VGI313 — the `fund` doc says "portfolio_id or exchange
   ticker", never "numeric"); every function needs an agent test task (VGI520 — all six are
-  covered in `catalog.ts` `vgi.agent_test_tasks`).
+  covered in `catalog.ts` `vgi.agent_test_tasks`; their graders live in `vgi-agent-tests.yaml`, VGI416).
 - Don't add a secret type; this worker is keyless by design.
 
 ## DuckDB (manual)

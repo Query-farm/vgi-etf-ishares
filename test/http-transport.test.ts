@@ -22,6 +22,7 @@ import { test, expect, beforeAll, afterAll } from "bun:test";
 import { createVgiFetch } from "@query-farm/vgi/worker-cf";
 import { FunctionRegistry, ReadOnlyCatalogInterface, VgiClient, Arguments } from "@query-farm/vgi";
 import { httpConnect } from "@query-farm/vgi-rpc";
+import pkg from "../package.json" with { type: "json" };
 import {
   makeProductsScan,
   makeHoldingsScan,
@@ -64,6 +65,8 @@ beforeAll(() => {
     protocol: { registry, catalogInterface },
     signingKey: SIGNING_KEY,
     prefix: PREFIX,
+    // Required since vgi 0.26: the worker identity for the landing page at `GET {prefix}/`.
+    landingInfo: { name: pkg.name, doc: pkg.description, version: pkg.version },
   });
 
   server = Bun.serve({ port: 0, fetch });
