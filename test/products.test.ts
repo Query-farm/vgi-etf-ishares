@@ -3,7 +3,7 @@
 // sentinel coercion, productView filtering, and the screener URL contract.
 
 import { test, expect } from "bun:test";
-import { parseProducts, fetchProducts, num, disp, ymd, SCREENER_URL } from "../src/ishares.js";
+import { parseProducts, fetchProducts, keyedProducts, num, disp, ymd, SCREENER_URL } from "../src/ishares.js";
 import { FakeIshares, screenerEnvelope } from "./fake-ishares.js";
 
 test("num reads .r pairs, numeric strings, and rejects sentinels", () => {
@@ -72,4 +72,10 @@ test("fetchProducts hits the screener URL once", async () => {
   expect(rows.length).toBe(1);
   expect(fake.calls.length).toBe(1);
   expect(fake.calls[0]).toBe(SCREENER_URL);
+});
+
+test("keyedProducts keeps one row per non-null ISIN (the products PRIMARY KEY)", () => {
+  const [a] = parseProducts(screenerEnvelope(), "all");
+  const rows = keyedProducts([a!, { ...a!, ticker: "DUP" }, { ...a!, isin: null }]);
+  expect(rows).toEqual([a!]);
 });

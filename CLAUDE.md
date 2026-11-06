@@ -53,13 +53,14 @@ Query `FROM ishares.main.holdings WHERE fund_ticker = 'IVV'` (fund selector) and
   ticker; overloading one column broke `WHERE`/`count(DISTINCT ticker)` semantics. The scan tags
   every row of a fund with `fundTicker` (the requested fund ticker, upper-cased).
 - The internal iShares `portfolio_id` is NOT exposed as an output column (funds are keyed by
-  `ticker`); it's still used internally (`resolveFund`, `productDataUrl`). Constraints (all
-  advisory — NOT enforced on scan): `products` PK `[isin]`; `holdings` `notNull
-  [fund_ticker, as_of_date]` + advisory composite PK `[fund_ticker, as_of_date, ticker]` (one
-  constituent of one fund on one as-of date — `ticker` is null for the rare cash/derivative line
-  item, hence advisory). There's no cross-table FK (ticker/isin/etc. recur with different
-  meanings). `vgi-lint.toml` no longer suppresses any rule — VGI311 is cleared by the shared
-  scan name, VGI807 by the advisory PK, and VGI809 no longer fires.
+  `ticker`); it's still used internally (`resolveFund`, `productDataUrl`). Constraints are
+  vgi.v3 canonical `constraintRecord()` records, which DuckDB takes as ENFORCED engine facts, so
+  each must hold on every emitted row: `products` PK `[isin]` (the scan's `keyedProducts` drops
+  ISIN-less / repeated-ISIN rows); `holdings` NOT NULL `fund_ticker`, `as_of_date` and NO primary
+  key — the old advisory `(fund_ticker, as_of_date, ticker)` key is false (bond funds like AGG/HYG
+  have no constituent ticker on any line; EFA repeats tickers). There's no cross-table FK
+  (ticker/isin/etc. recur with different meanings). `vgi-lint.toml` waives only VGI807 on
+  `holdings` (per-object domain exemption); VGI311 is cleared by the shared scan name.
 - The old `holdings(fund, as_of_date)` table FUNCTION was replaced by this table.
 
 ## Architecture (keep this separation)

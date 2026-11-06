@@ -123,3 +123,23 @@ test("fetchHoldings with a date makes one request carrying that asOfDate", async
   expect(fake.calls[0]).toContain("asOfDate=20260630");
   expect(rows[0]!.asOfDate).toBe(Math.floor(Date.UTC(2026, 5, 30) / 1000));
 });
+
+test("parseHoldings reads the ce*/marketWeight columns some equity funds publish instead", () => {
+  // Since Nov 2026 e.g. IVV carries marketWeight / ceMarketValue / ceNotionalValue in place of
+  // holdingPercent / marketValue / notionalValue.
+  const env = {
+    componentsByNameMap: { holdings: { containersByNameMap: { all: { dataPointsByNameMap: {
+      issueName: { value: ["APPLE INC", "NVIDIA CORP"] },
+      ticker: { value: ["AAPL", "NVDA"] },
+      marketWeight: { value: [6.93, 7.92] },
+      ceMarketValue: { value: [58925443785.6, 67347967210.07] },
+      ceNotionalValue: { value: [58925443785.6, 67347967210.07] },
+      asOfDate: { value: 20261105 },
+    } } } } },
+  };
+  const rows = parseHoldings(env, 239726, null, "IVV");
+  expect(rows.map((r) => [r.ticker, r.weightPercent, r.marketValue, r.notionalValue])).toEqual([
+    ["NVDA", 7.92, 67347967210.07, 67347967210.07],
+    ["AAPL", 6.93, 58925443785.6, 58925443785.6],
+  ]);
+});

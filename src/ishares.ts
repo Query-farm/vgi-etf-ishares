@@ -269,6 +269,19 @@ export function parseProducts(json: unknown, productView = "etf", ticker = ""): 
   return rows;
 }
 
+/**
+ * The rows the `products` table serves: one per non-null ISIN (the table's PRIMARY KEY, an
+ * ENFORCED engine fact under vgi.v3). Drops ISIN-less products and repeated ISINs (first wins).
+ */
+export function keyedProducts(rows: ProductRow[]): ProductRow[] {
+  const seen = new Set<string>();
+  return rows.filter((r) => {
+    if (!r.isin || seen.has(r.isin)) return false;
+    seen.add(r.isin);
+    return true;
+  });
+}
+
 export async function fetchProducts(
   get: (url: string) => Promise<unknown>,
   productView = "etf",
@@ -393,7 +406,20 @@ export interface HoldingRow {
 }
 
 // Names that drive the row count (any populated column suffices; equity funds lack the bond ones).
-const HOLDING_COLS = ["issueName", "ticker", "holdingPercent", "marketValue", "unitsHeld"];
+const HOLDING_COLS = ["issueName", "ticker", "holdingPercent", "marketWeight", "marketValue", "unitsHeld"];
+
+/**
+ * First non-null numeric cell among `names` (a field iShares publishes under more than one name:
+ * since Nov 2026 some equity funds, e.g. IVV, carry marketWeight / ceMarketValue / ceNotionalValue
+ * in place of holdingPercent / marketValue / notionalValue).
+ */
+function numCell(dp: Record<string, DataPoint>, names: string[], i: number): number | null {
+  for (const name of names) {
+    const v = asNum(cell(dp, name, i));
+    if (v != null) return v;
+  }
+  return null;
+}
 
 /** Map one holdings.all envelope to holding rows, sorted by weight desc (NULLS last). */
 export function parseHoldings(
@@ -423,9 +449,9 @@ export function parseHoldings(
       isin: asStr(cell(dp, "isin", i)),
       cusip: asStr(cell(dp, "cusip", i)),
       sedol: asStr(cell(dp, "sedol", i)),
-      weightPercent: asNum(cell(dp, "holdingPercent", i)),
-      marketValue: asNum(cell(dp, "marketValue", i)),
-      notionalValue: asNum(cell(dp, "notionalValue", i)),
+      weightPercent: numCell(dp, ["holdingPercent", "marketWeight"], i),
+      marketValue: numCell(dp, ["marketValue", "ceMarketValue"], i),
+      notionalValue: numCell(dp, ["notionalValue", "ceNotionalValue"], i),
       unitsHeld: asNum(cell(dp, "unitsHeld", i)),
       price: asNum(cell(dp, "unitPrice", i)),
       accrualDate: asYmd(cell(dp, "accrualDate", i)),

@@ -7,7 +7,7 @@
 // catalog-qualified (ishares.main.<fn>) so it binds/runs when the catalog is attached.
 
 import type { CatalogDescriptor, VgiFunction } from "@query-farm/vgi";
-import { Arguments } from "@query-farm/vgi";
+import { Arguments, constraintRecord } from "@query-farm/vgi";
 import { productsSchema, holdingsSchema, resultColumnsSchema } from "./schema.js";
 
 const REPO = "https://github.com/Query-farm/vgi-etf-ishares";
@@ -314,8 +314,14 @@ export function makeCatalog(
             name: "products",
             function: productsScan,
             arguments: new Arguments([], new Map()),
-            // Each fund has a unique ISIN (advisory — not enforced on scan).
-            primaryKey: [["isin"]],
+            // Each fund has a unique ISIN. vgi.v3 serves key records as ENFORCED engine facts; the
+            // products scan (keyedProducts) drops ISIN-less and repeated-ISIN rows to guarantee it.
+            constraints: [
+              constraintRecord({
+                schemaPath: ["main"], table: "products", id: "products.pk",
+                kind: "PRIMARY_KEY", columns: [["isin"]], enforcement: "ENFORCED", validation: "ALL_ROWS",
+              }),
+            ],
             // The US product catalog is ~530 funds (all product types); headroom to ~700.
             inlinedCardinality: { estimate: 530n, max: 700n },
             comment:
@@ -330,12 +336,15 @@ export function makeCatalog(
             arguments: new Arguments([], new Map()),
             // fund_ticker and as_of_date are always populated (the scan stamps every row with its
             // fund and the resolved as-of date).
-            notNull: ["fund_ticker", "as_of_date"],
-            // Advisory composite key (NOT enforced on scan): a holdings row is one constituent of
-            // one fund on one as-of date, so (fund_ticker, as_of_date, ticker) is how an agent
-            // references a row. `ticker` completes the key for securities; a small number of
-            // non-equity line items (cash, derivatives) carry a null constituent ticker.
-            primaryKey: [["fund_ticker", "as_of_date", "ticker"]],
+            // No PRIMARY KEY: vgi.v3 serves key records as ENFORCED engine facts, and the old
+            // advisory (fund_ticker, as_of_date, ticker) key does not hold — bond funds (AGG, HYG)
+            // carry no constituent ticker on any line, and equity funds repeat a ticker (EFA).
+            constraints: ["fund_ticker", "as_of_date"].map((col) =>
+              constraintRecord({
+                schemaPath: ["main"], table: "holdings", id: `holdings.${col}.not_null`,
+                kind: "NOT_NULL", columns: [[col]], enforcement: "ENFORCED", validation: "ALL_ROWS",
+              }),
+            ),
             // Hive partition key: fund_ticker. A WHERE fund_ticker = … / IN (…) filter is pushed
             // down to fetch just those funds; an unfiltered scan streams every fund (all partitions).
             // The as-of date is the time-travel coordinate: AT (TIMESTAMP => DATE '…').

@@ -34,7 +34,7 @@ Two conventions to know:
 
 Each release ships a self-contained executable per platform, so the host needs **neither Bun
 nor `node_modules`**. Archives are named `vgi-etf-ishares-<tag>-<platform>.tar.gz` for
-`linux_amd64`, `linux_arm64`, `osx_amd64`, `osx_arm64`, and `windows_amd64`, each with a
+`linux_amd64`, `linux_arm64`, `osx_arm64`, and `windows_amd64`, each with a
 SHA256, a keyless **cosign** signature, and a **SLSA** build-provenance attestation.
 
 ```bash
@@ -236,8 +236,8 @@ bun run typecheck   # own-source typecheck (see scripts/typecheck.sh)
 The E2E suite needs the haybarn runner and the vgi extension, once:
 
 ```bash
-uv tool install haybarn-unittest
-echo "INSTALL vgi FROM community;" | uvx haybarn-cli
+uv tool install --prerelease allow 'haybarn-unittest>=2.0.0rc11,<2.1'
+echo "INSTALL vgi FROM community;" | uvx --prerelease allow --from 'haybarn-cli>=2.0.0rc11,<2.1' haybarn-cli
 ```
 
 Metadata quality is graded by [`vgi-lint`](https://github.com/Query-farm/vgi-lint-check);

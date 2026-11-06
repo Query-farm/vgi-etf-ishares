@@ -16,6 +16,7 @@ import {
 import { Schema, Field, Utf8, DateDay } from "@query-farm/apache-arrow";
 import {
   fetchProducts,
+  keyedProducts,
   fetchHoldings,
   fetchHoldingDates,
   fetchFundDetails,
@@ -202,7 +203,7 @@ export function makeProductsScan(get: IsharesGet) {
         out.finish();
         return;
       }
-      const rows = await fetchProducts(get, "all");
+      const rows = keyedProducts(await fetchProducts(get, "all"));
       out.emit(productsBatch(schema, rows));
       state.done = true;
     },

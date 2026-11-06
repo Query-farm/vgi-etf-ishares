@@ -4,3 +4,8 @@ fail_on = "info"
 
 [tool.vgi-lint-check.options]
 column_comment_min_ratio = 0.8
+
+[tool.vgi-lint-check.per_object]
+"ishares.main.holdings" = { ignore = [
+  { code = "VGI807", kind = "domain-exemption", reason = "no guaranteed-unique non-null key in iShares holdings (bond funds carry no constituent ticker; tickers repeat within equity funds); vgi.v3 PKs are enforced facts" },
+] }
