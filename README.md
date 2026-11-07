@@ -28,25 +28,46 @@ Two conventions to know:
 > typecheck, a live HTTP-transport smoke test, the haybarn SQLLogic E2E suite against a real
 > DuckDB + the community `vgi` extension, and a `vgi-lint` metadata gate at 100/100 all pass.
 
-## Install / attach
+## Quick start
 
-### Option A — prebuilt binary (recommended)
-
-Each release ships a self-contained executable per platform, so the host needs **neither Bun
-nor `node_modules`**. Archives are named `vgi-etf-ishares-<tag>-<platform>.tar.gz` for
-`linux_amd64`, `linux_arm64`, `osx_arm64`, and `windows_amd64`, each with a
-SHA256, a keyless **cosign** signature, and a **SLSA** build-provenance attestation.
-
-```bash
-tar xzf vgi-etf-ishares-v0.1.0-osx_arm64.tar.gz     # → vgi-etf-ishares-worker
-```
+Every [GitHub release](https://github.com/Query-farm/vgi-etf-ishares/releases) ships a prebuilt worker binary. The `vgi` extension downloads the one for your platform, checks its SHA-256 and caches it, so there is nothing to install besides DuckDB:
 
 ```sql
+INSTALL vgi FROM community;
 LOAD vgi;
-ATTACH 'ishares' AS ishares (TYPE vgi, LOCATION '/path/to/vgi-etf-ishares-worker');
+
+ATTACH 'ishares' AS ishares (TYPE vgi, LOCATION 'github-auto://Query-farm/vgi-etf-ishares@v0.2.0');
+
+-- The largest iShares ETFs by net assets
+SELECT ticker, fund_name, net_assets FROM ishares.main.products ORDER BY net_assets DESC LIMIT 5;
+
+-- The top holdings of the iShares Core S&P 500 ETF
+SELECT ticker, name, weight_percent FROM ishares.main.holdings WHERE fund_ticker = 'IVV' ORDER BY weight_percent DESC LIMIT 5;
 ```
 
-### Option B — from source (Bun)
+Prebuilt binaries cover macOS (Apple silicon), Linux (x86-64 and arm64). `github-auto://` needs an explicit release tag; change `@v0.2.0` to move to a newer release.
+
+### Other ways to run it
+
+- **Docker** (the image bundles the worker; needs a container runtime):
+
+  ```sql
+  ATTACH 'ishares' AS ishares (TYPE vgi, LOCATION 'docker://ghcr.io/query-farm/vgi-etf-ishares:0.2.0');
+  ```
+
+- **Manual download.** Download the archive for your platform from the [releases page](https://github.com/Query-farm/vgi-etf-ishares/releases), verify it against its `.sha256` file (a cosign `.cosign.bundle` is published alongside), unpack it, and set `LOCATION` to the path of the extracted worker executable.
+
+- **HTTP server.** Run the image's HTTP transport yourself and attach it by URL:
+
+  ```bash
+  docker run --rm -p 8000:8000 ghcr.io/query-farm/vgi-etf-ishares:0.2.0   # serves /health + the VGI RPC on :8000
+  ```
+
+  ```sql
+  ATTACH 'ishares' AS ishares (TYPE vgi, LOCATION 'http://localhost:8000');
+  ```
+
+### Build from source
 
 For development or the latest `main`, run the worker on [Bun](https://bun.sh):
 
@@ -61,29 +82,7 @@ ATTACH 'ishares' AS ishares (TYPE vgi, LOCATION '/path/to/vgi-etf-ishares/bin/vg
 
 `bin/vgi-etf-ishares-worker` is a small wrapper that launches `src/worker.ts` under Bun.
 
-### Option C — container image (ghcr.io)
-
-A multi-arch (linux/amd64 + linux/arm64), cosign-signed image is published to
-`ghcr.io/query-farm/vgi-etf-ishares` on every release — no local Bun or worker binary needed.
-Attach it directly over the VGI container transport:
-
-```sql
-LOAD vgi;
-ATTACH 'ishares' AS ishares (TYPE vgi, LOCATION 'oci://ghcr.io/query-farm/vgi-etf-ishares:latest');
-```
-
-Or run the HTTP transport yourself and attach that:
-
-```bash
-docker run --rm -p 8000:8000 ghcr.io/query-farm/vgi-etf-ishares:latest   # serves /health + the VGI RPC on :8000
-```
-
-```sql
-LOAD vgi;
-ATTACH 'ishares' AS ishares (TYPE vgi, LOCATION 'http://localhost:8000');
-```
-
-`:latest` always tracks the newest release.
+Tests, typecheck and the E2E suite are described under [Development](#development).
 
 ## Usage
 
