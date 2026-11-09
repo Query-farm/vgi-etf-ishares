@@ -158,6 +158,7 @@ const HOLDINGS_TABLE_TAGS: Record<string, string> = {
 /** Catalog-level tags: docs, discovery, provenance, and the agent-test suite. */
 const CATALOG_TAGS: Record<string, string> = {
   "vgi.title": "iShares ETFs",
+  "vgi.subtitle": "Screen the iShares US ETF lineup and query point-in-time fund holdings, distributions and daily NAV history.",
   "vgi.doc_llm":
     "iShares (BlackRock) US fund data as SQL tables and table functions. Reach for it to screen the fund " +
     "lineup on key facts (net assets, fees, yields, returns), to inspect what a fund holds — " +
