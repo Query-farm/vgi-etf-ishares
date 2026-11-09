@@ -22,7 +22,7 @@ const { registry, catalogInterface } = makeWorkerParts();
 serveVgiWorker({
   name: "ishares",
   doc: "iShares (BlackRock) US fund data: product catalog, multi-day holdings, and per-fund history.",
-  version: "0.2.0",
+  version: "0.3.0",
   repositoryUrl: "https://github.com/Query-farm/vgi-etf-ishares",
   serverId: "vgi-etf-ishares",
   registry,
