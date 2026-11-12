@@ -36,7 +36,7 @@ Every [GitHub release](https://github.com/Query-farm/vgi-etf-ishares/releases) s
 INSTALL vgi FROM community;
 LOAD vgi;
 
-ATTACH 'ishares' AS ishares (TYPE vgi, LOCATION 'github-auto://Query-farm/vgi-etf-ishares@v0.3.0');
+ATTACH 'ishares' AS ishares (TYPE vgi, LOCATION 'github-auto://Query-farm/vgi-etf-ishares@v0.4.0');
 
 -- The largest iShares ETFs by net assets
 SELECT ticker, fund_name, net_assets FROM ishares.main.products ORDER BY net_assets DESC LIMIT 5;
@@ -45,14 +45,14 @@ SELECT ticker, fund_name, net_assets FROM ishares.main.products ORDER BY net_ass
 SELECT ticker, name, weight_percent FROM ishares.main.holdings WHERE fund_ticker = 'IVV' ORDER BY weight_percent DESC LIMIT 5;
 ```
 
-Prebuilt binaries cover macOS (Apple silicon), Linux (x86-64 and arm64). `github-auto://` needs an explicit release tag; change `@v0.3.0` to move to a newer release.
+Prebuilt binaries cover macOS (Apple silicon), Linux (x86-64 and arm64). `github-auto://` needs an explicit release tag; change `@v0.4.0` to move to a newer release.
 
 ### Other ways to run it
 
 - **Docker** (the image bundles the worker; needs a container runtime):
 
   ```sql
-  ATTACH 'ishares' AS ishares (TYPE vgi, LOCATION 'docker://ghcr.io/query-farm/vgi-etf-ishares:0.3.0');
+  ATTACH 'ishares' AS ishares (TYPE vgi, LOCATION 'docker://ghcr.io/query-farm/vgi-etf-ishares:0.4.0');
   ```
 
 - **Manual download.** Download the archive for your platform from the [releases page](https://github.com/Query-farm/vgi-etf-ishares/releases), verify it against its `.sha256` file (a cosign `.cosign.bundle` is published alongside), unpack it, and set `LOCATION` to the path of the extracted worker executable.
@@ -60,7 +60,7 @@ Prebuilt binaries cover macOS (Apple silicon), Linux (x86-64 and arm64). `github
 - **HTTP server.** Run the image's HTTP transport yourself and attach it by URL:
 
   ```bash
-  docker run --rm -p 8000:8000 ghcr.io/query-farm/vgi-etf-ishares:0.3.0   # serves /health + the VGI RPC on :8000
+  docker run --rm -p 8000:8000 ghcr.io/query-farm/vgi-etf-ishares:0.4.0   # serves /health + the VGI RPC on :8000
   ```
 
   ```sql

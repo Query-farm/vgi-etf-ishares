@@ -20,7 +20,7 @@ if [[ -z "$UNITTEST" || ! -x "$UNITTEST" ]]; then
 fi
 
 # Ensure the vgi community extension is installed for this haybarn version. (haybarn 2.0 /
-# vgi.v3: the community extension must speak protocol 3.2.)
+# vgi.v3: the community extension must speak protocol 3.3.)
 if ! echo "LOAD vgi;" | uvx --prerelease allow --from 'haybarn-cli>=2.0.0rc11,<2.1' haybarn-cli >/dev/null 2>&1; then
     echo "==> Installing vgi extension from community repository"
     echo "INSTALL vgi FROM community;" | uvx --prerelease allow --from 'haybarn-cli>=2.0.0rc11,<2.1' haybarn-cli
