@@ -8,6 +8,7 @@ import {
   dateArgToYmd,
   dateArgToEpoch,
   fetchHoldings,
+  fetchHoldingsSkippingErrors,
   resolveFund,
   productDataUrl,
 } from "../src/ishares.js";
@@ -142,4 +143,23 @@ test("parseHoldings reads the ce*/marketWeight columns some equity funds publish
     ["NVDA", 7.92, 67347967210.07, 67347967210.07],
     ["AAPL", 6.93, 58925443785.6, 58925443785.6],
   ]);
+});
+
+test("fetchHoldingsSkippingErrors yields [] and reports the error when a fund's feed fails", async () => {
+  // iShares answers HTTP 500 for some funds' holdings (e.g. IAU); the all-funds scan must skip them.
+  const failing = async (_url: string): Promise<unknown> => {
+    throw new Error("ishares: HTTP 500");
+  };
+  const errors: unknown[] = [];
+  const rows = await fetchHoldingsSkippingErrors(failing, 239561, "", "IAU", (e) => errors.push(e));
+  expect(rows).toEqual([]);
+  expect(errors.length).toBe(1);
+  // The strict variant (used when the query names its funds) still raises.
+  await expect(fetchHoldings(failing, 239561)).rejects.toThrow("HTTP 500");
+});
+
+test("fetchHoldingsSkippingErrors passes rows through when the feed succeeds", async () => {
+  const fake = FakeIshares.router({ holdings: (d) => holdingsEnvelope(d) });
+  const rows = await fetchHoldingsSkippingErrors(fake.get, 239726, "", "IVV");
+  expect(rows.length).toBe(2);
 });

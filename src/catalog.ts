@@ -9,6 +9,12 @@
 import type { CatalogDescriptor, VgiFunction } from "@query-farm/vgi";
 import { Arguments, constraintRecord } from "@query-farm/vgi";
 import { productsSchema, holdingsSchema, resultColumnsSchema } from "./schema.js";
+import {
+  COMPOSED_EXAMPLES,
+  HOLDINGS_DRIFT_EXAMPLE,
+  FUND_OVERLAP_EXAMPLE,
+  BOND_PORTFOLIO_YIELD_EXAMPLE,
+} from "./examples.js";
 
 const REPO = "https://github.com/Query-farm/vgi-etf-ishares";
 const ISSUES = `${REPO}/issues`;
@@ -150,6 +156,11 @@ const HOLDINGS_TABLE_TAGS: Record<string, string> = {
   "vgi.result_columns_schema": resultColumnsSchema(holdingsSchema(), HOLDINGS_COLUMN_COMMENTS),
   "vgi.example_queries": JSON.stringify([
     { description: "Top 10 current holdings of IVV", sql: "SELECT ticker, name, weight_percent FROM ishares.main.holdings WHERE fund_ticker = 'IVV' ORDER BY weight_percent DESC LIMIT 10" },
+    // Composed examples (holdings at two dates / two funds / joined to products), kept within
+    // the first five so the agent simulator, which shows five per object, sees them.
+    HOLDINGS_DRIFT_EXAMPLE,
+    FUND_OVERLAP_EXAMPLE,
+    BOND_PORTFOLIO_YIELD_EXAMPLE,
     { description: "IVV holdings as of a past date (time travel)", sql: "SELECT ticker, weight_percent FROM ishares.main.holdings AT (TIMESTAMP => DATE '2025-12-31') WHERE fund_ticker = 'IVV'" },
     { description: "Two funds at once (partition fan-out)", sql: "SELECT ticker, name, weight_percent FROM ishares.main.holdings WHERE fund_ticker IN ('IVV', 'AGG')" },
   ]),
@@ -249,6 +260,23 @@ const CATALOG_TAGS: Record<string, string> = {
       name: "ivv_holdings_dates",
       prompt: "Which recent holdings as-of dates does iShares feature for the Core S&P 500 ETF (IVV)?",
     },
+    {
+      name: "ivv_2025_total_return",
+      prompt:
+        "What was the iShares Core S&P 500 ETF's (IVV) NAV total return for calendar 2025, counting " +
+        "its distributions? Compute it as (NAV on the last valuation date of 2025 + the per-share " +
+        "distributions with ex-dates in 2025) / (NAV on the last valuation date of 2024) - 1. Save " +
+        "your answer as a temp table named ivv_2025_return with one row and one column " +
+        "total_return_percent (DOUBLE, percent points: 12.5 means 12.5%).",
+    },
+    {
+      name: "core_sp_top_tech",
+      prompt:
+        "Among the iShares Core S&P ETFs (fund names beginning 'iShares Core S&P'), which one has " +
+        "the largest current portfolio weight in the 'Information Technology' sector, and what is " +
+        "that weight? Save your answer as a temp table named top_tech_core with one row and columns " +
+        "fund_ticker (VARCHAR, the fund's ticker) and it_weight_percent (DOUBLE, percent points).",
+    },
   ]),
 };
 
@@ -281,6 +309,7 @@ const SCHEMA_TAGS: Record<string, string> = {
     { description: "Top holdings of IVV", sql: "SELECT ticker, name, weight_percent FROM ishares.main.holdings WHERE fund_ticker = 'IVV' ORDER BY weight_percent DESC LIMIT 10" },
     { description: "Join holdings to the catalog: a fund's top holdings alongside its fund-level facts (holdings.fund_ticker = products.ticker)", sql: "SELECT p.fund_name, p.expense_ratio_percent, h.ticker, h.name, h.weight_percent FROM ishares.main.holdings h JOIN ishares.main.products p ON h.fund_ticker = p.ticker WHERE h.fund_ticker = 'IVV' ORDER BY h.weight_percent DESC LIMIT 10" },
     { description: "Recent daily NAV history for IVV", sql: "SELECT as_of_date, nav FROM ishares.main.nav_history('IVV', start_date := DATE '2026-01-01') ORDER BY as_of_date DESC" },
+    ...COMPOSED_EXAMPLES,
   ]),
 };
 

@@ -6,6 +6,10 @@
 # reference_sql is deliberately omitted (live data + free-form analyst queries won't
 # reproduce an exact result set). success_criteria records what a correct answer looks like
 # for the LLM judge.
+#
+# Composed tasks (nav_history × distributions; products → holdings) ask the agent to save its
+# answer in a temp table; their check_sql recomputes the truth live and compares, so a wrong
+# answer fails.
 tasks:
   - name: ivv_exists
     check_sql: >-
@@ -52,3 +56,33 @@ tasks:
       SELECT count(*) > 0 FROM ishares.main.holding_dates('IVV')
     success_criteria: >-
       The answer lists one or more featured holdings dates for IVV from the holding_dates function.
+  - name: ivv_2025_total_return
+    # nav_history (2024 and 2025 year-end NAVs) composed with distributions (2025 ex-dates).
+    # Historical, so stable: ~17.7%; NAV-only (no distributions) is ~16.4% and fails the 0.05 pp band.
+    check_sql: >-
+      SELECT (SELECT count(*) FROM ivv_2025_return) = 1
+      AND abs((SELECT max(total_return_percent) FROM ivv_2025_return) - (
+        SELECT 100 * ((n.nav1 + d.dist) / n.nav0 - 1)
+        FROM (SELECT arg_max(nav, as_of_date) FILTER (WHERE as_of_date <= DATE '2024-12-31') AS nav0,
+                     arg_max(nav, as_of_date) FILTER (WHERE as_of_date <= DATE '2025-12-31') AS nav1
+              FROM ishares.main.nav_history('IVV', start_date := DATE '2024-12-01', end_date := DATE '2025-12-31')) n,
+             (SELECT sum(total_distribution) AS dist
+              FROM ishares.main.distributions('IVV', start_date := DATE '2025-01-01', end_date := DATE '2025-12-31')) d)) < 0.05
+    success_criteria: >-
+      The answer combines nav_history (year-end 2024 and 2025 NAVs) with distributions (2025 ex-dates)
+      and reports IVV's 2025 NAV total return, about 17.7%.
+  - name: core_sp_top_tech
+    # products (find the 'iShares Core S&P' funds) composed with holdings (sector weights). The
+    # grader lists those six tickers (IJH IJR ITOT IUSG IUSV IVV, as of 2026-11) rather than
+    # joining products, which would stream every fund's holdings (~45 s). Live: IUSG ~49% led
+    # IVV ~36% in 2026-11, so not a near tie.
+    check_sql: >-
+      SELECT (SELECT count(*) FROM top_tech_core) = 1
+      AND (SELECT max(fund_ticker) FROM top_tech_core) = t.fund_ticker
+      AND abs((SELECT max(it_weight_percent) FROM top_tech_core) - t.w) < 0.5
+      FROM (SELECT fund_ticker, sum(weight_percent) AS w FROM ishares.main.holdings
+            WHERE fund_ticker IN ('IVV', 'IJH', 'IJR', 'ITOT', 'IUSG', 'IUSV') AND sector = 'Information Technology'
+            GROUP BY fund_ticker ORDER BY w DESC LIMIT 1) t
+    success_criteria: >-
+      The answer finds the iShares Core S&P funds in products, sums each fund's Information Technology
+      holdings weight from the holdings table, and names the leader (IUSG in 2026-11) with its weight.

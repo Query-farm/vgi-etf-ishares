@@ -18,6 +18,7 @@ import {
   fetchProducts,
   keyedProducts,
   fetchHoldings,
+  fetchHoldingsSkippingErrors,
   fetchHoldingDates,
   fetchFundDetails,
   fetchDistributions,
@@ -41,6 +42,7 @@ import {
   navHistoryBatch,
   resultColumnsSchema,
 } from "./schema.js";
+import { TTM_YIELD_EXAMPLE } from "./examples.js";
 
 /** The injected HTTP getter: URL in, parsed JSON out. */
 export type IsharesGet = (url: string) => Promise<unknown>;
@@ -156,10 +158,15 @@ async function resolveOrThrow(fn: string, get: IsharesGet, fund: string): Promis
 // one SINGLE_VALUE partition. Multiple parallel workers drain the same execution-scoped queue, so
 // the fan-out is naturally work-stealing and bounded by maxWorkers.
 
-/** A queued fund: its resolved portfolioId and its exchange ticker (the partition value). */
+/**
+ * A queued fund: its resolved portfolioId and its exchange ticker (the partition value).
+ * `all` marks an unfiltered all-funds scan, where a fund whose upstream feed errors is skipped
+ * instead of failing the whole stream.
+ */
 interface FundItem {
   id: number;
   ticker: string;
+  all?: boolean;
 }
 const encodeFund = (item: FundItem): Uint8Array => new TextEncoder().encode(JSON.stringify(item));
 const decodeFund = (bytes: Uint8Array): FundItem => JSON.parse(new TextDecoder().decode(bytes));
@@ -268,7 +275,7 @@ export function makeHoldingsScan(get: IsharesGet) {
       const targets: FundItem[] =
         requested.length > 0
           ? requested.map((t) => byTicker.get(t)).filter((x): x is FundItem => x != null)
-          : [...byTicker.values()];
+          : [...byTicker.values()].map((f) => ({ ...f, all: true }));
       await storage.queuePush(targets.map(encodeFund));
       return { max_workers: DEFAULT_MAX_WORKERS, execution_id: executionId, opaque_data: null };
     },
@@ -285,9 +292,20 @@ export function makeHoldingsScan(get: IsharesGet) {
           return;
         }
         const fund = decodeFund(item);
-        const rows = await fetchHoldings(get, fund.id, asOf, fund.ticker);
+        const rows = fund.all
+          ? await fetchHoldingsSkippingErrors(get, fund.id, asOf, fund.ticker, (err) =>
+              console.error(`holdings: skipping ${fund.ticker} in the all-funds scan: ${String(err)}`),
+            )
+          : await fetchHoldings(get, fund.id, asOf, fund.ticker);
         if (rows.length === 0) continue;
-        out.emit(holdingsBatch(schema, rows), partitionValues(fund.ticker));
+        // filterPushdown is exact: DuckDB drops every predicate it pushes here, so the scan must
+        // apply them all — not just the fund_ticker partition selector it routes on (a
+        // WHERE ticker = 'AAPL' or asset_class = 'Equity' was otherwise silently ignored).
+        let batch = holdingsBatch(schema, rows);
+        // (apply() is typed VgiBatch; under the arrow-js backend it returns a RecordBatch.)
+        if (p.pushdownFilters) batch = p.pushdownFilters.apply(batch) as typeof batch;
+        if (batch.numRows === 0) continue;
+        out.emit(batch, partitionValues(fund.ticker));
         return;
       }
     },
@@ -498,6 +516,7 @@ export function makeDistributionsFunction(get: IsharesGet) {
     examples: [
       { sql: "SELECT ex_date, total_distribution FROM ishares.main.distributions('IVV') ORDER BY ex_date DESC LIMIT 8", description: "Recent IVV distributions" },
       { sql: "SELECT sum(total_distribution) AS ttm_income FROM ishares.main.distributions('IVV', start_date := DATE '2025-01-01')", description: "Total distributions since a start date" },
+      TTM_YIELD_EXAMPLE,
     ],
     tags: {
       "vgi.category": "history",
@@ -515,6 +534,7 @@ export function makeDistributionsFunction(get: IsharesGet) {
       "vgi.example_queries": JSON.stringify([
         { description: "Recent IVV distributions", sql: "SELECT ex_date, total_distribution FROM ishares.main.distributions('IVV') ORDER BY ex_date DESC LIMIT 8" },
         { description: "Total distributions since a start date", sql: "SELECT sum(total_distribution) AS ttm_income FROM ishares.main.distributions('IVV', start_date := DATE '2025-01-01')" },
+        TTM_YIELD_EXAMPLE,
       ]),
       "vgi.result_columns_schema": resultColumnsSchema(distributionsSchema(), DISTRIBUTIONS_DESCS),
     },

@@ -486,6 +486,28 @@ export async function fetchHoldings(
   return parseHoldings(json, portfolioId, d ? ymd(Number(d)) : null, fundTicker);
 }
 
+/**
+ * fetchHoldings for one fund inside an UNFILTERED all-funds stream: an upstream error for that
+ * fund (iShares answers HTTP 500 for some products' holdings feed, e.g. the IAU gold trust) is
+ * reported via `onError` and yields no rows, so one broken feed can't abort a scan of every fund.
+ * A scan that names its funds (WHERE fund_ticker = …) calls fetchHoldings directly and still
+ * raises.
+ */
+export async function fetchHoldingsSkippingErrors(
+  get: (url: string) => Promise<unknown>,
+  portfolioId: number,
+  asOfDate = "",
+  fundTicker: string | null = null,
+  onError: (err: unknown) => void = () => {},
+): Promise<HoldingRow[]> {
+  try {
+    return await fetchHoldings(get, portfolioId, asOfDate, fundTicker);
+  } catch (err) {
+    onError(err);
+    return [];
+  }
+}
+
 // ── holding_dates (the featured as-of date list) ───────────────────────────────
 
 export interface HoldingDateRow {

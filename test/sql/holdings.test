@@ -38,6 +38,19 @@ FROM ish.holdings AT (TIMESTAMP => DATE '2025-01-02') WHERE fund_ticker = 'IVV';
 ----
 1
 
+# Non-partition predicates are honored too: the scan declares filterPushdown, so DuckDB drops
+# every pushed predicate and the scan must apply them (a constituent filter was once ignored and
+# returned the whole fund).
+query I
+SELECT (count(*) = 1 AND max(ticker) = 'AAPL')::INT FROM ish.holdings WHERE fund_ticker = 'IVV' AND ticker = 'AAPL';
+----
+1
+
+query I
+SELECT bool_and(asset_class = 'Equity')::INT FROM ish.holdings WHERE fund_ticker = 'IVV' AND asset_class = 'Equity';
+----
+1
+
 # Multiple partitions at once: fund_ticker IN (...) fans out to two funds.
 query I
 SELECT (count(DISTINCT fund_ticker) = 2)::INT FROM ish.holdings WHERE fund_ticker IN ('IVV', 'AGG');

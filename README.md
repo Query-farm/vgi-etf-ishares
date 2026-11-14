@@ -143,6 +143,21 @@ SELECT fund_ticker, ticker, weight_percent
 FROM ishares.holdings
 WHERE fund_ticker IN ('IVV', 'AGG');
 
+-- Portfolio drift: IVV's largest stocks now vs. at the 2025 year-end (the table read at two
+-- dates and joined on ISIN, which stays stable when a ticker's formatting changes):
+WITH cur AS (
+  SELECT isin, ticker, weight_percent FROM ishares.holdings
+  WHERE fund_ticker = 'IVV' AND asset_class = 'Equity'
+), prev AS (
+  SELECT isin, weight_percent FROM ishares.holdings AT (TIMESTAMP => DATE '2025-12-31')
+  WHERE fund_ticker = 'IVV' AND asset_class = 'Equity'
+)
+SELECT cur.ticker, prev.weight_percent AS weight_2025_12_31, cur.weight_percent AS weight_now,
+       round(cur.weight_percent - prev.weight_percent, 2) AS change_pp
+FROM cur LEFT JOIN prev USING (isin)
+ORDER BY cur.weight_percent DESC
+LIMIT 10;
+
 -- Every fund at once (streams all partitions — slow; each fund is a partition):
 SELECT fund_ticker, count(*) AS n
 FROM ishares.holdings
@@ -157,7 +172,8 @@ LIMIT 5;
 
 `fund_ticker` is the **fund's** ticker and the hive partition key — distinct from the
 `ticker` column (each row's own constituent ticker). Filter it to pick funds, or omit it to stream
-all funds. The as-of date is time travel: omit it for
+all funds (a fund whose iShares holdings feed errors — e.g. the IAU gold trust — is skipped in
+an unfiltered scan rather than failing it; naming that fund in `fund_ticker` still raises). The as-of date is time travel: omit it for
 the latest holdings, or `AT (TIMESTAMP => DATE '…')` for **any business day back to roughly the
 fund's inception** (`holding_dates` only lists the dates iShares features in its UI). Rows come
 back **weight-descending**. Join `holdings.fund_ticker` to `products.ticker` for fund-level
