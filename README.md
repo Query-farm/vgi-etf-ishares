@@ -289,3 +289,7 @@ affiliated with or endorsed by BlackRock / iShares.
 ## License
 
 MIT — Copyright 2026 Query Farm LLC · https://query.farm
+
+## Notebooks
+
+[Executed historical holdings walkthrough](notebooks/README.md) compares IVV equity weights with explicit identifier coverage and a threshold experiment.
