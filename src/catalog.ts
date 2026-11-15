@@ -335,8 +335,8 @@ export function makeCatalog(
     name: "ishares",
     defaultSchema: "main",
     comment:
-      "iShares (BlackRock) US fund data as DuckDB tables: products (catalog) & holdings " +
-      "(ticker-partitioned, time-travel) tables, plus fund_details, distributions, nav_history — vgi-etf-ishares",
+      "iShares (BlackRock) US fund data from iShares' public product feed: screen the lineup on fund " +
+      "facts, inspect a fund's holdings as of a past date, and pull per-fund distribution and NAV history — vgi-etf-ishares",
     sourceUrl: REPO,
     tags: CATALOG_TAGS,
     schemas: [
