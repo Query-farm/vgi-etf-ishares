@@ -177,7 +177,8 @@ const CATALOG_TAGS: Record<string, string> = {
     "to pull per-fund history like distributions and daily NAV. " +
     "The central concept is the fund, identified by its exchange ticker " +
     "(e.g. IVV); start from the catalog to find that key, then drill into a specific fund. Data " +
-    "is iShares' public product feed: best-effort, for informational use.",
+    "is iShares' public product feed: best-effort, for informational use." +
+    " Upstream source: https://www.ishares.com/us/products/etf-investments.",
   "vgi.doc_md":
     "## iShares ETFs\n\n" +
     "iShares (BlackRock) US fund data, exposed as DuckDB tables and table functions.\n\n" +
@@ -186,6 +187,11 @@ const CATALOG_TAGS: Record<string, string> = {
     "discover that key, then drill into a fund. Second, fund holdings are **point-in-time**: you " +
     "can ask for a fund's constituents as of any past business day, which makes day-over-day " +
     "portfolio comparison possible.\n\n" +
+    "### Sources\n\n" +
+    "- [iShares ETF screener](https://www.ishares.com/us/products/etf-investments) — the US fund lineup the catalog is read from.\n" +
+    "- [Example fund page (IVV)](https://www.ishares.com/us/products/239726/ishares-core-sp-500-etf) — a fund page with the holdings, distributions and NAV data exposed here.\n" +
+    "- [BlackRock terms and conditions](https://www.blackrock.com/corporate/compliance/terms-and-conditions) — terms that govern use of the site's data.\n" +
+    "\n" +
     "Data is provided for informational use; review iShares' " +
     "terms before redistribution.",
   "vgi.keywords": JSON.stringify([
