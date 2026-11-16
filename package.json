@@ -1,6 +1,6 @@
 {
   "name": "vgi-etf-ishares",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "type": "module",
   "main": "src/worker.ts",
   "license": "MIT",
@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@query-farm/apache-arrow": "^21.1.1",
-    "@query-farm/vgi": "^0.50.0",
+    "@query-farm/vgi": "^0.50.1",
     "@query-farm/vgi-rpc": "^0.29.7"
   },
   "devDependencies": {
